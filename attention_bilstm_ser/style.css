@@ -1,46 +1,138 @@
 /* ============================================================================
-   APPLE & EDGEBOOK SINGLE-DASHBOARD DESIGN SYSTEM
-   Warm Alabaster, Forest Sage & Crisp Apple Black (#1D1D1F) Top-Right Controls
+   EDGEBOOK × APPLE HUMAN INTERFACE DESIGN SYSTEM
+   Warm Alabaster Paper, Forest Sage, Olive Bronze & Staggered Spring Motion
    ============================================================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap');
 
 :root {
+    /* Surface Palette (Matched 1:1 to Edgebook Reference) */
     --bg-canvas: #F3F0E8;
     --bg-card: #FAF8F4;
-    --bg-card-subtle: #F4F1EA;
-    --bg-pill-track: #EAE5DA;
-    --bg-active-tint: #F4EFE4;
+    --bg-card-hover: #FCFBF8;
+    --bg-subtle: #F4F1EA;
+    --bg-pill-track: #EFECE3;
+    --bg-active-cell: #F5EFE2;
+    --bg-runner-cell: #F2ECE9;
 
-    --border-hairline: #E4DFD3;
+    /* Hairlines & Borders */
+    --border-card: #E5E0D5;
     --border-divider: #EBE6DC;
-    --border-bronze: #B58D47;
+    --border-subtle: #DFD9CC;
+    --border-bronze: #B68F48;
 
+    /* Typography Ink Hierarchy */
     --apple-black: #1D1D1F;
-    --ink-primary: #1D1D1F;
-    --ink-secondary: #48484A;
-    --ink-muted: #6E6E73;
-    --ink-faint: #8E8E93;
+    --ink-primary: #1C1917;
+    --ink-secondary: #57534E;
+    --ink-muted: #78736A;
+    --ink-decimal: #A69E90;
 
-    --sage: #2A6F4E;
-    --bronze: #78592B;
-    --bronze-btn: #AC833E;
-    --bronze-btn-hover: #967030;
+    /* Accents (Forest Sage & Warm Olive Bronze) */
+    --sage: #296E4D;
+    --sage-light: rgba(41, 110, 77, 0.10);
+    --bronze-ink: #7D5F2A;
+    --bronze-pill: #A9813A;
+    --bronze-pill-hover: #97712F;
 
-    --radius-card: 16px;
-    --radius-cell: 12px;
+    /* Geometry & Shadows */
+    --radius-card: 18px;
+    --radius-cell: 13px;
     --radius-pill: 9999px;
-    --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+    --shadow-card: 0 1px 2px rgba(28, 25, 23, 0.03), 0 8px 24px -4px rgba(28, 25, 23, 0.035);
+    --shadow-card-hover: 0 4px 12px rgba(28, 25, 23, 0.05), 0 16px 32px -6px rgba(28, 25, 23, 0.05);
+    --shadow-pill: 0 1px 3px rgba(28, 25, 23, 0.08);
+
+    /* Apple Spring & Fluid Timing Curves */
+    --font-sans: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", sans-serif;
+    --ease-apple: cubic-bezier(0.16, 1, 0.3, 1);
+    --ease-smooth: cubic-bezier(0.22, 1, 0.36, 1);
+    --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 /* ============================================================================
-   1. BASE PAGE & FULL-WIDTH SINGLE DASHBOARD
+   1. KEYFRAME ANIMATIONS (STAGGERED DELAYED CHOREOGRAPHY)
+   ============================================================================ */
+@keyframes appleFadeUp {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, 14px, 0) scale(0.992);
+    }
+    100% {
+        opacity: 1;
+        transform: translate3d(0, 0, 0) scale(1);
+    }
+}
+
+@keyframes appleHeroReveal {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, 10px, 0);
+        filter: blur(3px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+        filter: blur(0);
+    }
+}
+
+@keyframes drawSpline {
+    0% {
+        stroke-dashoffset: 1600;
+    }
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes fadeSplineArea {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes popPeakNode {
+    0% {
+        opacity: 0;
+        transform: scale(0.35);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes growProgressBar {
+    0% {
+        transform: scaleX(0);
+    }
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+@keyframes pulseLiveDot {
+    0%, 100% {
+        box-shadow: 0 0 0 0 rgba(41, 110, 77, 0.35);
+    }
+    50% {
+        box-shadow: 0 0 0 5px rgba(41, 110, 77, 0);
+    }
+}
+
+/* ============================================================================
+   2. GLOBAL CANVAS & TYPOGRAPHY RESET
    ============================================================================ */
 html, body, [class*="css"], .stApp {
-    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", 'Plus Jakarta Sans', "Helvetica Neue", sans-serif !important;
+    font-family: var(--font-sans) !important;
     background-color: var(--bg-canvas) !important;
-    color: var(--apple-black) !important;
+    color: var(--ink-primary) !important;
     -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     letter-spacing: -0.015em;
 }
 
@@ -48,126 +140,199 @@ html, body, [class*="css"], .stApp {
     background: var(--bg-canvas) !important;
 }
 
-/* Hide sidebar completely for a clean single-page dashboard */
+/* Hide Sidebar & Footer for Pure Single-Page Focus */
 section[data-testid="stSidebar"],
 div[data-testid="collapsedControl"],
-button[kind="header"] {
+button[kind="header"],
+footer {
     display: none !important;
 }
 
-/* Style Streamlit Top-Right Header Toolbar Icons in Crisp Apple Black (#1D1D1F) */
+/* Crisp Apple Black (#1D1D1F) Top-Right Streamlit Chrome */
 header[data-testid="stHeader"] {
     background: transparent !important;
     border-bottom: none !important;
-    height: 2.2rem !important;
+    height: 2rem !important;
 }
 
 header[data-testid="stHeader"] *,
 header[data-testid="stHeader"] button,
 header[data-testid="stHeader"] svg,
-header[data-testid="stHeader"] path,
 div[data-testid="stToolbar"] *,
 div[data-testid="stToolbar"] button,
 div[data-testid="stToolbar"] svg,
-div[data-testid="stToolbar"] path,
 div[data-testid="stStatusWidget"] * {
     color: var(--apple-black) !important;
+}
+
+header[data-testid="stHeader"] path:not([fill="none"]),
+div[data-testid="stToolbar"] path:not([fill="none"]) {
     fill: var(--apple-black) !important;
 }
 
-footer {
-    display: none !important;
-}
-
 .block-container {
-    padding-top: 1.4rem !important;
-    padding-bottom: 2.8rem !important;
-    padding-left: 2.5rem !important;
-    padding-right: 2.5rem !important;
-    max-width: 1120px !important;
+    padding-top: 1.35rem !important;
+    padding-bottom: 2.6rem !important;
+    padding-left: 2.6rem !important;
+    padding-right: 2.6rem !important;
+    max-width: 1140px !important;
 }
 
 /* ============================================================================
-   2. MINIMAL HEADER ("Hi." + APPLE BLACK TOP-RIGHT ICONS & TIME CLUSTER)
+   3. HEADER ROW (GREETING + DATE/SESSION PILL + TOP-RIGHT ACTION PILLS)
    ============================================================================ */
 .eb-topbar {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
-    margin-bottom: 1.2rem;
+    margin-bottom: 1.15rem;
+    animation: appleFadeUp 0.65s var(--ease-apple) 0.02s both;
+}
+
+.eb-title-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 }
 
 .eb-greeting {
     font-size: 2.15rem;
     font-weight: 700;
     letter-spacing: -0.035em;
-    color: var(--apple-black) !important;
+    color: var(--ink-primary) !important;
     margin: 0;
     line-height: 1.08;
+}
+
+.eb-greeting-accent {
+    color: var(--bronze-ink) !important;
+    font-weight: 700;
+}
+
+.eb-submeta-row {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.81rem;
+    font-weight: 500;
+    color: var(--ink-muted) !important;
+}
+
+.eb-session-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 3px 11px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-card);
+    border-radius: var(--radius-pill);
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--ink-primary) !important;
+    box-shadow: 0 1px 2px rgba(28, 25, 23, 0.03);
+    transition: transform 0.25s var(--ease-apple), box-shadow 0.25s var(--ease-apple);
+}
+
+.eb-session-pill:hover {
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-pill);
+}
+
+.eb-dot {
+    width: 6.5px;
+    height: 6.5px;
+    border-radius: 50%;
+    background: var(--sage);
+    display: inline-block;
+    animation: pulseLiveDot 2.8s infinite ease-in-out;
 }
 
 .apple-topright-bar {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
+    gap: 9px;
+    padding-top: 2px;
 }
 
 .apple-status-chip {
     display: inline-flex;
     align-items: center;
     gap: 7px;
-    padding: 6px 13px;
+    padding: 7px 14px;
     background: var(--bg-card);
-    border: 1px solid var(--border-hairline);
+    border: 1px solid var(--border-card);
     border-radius: var(--radius-pill);
     font-size: 0.78rem;
     font-weight: 600;
     color: var(--apple-black) !important;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 1px 2px rgba(28, 25, 23, 0.03);
+    transition: all 0.25s var(--ease-apple);
 }
 
-.apple-status-chip svg,
-.apple-status-chip path,
-.apple-status-chip line,
-.apple-status-chip circle,
-.apple-status-chip polyline {
-    color: var(--apple-black) !important;
-    stroke: var(--apple-black) !important;
+.apple-status-chip:hover {
+    background: #FFFFFF;
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-pill);
 }
 
 .apple-time-chip {
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    padding: 6px 13px;
-    background: var(--bg-card);
-    border: 1px solid var(--border-hairline);
+    padding: 7px 15px;
+    background: var(--bronze-pill);
+    border: 1px solid var(--bronze-pill);
     border-radius: var(--radius-pill);
-    font-size: 0.80rem;
-    font-weight: 700;
+    font-size: 0.79rem;
+    font-weight: 600;
     font-variant-numeric: tabular-nums;
-    color: var(--apple-black) !important;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+    color: #FFFFFF !important;
+    box-shadow: 0 1px 3px rgba(169, 129, 58, 0.22);
+    transition: all 0.25s var(--ease-apple);
+}
+
+.apple-time-chip:hover {
+    background: var(--bronze-pill-hover);
+    transform: translateY(-1px);
+}
+
+.apple-time-chip span {
+    color: #FFFFFF !important;
 }
 
 .apple-time-chip svg,
 .apple-time-chip circle,
 .apple-time-chip polyline {
-    color: var(--apple-black) !important;
-    stroke: var(--apple-black) !important;
-}
-
-.eb-dot {
-    width: 7px;
-    height: 7px;
-    border-radius: 50%;
-    background: var(--sage);
-    display: inline-block;
+    stroke: #FFFFFF !important;
 }
 
 /* ============================================================================
-   3. APPLE INPUT DOCK (RECORD & UPLOAD CARDS WITH CRISP BLACK ICONS)
+   4. BORDERED CONTAINERS & INPUT DOCK (STAGGERED ENTRANCE + HOVER LIFT)
    ============================================================================ */
+div[data-testid="stVerticalBlockBorderWrapper"] {
+    background: var(--bg-card) !important;
+    border: 1px solid var(--border-card) !important;
+    border-radius: var(--radius-card) !important;
+    padding: 18px 22px !important;
+    box-shadow: var(--shadow-card) !important;
+    transition: transform 0.34s var(--ease-apple), box-shadow 0.34s var(--ease-apple), border-color 0.34s var(--ease-apple) !important;
+    animation: appleFadeUp 0.72s var(--ease-apple) 0.10s both;
+}
+
+div[data-testid="stVerticalBlockBorderWrapper"]:hover {
+    box-shadow: var(--shadow-card-hover) !important;
+    border-color: #DCD5C7 !important;
+}
+
+/* Staggered delay for second column in input dock */
+div[data-testid="stHorizontalBlock"] > div[data-testid="column"]:nth-child(1) div[data-testid="stVerticalBlockBorderWrapper"] {
+    animation-delay: 0.08s;
+}
+
+div[data-testid="stHorizontalBlock"] > div[data-testid="column"]:nth-child(2) div[data-testid="stVerticalBlockBorderWrapper"] {
+    animation-delay: 0.15s;
+}
+
 .apple-input-header {
     display: flex;
     align-items: center;
@@ -179,138 +344,185 @@ footer {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    font-size: 0.88rem;
+    font-size: 0.86rem;
     font-weight: 600;
     color: var(--apple-black) !important;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.015em;
 }
 
 .apple-icon-badge {
-    width: 28px;
-    height: 28px;
+    width: 27px;
+    height: 27px;
     border-radius: 8px;
-    background: #EFECE3;
-    border: 1px solid var(--border-hairline);
+    background: var(--bg-subtle);
+    border: 1px solid var(--border-card);
     display: inline-flex;
     align-items: center;
     justify-content: center;
     color: var(--apple-black) !important;
+    transition: transform 0.25s var(--ease-spring), background-color 0.25s var(--ease-apple);
 }
 
-.apple-icon-badge svg,
-.apple-icon-badge path,
-.apple-icon-badge line,
-.apple-icon-badge polyline {
-    color: var(--apple-black) !important;
-    stroke: var(--apple-black) !important;
+div[data-testid="stVerticalBlockBorderWrapper"]:hover .apple-icon-badge {
+    transform: scale(1.04);
+    background: #EFECE3;
 }
 
 .apple-input-tag {
-    font-size: 0.72rem;
+    font-size: 0.69rem;
     font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 0.06em;
-    color: var(--apple-black) !important;
-}
-
-/* Style Streamlit bordered containers as clean ivory Apple cards */
-div[data-testid="stVerticalBlockBorderWrapper"] {
-    background: var(--bg-card) !important;
-    border: 1px solid var(--border-hairline) !important;
-    border-radius: var(--radius-card) !important;
-    padding: 16px 18px !important;
-    box-shadow: 0 2px 8px rgba(28, 25, 23, 0.025) !important;
+    letter-spacing: 0.07em;
+    color: var(--ink-muted) !important;
+    background: var(--bg-subtle);
+    padding: 3px 9px;
+    border-radius: var(--radius-pill);
+    border: 1px solid var(--border-divider);
 }
 
 /* ============================================================================
-   4. MICROPHONE RECORDER BAR, TIMER (00:05) & TOP-RIGHT ICONS IN APPLE BLACK
+   5. AUDIO RECORDER, UPLOADER & SEGMENTED PILLS (APPLE FLUID CONTROLS)
    ============================================================================ */
-
-/* Force entire stAudioInput bar to warm ivory with crisp #1D1D1F black timer & icons */
 div[data-testid="stAudioInput"],
 div[data-testid="stAudioInput"] > div,
 div[data-testid="stAudioInput"] [data-baseweb] {
-    background-color: var(--bg-card-subtle) !important;
+    background-color: var(--bg-subtle) !important;
     color: var(--apple-black) !important;
     border-radius: 12px !important;
 }
 
 div[data-testid="stAudioInput"] {
-    border: 1px solid var(--border-hairline) !important;
-    padding: 4px 10px !important;
+    border: 1px solid var(--border-card) !important;
+    padding: 3px 10px !important;
+    transition: border-color 0.24s var(--ease-apple), background-color 0.24s var(--ease-apple) !important;
 }
 
-/* Timer (00:05) and all status text inside stAudioInput in crisp Apple Black */
+div[data-testid="stAudioInput"]:hover {
+    border-color: #CFC8B8 !important;
+}
+
 div[data-testid="stAudioInput"] span,
 div[data-testid="stAudioInput"] p,
 div[data-testid="stAudioInput"] time,
 div[data-testid="stAudioInput"] [data-testid="stAudioInputWaveformTimeCode"],
 div[data-testid="stAudioInput"] div {
+    background-color: transparent !important;
     color: var(--apple-black) !important;
     font-weight: 600 !important;
     font-variant-numeric: tabular-nums !important;
     opacity: 1 !important;
 }
 
-/* Action buttons and icons inside stAudioInput in crisp Apple Black on warm ivory */
 div[data-testid="stAudioInput"] button {
     background-color: #EAE5DA !important;
     color: var(--apple-black) !important;
     border: 1px solid #D8D2C5 !important;
     border-radius: 8px !important;
-    opacity: 1 !important;
+    transition: transform 0.18s var(--ease-spring), background-color 0.18s var(--ease-apple) !important;
 }
 
 div[data-testid="stAudioInput"] button:hover {
     background-color: #DFD9CA !important;
+    transform: scale(1.04);
 }
 
-div[data-testid="stAudioInput"] button svg,
-div[data-testid="stAudioInput"] button path,
+div[data-testid="stAudioInput"] button:active {
+    transform: scale(0.95);
+}
+
 div[data-testid="stAudioInput"] svg,
-div[data-testid="stAudioInput"] path {
+div[data-testid="stAudioInput"] path:not([fill="none"]) {
     color: var(--apple-black) !important;
     fill: var(--apple-black) !important;
-    stroke: var(--apple-black) !important;
-    opacity: 1 !important;
 }
 
-/* Action Buttons (New recording) — Crisp Apple Black text on Warm Ivory Pill */
+/* Action Buttons ("+ New recording") — Edgebook Outline Pill Style */
 div.stButton > button,
 div[data-testid="stButton"] > button {
-    background-color: #EFECE3 !important;
+    background-color: var(--bg-card) !important;
     background-image: none !important;
     color: var(--apple-black) !important;
-    border: 1px solid #D5CFC2 !important;
+    border: 1px solid #D6D0C4 !important;
     border-radius: var(--radius-pill) !important;
-    padding: 0.38rem 1.05rem !important;
-    min-height: 34px !important;
-    font-size: 0.79rem !important;
+    padding: 0.34rem 0.95rem !important;
+    min-height: 32px !important;
+    font-size: 0.77rem !important;
     font-weight: 600 !important;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04) !important;
-    transition: all 0.18s var(--ease-out) !important;
+    box-shadow: 0 1px 2px rgba(28, 25, 23, 0.03) !important;
+    transition: all 0.22s var(--ease-apple) !important;
 }
 
 div.stButton > button *,
-div[data-testid="stButton"] > button *,
-div.stButton > button p,
-div.stButton > button span {
+div[data-testid="stButton"] > button * {
     color: var(--apple-black) !important;
-    fill: var(--apple-black) !important;
     font-weight: 600 !important;
-    font-size: 0.79rem !important;
+    font-size: 0.77rem !important;
 }
 
 div.stButton > button:hover,
 div[data-testid="stButton"] > button:hover {
-    background-color: #E4DFD3 !important;
+    background-color: #F2EFE8 !important;
+    border-color: #B8B0A0 !important;
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-pill) !important;
+}
+
+div.stButton > button:active,
+div[data-testid="stButton"] > button:active {
+    transform: scale(0.97);
+}
+
+/* File Uploader Dropzone — Matched Height & Minimalist Styling */
+section[data-testid="stFileUploaderDropzone"] {
+    background-color: var(--bg-subtle) !important;
+    border: 1px dashed #CFC8B8 !important;
+    border-radius: 12px !important;
+    padding: 7px 12px !important;
+    min-height: 50px !important;
+    transition: all 0.24s var(--ease-apple) !important;
+}
+
+section[data-testid="stFileUploaderDropzone"]:hover {
+    background-color: #EFECE3 !important;
+    border-color: var(--bronze-pill) !important;
+}
+
+section[data-testid="stFileUploaderDropzone"] *,
+section[data-testid="stFileUploaderDropzone"] span,
+section[data-testid="stFileUploaderDropzone"] small {
+    color: var(--ink-secondary) !important;
+    font-size: 0.77rem !important;
+}
+
+section[data-testid="stFileUploaderDropzone"] svg {
+    display: none !important;
+}
+
+section[data-testid="stFileUploaderDropzone"] button {
+    background-color: #FFFFFF !important;
+    color: var(--apple-black) !important;
+    border: 1px solid #D6D0C4 !important;
+    border-radius: var(--radius-pill) !important;
+    padding: 3px 12px !important;
+    font-size: 0.75rem !important;
+    font-weight: 600 !important;
+    transition: all 0.2s var(--ease-apple) !important;
+}
+
+section[data-testid="stFileUploaderDropzone"] button:hover {
+    background-color: var(--bg-card) !important;
     border-color: var(--apple-black) !important;
 }
 
-/* Segmented Radio Pills at Top-Right of Card (Attention | Energy | Waveform) — Crisp Apple Black */
+/* Segmented Pill Switcher (1W | 1M | All style from Edgebook) */
+div[data-testid="stRadio"] {
+    display: flex !important;
+    justify-content: flex-end !important;
+}
+
 div[data-testid="stRadio"] > div[role="radiogroup"] {
     background-color: var(--bg-pill-track) !important;
-    border: 1px solid var(--border-hairline) !important;
+    border: 1px solid var(--border-card) !important;
     border-radius: var(--radius-pill) !important;
     padding: 3px !important;
     gap: 2px !important;
@@ -323,31 +535,31 @@ div[data-testid="stRadio"] label {
     padding: 5px 14px !important;
     margin: 0 !important;
     cursor: pointer !important;
-    transition: all 0.18s var(--ease-out) !important;
+    transition: all 0.24s var(--ease-apple) !important;
 }
 
 div[data-testid="stRadio"] label,
 div[data-testid="stRadio"] label *,
-div[data-testid="stRadio"] label p,
-div[data-testid="stRadio"] label span,
-div[data-testid="stRadio"] label div,
 div[data-testid="stRadio"] [data-testid="stMarkdownContainer"] p {
-    color: var(--apple-black) !important;
-    font-size: 0.78rem !important;
+    color: var(--ink-secondary) !important;
+    font-size: 0.77rem !important;
     font-weight: 600 !important;
     opacity: 1 !important;
+    transition: color 0.2s var(--ease-apple) !important;
+}
+
+div[data-testid="stRadio"] label:hover {
+    background-color: rgba(255, 255, 255, 0.5) !important;
 }
 
 div[data-testid="stRadio"] label:has(input:checked) {
     background-color: #FFFFFF !important;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12) !important;
+    box-shadow: var(--shadow-pill) !important;
 }
 
 div[data-testid="stRadio"] label:has(input:checked),
-div[data-testid="stRadio"] label:has(input:checked) *,
-div[data-testid="stRadio"] label:has(input:checked) p,
-div[data-testid="stRadio"] label:has(input:checked) span {
-    color: var(--apple-black) !important;
+div[data-testid="stRadio"] label:has(input:checked) * {
+    color: var(--ink-primary) !important;
     font-weight: 700 !important;
 }
 
@@ -355,106 +567,128 @@ div[data-testid="stRadio"] label > div:first-child {
     display: none !important;
 }
 
-/* File Uploader — Clean Light Dropzone with Black Icons & Text */
-section[data-testid="stFileUploaderDropzone"] {
-    background-color: var(--bg-card-subtle) !important;
-    border: 1px dashed #C7C0B3 !important;
-    border-radius: 12px !important;
-    padding: 8px 12px !important;
-    min-height: 52px !important;
-}
-
-section[data-testid="stFileUploaderDropzone"] *,
-section[data-testid="stFileUploaderDropzone"] span,
-section[data-testid="stFileUploaderDropzone"] small,
-section[data-testid="stFileUploaderDropzone"] svg {
-    color: var(--apple-black) !important;
-    font-size: 0.78rem !important;
-}
-
-section[data-testid="stFileUploaderDropzone"] button {
-    background-color: #FFFFFF !important;
-    color: var(--apple-black) !important;
-    border: 1px solid #D5CFC2 !important;
-    border-radius: var(--radius-pill) !important;
-    padding: 3px 12px !important;
-    font-size: 0.76rem !important;
-    font-weight: 600 !important;
-}
-
 /* ============================================================================
-   5. HERO CARD & 4-COLUMN STAT STRIP
+   6. PRIMARY HERO CARD, SPLIT NUMERALS & ANIMATED SVG SPLINE CHART
    ============================================================================ */
-.eb-card {
-    background: var(--bg-card);
-    border: 1px solid var(--border-hairline);
-    border-radius: var(--radius-card);
-    padding: 22px 26px 20px 26px;
-    margin-bottom: 1.15rem;
-    box-shadow: 0 2px 8px rgba(28, 25, 23, 0.025);
-}
-
 .eb-micro-label {
-    font-size: 0.68rem;
+    font-size: 0.67rem;
     font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 0.09em;
+    letter-spacing: 0.095em;
     color: var(--ink-muted) !important;
-    margin-bottom: 4px;
+    margin-bottom: 5px;
 }
 
 .eb-hero-number {
-    font-size: 2.65rem;
+    font-size: 2.75rem;
     font-weight: 700;
-    letter-spacing: -0.035em;
-    color: var(--apple-black) !important;
-    line-height: 1.06;
-    margin: 2px 0 4px 0;
+    letter-spacing: -0.04em;
+    color: var(--ink-primary) !important;
+    line-height: 1.05;
+    margin: 2px 0 6px 0;
     font-variant-numeric: tabular-nums;
+    animation: appleHeroReveal 0.72s var(--ease-apple) 0.20s both;
 }
 
 .eb-hero-decimal {
-    font-size: 1.55rem;
+    font-size: 1.62rem;
     font-weight: 500;
-    color: var(--ink-faint) !important;
-    margin-left: 2px;
+    color: var(--ink-decimal) !important;
+    letter-spacing: -0.02em;
+    margin-left: 1px;
 }
 
 .eb-hero-delta {
-    font-size: 0.82rem;
+    font-size: 0.81rem;
     font-weight: 600;
     color: var(--sage) !important;
-    margin-bottom: 0.35rem;
+    margin-bottom: 0.25rem;
+    animation: appleFadeUp 0.68s var(--ease-apple) 0.26s both;
 }
 
 .eb-hero-delta span.muted {
     color: var(--ink-muted) !important;
     font-weight: 500;
-    margin-left: 4px;
+    margin-left: 5px;
 }
 
+/* Animated Vector Spline Chart Container */
+.eb-chart-wrap {
+    width: 100%;
+    margin: 6px 0 4px 0;
+    overflow: visible;
+    animation: appleFadeUp 0.75s var(--ease-apple) 0.24s both;
+}
+
+.eb-spline-svg {
+    width: 100%;
+    height: auto;
+    display: block;
+    overflow: visible;
+}
+
+.eb-spline-line {
+    stroke-dasharray: 1600;
+    stroke-dashoffset: 1600;
+    animation: drawSpline 1.25s var(--ease-apple) 0.28s forwards;
+}
+
+.eb-spline-area {
+    opacity: 0;
+    animation: fadeSplineArea 0.95s var(--ease-smooth) 0.42s forwards;
+}
+
+.eb-peak-group {
+    transform-box: fill-box;
+    transform-origin: center;
+    opacity: 0;
+    animation: popPeakNode 0.58s var(--ease-spring) 0.64s forwards;
+}
+
+.eb-end-dot {
+    transform-box: fill-box;
+    transform-origin: center;
+    opacity: 0;
+    animation: popPeakNode 0.58s var(--ease-spring) 0.74s forwards;
+}
+
+/* 4-Column Hairline-Divided Footer Strip (WIN RATE | AVERAGE DAY | DRAWDOWN | TARGET) */
 .eb-stat-strip {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     border-top: 1px solid var(--border-divider);
     background: var(--bg-card);
+    margin: 8px -22px -18px -22px;
+    border-bottom-left-radius: var(--radius-card);
+    border-bottom-right-radius: var(--radius-card);
+    overflow: hidden;
 }
 
 .eb-stat-cell {
-    padding: 15px 22px 16px 22px;
+    padding: 16px 22px 17px 22px;
     border-right: 1px solid var(--border-divider);
+    animation: appleFadeUp 0.68s var(--ease-apple) both;
+    transition: background-color 0.25s var(--ease-apple);
 }
 
-.eb-stat-cell:last-child {
+.eb-stat-cell:hover {
+    background-color: var(--bg-card-hover);
+}
+
+.eb-stat-cell:nth-child(1) { animation-delay: 0.32s; }
+.eb-stat-cell:nth-child(2) { animation-delay: 0.38s; }
+.eb-stat-cell:nth-child(3) { animation-delay: 0.44s; }
+.eb-stat-cell:nth-child(4) {
     border-right: none;
+    animation-delay: 0.50s;
 }
 
 .eb-stat-val {
-    font-size: 1.32rem;
+    font-size: 1.35rem;
     font-weight: 700;
-    letter-spacing: -0.025em;
-    color: var(--apple-black) !important;
-    margin: 3px 0 2px 0;
+    letter-spacing: -0.03em;
+    color: var(--ink-primary) !important;
+    margin: 3px 0 3px 0;
     font-variant-numeric: tabular-nums;
 }
 
@@ -468,49 +702,147 @@ section[data-testid="stFileUploaderDropzone"] button {
     font-weight: 500;
 }
 
+.eb-stat-sub.bronze-note {
+    color: var(--bronze-ink) !important;
+}
+
 .eb-progress-track {
     width: 100%;
     height: 3.5px;
-    background: #E8E3D9;
+    background: #E8E3D8;
     border-radius: var(--radius-pill);
     overflow: hidden;
-    margin-top: 7px;
+    margin-top: 8px;
 }
 
 .eb-progress-fill {
     height: 100%;
     border-radius: var(--radius-pill);
     background: var(--sage);
+    transform-origin: left center;
+    animation: growProgressBar 0.95s var(--ease-apple) 0.58s both;
 }
 
 .eb-progress-fill.bronze {
-    background: var(--bronze-btn);
+    background: var(--bronze-pill);
+    animation-delay: 0.66s;
 }
 
 /* ============================================================================
-   6. COMPACT 8-EMOTION PROBABILITY GRID
+   7. SECONDARY CALENDAR-STYLE 8-EMOTION SPECTRUM CARD (STAGGERED CELLS)
    ============================================================================ */
+.eb-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-card);
+    border-radius: var(--radius-card);
+    padding: 20px 24px 22px 24px;
+    margin-top: 0.35rem;
+    box-shadow: var(--shadow-card);
+    transition: transform 0.34s var(--ease-apple), box-shadow 0.34s var(--ease-apple);
+    animation: appleFadeUp 0.75s var(--ease-apple) 0.36s both;
+}
+
+.eb-card:hover {
+    box-shadow: var(--shadow-card-hover);
+}
+
+.eb-cal-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 14px;
+    gap: 12px;
+}
+
+.eb-cal-summary {
+    font-size: 0.80rem;
+    color: var(--ink-secondary) !important;
+    font-weight: 500;
+    margin-top: 2px;
+}
+
+.eb-cal-summary strong {
+    color: var(--ink-primary) !important;
+    font-weight: 700;
+}
+
+.eb-cal-pills {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.eb-cal-pill {
+    padding: 5px 13px;
+    background: var(--bg-subtle);
+    border: 1px solid var(--border-card);
+    border-radius: var(--radius-pill);
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--ink-primary) !important;
+}
+
 .eb-grid-8 {
     display: grid;
     grid-template-columns: repeat(8, 1fr);
-    gap: 8px;
-    margin-top: 10px;
+    gap: 9px;
+}
+
+.eb-col-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    animation: appleFadeUp 0.65s var(--ease-apple) both;
+}
+
+/* Staggered cascade across all 8 emotion columns */
+.eb-col-wrap:nth-child(1) { animation-delay: 0.40s; }
+.eb-col-wrap:nth-child(2) { animation-delay: 0.44s; }
+.eb-col-wrap:nth-child(3) { animation-delay: 0.48s; }
+.eb-col-wrap:nth-child(4) { animation-delay: 0.52s; }
+.eb-col-wrap:nth-child(5) { animation-delay: 0.56s; }
+.eb-col-wrap:nth-child(6) { animation-delay: 0.60s; }
+.eb-col-wrap:nth-child(7) { animation-delay: 0.64s; }
+.eb-col-wrap:nth-child(8) { animation-delay: 0.68s; }
+
+.eb-col-header {
+    text-align: center;
+    font-size: 0.65rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--ink-muted) !important;
 }
 
 .eb-cell {
-    background: #F7F4ED;
-    border: 1px solid var(--border-hairline);
+    background: #F6F3EC;
+    border: 1px solid var(--border-card);
     border-radius: var(--radius-cell);
-    padding: 11px 12px;
+    padding: 11px 12px 12px 12px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    min-height: 76px;
+    min-height: 82px;
+    transition: transform 0.28s var(--ease-apple), box-shadow 0.28s var(--ease-apple), border-color 0.28s var(--ease-apple), background-color 0.28s var(--ease-apple);
 }
 
+.eb-cell:hover {
+    transform: translateY(-2.5px);
+    background: #FAF8F3;
+    box-shadow: 0 6px 14px -4px rgba(28, 25, 23, 0.06);
+}
+
+/* #1 Winning Emotion Cell — Matches SAT 7 Bronze Highlight in Edgebook */
 .eb-cell.active {
-    background: var(--bg-active-tint);
+    background: var(--bg-active-cell);
     border: 1.5px solid var(--border-bronze);
+    box-shadow: 0 4px 12px -2px rgba(169, 129, 58, 0.10);
+}
+
+/* #2 Runner-Up Cell — Matches WED 4 Soft Rose/Stone Tint in Edgebook */
+.eb-cell.runner {
+    background: var(--bg-runner-cell);
+    border: 1px solid #DFD4CE;
 }
 
 .eb-cell-top {
@@ -519,42 +851,44 @@ section[data-testid="stFileUploaderDropzone"] button {
     justify-content: space-between;
 }
 
-.eb-cell-name {
-    font-size: 0.73rem;
-    font-weight: 600;
-    color: var(--apple-black) !important;
-    text-transform: capitalize;
-}
-
-.eb-cell.active .eb-cell-name {
-    color: var(--bronze) !important;
-    font-weight: 700;
-}
-
 .eb-rank-badge {
-    width: 19px;
-    height: 19px;
+    width: 21px;
+    height: 21px;
     border-radius: 50%;
-    font-size: 0.66rem;
+    font-size: 0.68rem;
     font-weight: 700;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    color: var(--apple-black) !important;
+    color: var(--ink-secondary) !important;
+    background: transparent;
 }
 
 .eb-cell.active .eb-rank-badge {
-    background: var(--bronze-btn);
-    color: #FFFFFF !important;
+    background: var(--bronze-pill);
+    color: #1C1917 !important;
+    box-shadow: 0 1px 3px rgba(169, 129, 58, 0.25);
+}
+
+.eb-cell-dot {
+    width: 5.5px;
+    height: 5.5px;
+    border-radius: 50%;
+    background: var(--sage);
+    display: inline-block;
 }
 
 .eb-cell-val {
     font-size: 1.12rem;
     font-weight: 700;
-    letter-spacing: -0.02em;
-    color: var(--apple-black) !important;
+    letter-spacing: -0.025em;
+    color: var(--ink-primary) !important;
     font-variant-numeric: tabular-nums;
-    margin-top: 6px;
+    margin-top: 10px;
+}
+
+.eb-cell.active .eb-cell-val {
+    color: var(--bronze-ink) !important;
 }
 
 @media (max-width: 960px) {
