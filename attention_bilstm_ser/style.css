@@ -1,39 +1,32 @@
 /* ============================================================================
-   EDGEBOOK & APPLE EDITORIAL MINIMALIST DESIGN SYSTEM
-   Warm Alabaster, Forest Sage & Ochre Bronze — Clean, Quiet, Humanist UI
+   APPLE & EDGEBOOK SINGLE-DASHBOARD DESIGN SYSTEM
+   Warm Alabaster, Forest Sage & Crisp Apple Black (#1D1D1F) Top-Right Controls
    ============================================================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
 
 :root {
-    /* Surfaces (Warm Stone & Editorial Paper) */
     --bg-canvas: #F3F0E8;
-    --bg-sidebar: #F7F5F0;
     --bg-card: #FAF8F4;
     --bg-card-subtle: #F4F1EA;
+    --bg-pill-track: #EAE5DA;
     --bg-active-tint: #F4EFE4;
-    --bg-rose-tint: #EFE3E1;
 
-    /* Hairline Borders */
-    --border-hairline: #E5E0D5;
+    --border-hairline: #E4DFD3;
     --border-divider: #EBE6DC;
     --border-bronze: #B58D47;
 
-    /* Typography Ink */
-    --ink-primary: #1C1917;
-    --ink-secondary: #57534E;
-    --ink-muted: #8C857A;
-    --ink-faint: #A8A196;
+    --apple-black: #1D1D1F;
+    --ink-primary: #1D1D1F;
+    --ink-secondary: #48484A;
+    --ink-muted: #6E6E73;
+    --ink-faint: #8E8E93;
 
-    /* Accents (Forest Sage, Ochre Bronze, Terracotta Rose) */
     --sage: #2A6F4E;
-    --sage-soft: rgba(42, 111, 78, 0.12);
     --bronze: #78592B;
     --bronze-btn: #AC833E;
     --bronze-btn-hover: #967030;
-    --terracotta: #B8544E;
 
-    /* Radii & Motion */
     --radius-card: 16px;
     --radius-cell: 12px;
     --radius-pill: 9999px;
@@ -41,88 +34,364 @@
 }
 
 /* ============================================================================
-   1. GLOBAL RESET & TYPOGRAPHY
+   1. BASE PAGE & FULL-WIDTH SINGLE DASHBOARD
    ============================================================================ */
 html, body, [class*="css"], .stApp {
-    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", sans-serif !important;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", 'Plus Jakarta Sans', "Helvetica Neue", sans-serif !important;
     background-color: var(--bg-canvas) !important;
-    color: var(--ink-primary) !important;
+    color: var(--apple-black) !important;
     -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    letter-spacing: -0.014em;
+    letter-spacing: -0.015em;
 }
 
 .stApp {
     background: var(--bg-canvas) !important;
 }
 
-.block-container {
-    padding-top: 2.2rem !important;
-    padding-bottom: 3.5rem !important;
-    padding-left: 2.8rem !important;
-    padding-right: 2.8rem !important;
-    max-width: 1240px !important;
+/* Hide sidebar completely for a clean single-page dashboard */
+section[data-testid="stSidebar"],
+div[data-testid="collapsedControl"],
+button[kind="header"] {
+    display: none !important;
 }
 
+/* Style Streamlit Top-Right Header Toolbar Icons in Crisp Apple Black (#1D1D1F) */
 header[data-testid="stHeader"] {
     background: transparent !important;
     border-bottom: none !important;
+    height: 2.2rem !important;
 }
 
-#MainMenu, footer {
-    visibility: hidden;
+header[data-testid="stHeader"] *,
+header[data-testid="stHeader"] button,
+header[data-testid="stHeader"] svg,
+header[data-testid="stHeader"] path,
+div[data-testid="stToolbar"] *,
+div[data-testid="stToolbar"] button,
+div[data-testid="stToolbar"] svg,
+div[data-testid="stToolbar"] path,
+div[data-testid="stStatusWidget"] * {
+    color: var(--apple-black) !important;
+    fill: var(--apple-black) !important;
+}
+
+footer {
+    display: none !important;
+}
+
+.block-container {
+    padding-top: 1.4rem !important;
+    padding-bottom: 2.8rem !important;
+    padding-left: 2.5rem !important;
+    padding-right: 2.5rem !important;
+    max-width: 1120px !important;
 }
 
 /* ============================================================================
-   2. LEFT SIDEBAR (MINIMALIST WARM IVORY)
+   2. MINIMAL HEADER ("Hi." + APPLE BLACK TOP-RIGHT ICONS & TIME CLUSTER)
    ============================================================================ */
-section[data-testid="stSidebar"] {
-    background-color: var(--bg-sidebar) !important;
-    border-right: 1px solid var(--border-hairline) !important;
-    box-shadow: none !important;
-}
-
-section[data-testid="stSidebar"] .block-container {
-    padding: 1.4rem 1.15rem !important;
-}
-
-.eb-brand {
+.eb-topbar {
     display: flex;
     align-items: center;
-    gap: 10px;
-    padding: 4px 4px 18px 4px;
-    font-size: 1.05rem;
-    font-weight: 700;
-    letter-spacing: -0.025em;
-    color: var(--ink-primary);
+    justify-content: space-between;
+    margin-bottom: 1.2rem;
 }
 
-.eb-brand-logo {
+.eb-greeting {
+    font-size: 2.15rem;
+    font-weight: 700;
+    letter-spacing: -0.035em;
+    color: var(--apple-black) !important;
+    margin: 0;
+    line-height: 1.08;
+}
+
+.apple-topright-bar {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.apple-status-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 6px 13px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-hairline);
+    border-radius: var(--radius-pill);
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--apple-black) !important;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.apple-status-chip svg,
+.apple-status-chip path,
+.apple-status-chip line,
+.apple-status-chip circle,
+.apple-status-chip polyline {
+    color: var(--apple-black) !important;
+    stroke: var(--apple-black) !important;
+}
+
+.apple-time-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 13px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-hairline);
+    border-radius: var(--radius-pill);
+    font-size: 0.80rem;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+    color: var(--apple-black) !important;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.apple-time-chip svg,
+.apple-time-chip circle,
+.apple-time-chip polyline {
+    color: var(--apple-black) !important;
+    stroke: var(--apple-black) !important;
+}
+
+.eb-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--sage);
+    display: inline-block;
+}
+
+/* ============================================================================
+   3. APPLE INPUT DOCK (RECORD & UPLOAD CARDS WITH CRISP BLACK ICONS)
+   ============================================================================ */
+.apple-input-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.apple-input-title {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--apple-black) !important;
+    letter-spacing: -0.01em;
+}
+
+.apple-icon-badge {
     width: 28px;
     height: 28px;
-    border-radius: 7px;
-    background: #EFECE4;
+    border-radius: 8px;
+    background: #EFECE3;
     border: 1px solid var(--border-hairline);
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    color: var(--bronze);
-    font-weight: 700;
-    font-size: 0.82rem;
+    color: var(--apple-black) !important;
 }
 
-.eb-brand span {
-    font-weight: 400;
-    color: var(--ink-secondary);
+.apple-icon-badge svg,
+.apple-icon-badge path,
+.apple-icon-badge line,
+.apple-icon-badge polyline {
+    color: var(--apple-black) !important;
+    stroke: var(--apple-black) !important;
 }
 
-/* Sidebar Bottom Journey Card */
-.eb-sidebar-card {
+.apple-input-tag {
+    font-size: 0.72rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--apple-black) !important;
+}
+
+/* Style Streamlit bordered containers as clean ivory Apple cards */
+div[data-testid="stVerticalBlockBorderWrapper"] {
+    background: var(--bg-card) !important;
+    border: 1px solid var(--border-hairline) !important;
+    border-radius: var(--radius-card) !important;
+    padding: 16px 18px !important;
+    box-shadow: 0 2px 8px rgba(28, 25, 23, 0.025) !important;
+}
+
+/* ============================================================================
+   4. MICROPHONE RECORDER BAR, TIMER (00:05) & TOP-RIGHT ICONS IN APPLE BLACK
+   ============================================================================ */
+
+/* Force entire stAudioInput bar to warm ivory with crisp #1D1D1F black timer & icons */
+div[data-testid="stAudioInput"],
+div[data-testid="stAudioInput"] > div,
+div[data-testid="stAudioInput"] [data-baseweb] {
+    background-color: var(--bg-card-subtle) !important;
+    color: var(--apple-black) !important;
+    border-radius: 12px !important;
+}
+
+div[data-testid="stAudioInput"] {
+    border: 1px solid var(--border-hairline) !important;
+    padding: 4px 10px !important;
+}
+
+/* Timer (00:05) and all status text inside stAudioInput in crisp Apple Black */
+div[data-testid="stAudioInput"] span,
+div[data-testid="stAudioInput"] p,
+div[data-testid="stAudioInput"] time,
+div[data-testid="stAudioInput"] [data-testid="stAudioInputWaveformTimeCode"],
+div[data-testid="stAudioInput"] div {
+    color: var(--apple-black) !important;
+    font-weight: 600 !important;
+    font-variant-numeric: tabular-nums !important;
+    opacity: 1 !important;
+}
+
+/* Action buttons and icons inside stAudioInput in crisp Apple Black on warm ivory */
+div[data-testid="stAudioInput"] button {
+    background-color: #EAE5DA !important;
+    color: var(--apple-black) !important;
+    border: 1px solid #D8D2C5 !important;
+    border-radius: 8px !important;
+    opacity: 1 !important;
+}
+
+div[data-testid="stAudioInput"] button:hover {
+    background-color: #DFD9CA !important;
+}
+
+div[data-testid="stAudioInput"] button svg,
+div[data-testid="stAudioInput"] button path,
+div[data-testid="stAudioInput"] svg,
+div[data-testid="stAudioInput"] path {
+    color: var(--apple-black) !important;
+    fill: var(--apple-black) !important;
+    stroke: var(--apple-black) !important;
+    opacity: 1 !important;
+}
+
+/* Action Buttons (New recording) — Crisp Apple Black text on Warm Ivory Pill */
+div.stButton > button,
+div[data-testid="stButton"] > button {
+    background-color: #EFECE3 !important;
+    background-image: none !important;
+    color: var(--apple-black) !important;
+    border: 1px solid #D5CFC2 !important;
+    border-radius: var(--radius-pill) !important;
+    padding: 0.38rem 1.05rem !important;
+    min-height: 34px !important;
+    font-size: 0.79rem !important;
+    font-weight: 600 !important;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04) !important;
+    transition: all 0.18s var(--ease-out) !important;
+}
+
+div.stButton > button *,
+div[data-testid="stButton"] > button *,
+div.stButton > button p,
+div.stButton > button span {
+    color: var(--apple-black) !important;
+    fill: var(--apple-black) !important;
+    font-weight: 600 !important;
+    font-size: 0.79rem !important;
+}
+
+div.stButton > button:hover,
+div[data-testid="stButton"] > button:hover {
+    background-color: #E4DFD3 !important;
+    border-color: var(--apple-black) !important;
+}
+
+/* Segmented Radio Pills at Top-Right of Card (Attention | Energy | Waveform) — Crisp Apple Black */
+div[data-testid="stRadio"] > div[role="radiogroup"] {
+    background-color: var(--bg-pill-track) !important;
+    border: 1px solid var(--border-hairline) !important;
+    border-radius: var(--radius-pill) !important;
+    padding: 3px !important;
+    gap: 2px !important;
+    display: inline-flex !important;
+}
+
+div[data-testid="stRadio"] label {
+    background-color: transparent !important;
+    border-radius: var(--radius-pill) !important;
+    padding: 5px 14px !important;
+    margin: 0 !important;
+    cursor: pointer !important;
+    transition: all 0.18s var(--ease-out) !important;
+}
+
+div[data-testid="stRadio"] label,
+div[data-testid="stRadio"] label *,
+div[data-testid="stRadio"] label p,
+div[data-testid="stRadio"] label span,
+div[data-testid="stRadio"] label div,
+div[data-testid="stRadio"] [data-testid="stMarkdownContainer"] p {
+    color: var(--apple-black) !important;
+    font-size: 0.78rem !important;
+    font-weight: 600 !important;
+    opacity: 1 !important;
+}
+
+div[data-testid="stRadio"] label:has(input:checked) {
+    background-color: #FFFFFF !important;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12) !important;
+}
+
+div[data-testid="stRadio"] label:has(input:checked),
+div[data-testid="stRadio"] label:has(input:checked) *,
+div[data-testid="stRadio"] label:has(input:checked) p,
+div[data-testid="stRadio"] label:has(input:checked) span {
+    color: var(--apple-black) !important;
+    font-weight: 700 !important;
+}
+
+div[data-testid="stRadio"] label > div:first-child {
+    display: none !important;
+}
+
+/* File Uploader — Clean Light Dropzone with Black Icons & Text */
+section[data-testid="stFileUploaderDropzone"] {
+    background-color: var(--bg-card-subtle) !important;
+    border: 1px dashed #C7C0B3 !important;
+    border-radius: 12px !important;
+    padding: 8px 12px !important;
+    min-height: 52px !important;
+}
+
+section[data-testid="stFileUploaderDropzone"] *,
+section[data-testid="stFileUploaderDropzone"] span,
+section[data-testid="stFileUploaderDropzone"] small,
+section[data-testid="stFileUploaderDropzone"] svg {
+    color: var(--apple-black) !important;
+    font-size: 0.78rem !important;
+}
+
+section[data-testid="stFileUploaderDropzone"] button {
+    background-color: #FFFFFF !important;
+    color: var(--apple-black) !important;
+    border: 1px solid #D5CFC2 !important;
+    border-radius: var(--radius-pill) !important;
+    padding: 3px 12px !important;
+    font-size: 0.76rem !important;
+    font-weight: 600 !important;
+}
+
+/* ============================================================================
+   5. HERO CARD & 4-COLUMN STAT STRIP
+   ============================================================================ */
+.eb-card {
     background: var(--bg-card);
     border: 1px solid var(--border-hairline);
-    border-radius: var(--radius-cell);
-    padding: 14px 16px;
-    margin-top: 1.2rem;
+    border-radius: var(--radius-card);
+    padding: 22px 26px 20px 26px;
+    margin-bottom: 1.15rem;
+    box-shadow: 0 2px 8px rgba(28, 25, 23, 0.025);
 }
 
 .eb-micro-label {
@@ -130,162 +399,49 @@ section[data-testid="stSidebar"] .block-container {
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.09em;
-    color: var(--ink-muted);
-    margin-bottom: 6px;
-}
-
-.eb-sidebar-val {
-    font-size: 1.15rem;
-    font-weight: 700;
-    color: var(--ink-primary);
-    letter-spacing: -0.02em;
-}
-
-.eb-progress-track {
-    width: 100%;
-    height: 3.5px;
-    background: #E8E3D9;
-    border-radius: var(--radius-pill);
-    overflow: hidden;
-    margin: 9px 0 7px 0;
-}
-
-.eb-progress-fill {
-    height: 100%;
-    border-radius: var(--radius-pill);
-    background: var(--sage);
-    transition: width 0.45s var(--ease-out);
-}
-
-.eb-progress-fill.bronze {
-    background: var(--bronze-btn);
-}
-
-/* ============================================================================
-   3. TOP GREETING BAR & ACTION PILLS
-   ============================================================================ */
-.eb-topbar {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    margin-bottom: 1.65rem;
-}
-
-.eb-greeting {
-    font-size: 1.75rem;
-    font-weight: 700;
-    letter-spacing: -0.03em;
-    color: var(--ink-primary);
-    margin: 0 0 6px 0;
-    line-height: 1.15;
-}
-
-.eb-greeting-accent {
-    color: var(--bronze);
-}
-
-.eb-submeta {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 0.82rem;
-    color: var(--ink-muted);
-    font-weight: 500;
-}
-
-.eb-session-pill {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    padding: 3px 11px;
-    background: var(--bg-card);
-    border: 1px solid var(--border-hairline);
-    border-radius: var(--radius-pill);
-    font-size: 0.75rem;
-    font-weight: 600;
-    color: var(--ink-secondary);
-}
-
-.eb-dot {
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: var(--sage);
-    display: inline-block;
-}
-
-/* ============================================================================
-   4. MAIN EDITORIAL CARD & 4-COLUMN FOOTER STRIP
-   ============================================================================ */
-.eb-card {
-    background: var(--bg-card);
-    border: 1px solid var(--border-hairline);
-    border-radius: var(--radius-card);
-    padding: 26px 28px 22px 28px;
-    margin-bottom: 1.4rem;
-    box-shadow: 0 2px 10px rgba(28, 25, 23, 0.025);
-    transition: border-color 0.25s var(--ease-out);
-}
-
-.eb-card-Flush {
-    background: var(--bg-card);
-    border: 1px solid var(--border-hairline);
-    border-radius: var(--radius-card);
-    overflow: hidden;
-    margin-bottom: 1.4rem;
-    box-shadow: 0 2px 10px rgba(28, 25, 23, 0.025);
-}
-
-.eb-card-top {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    margin-bottom: 0.35rem;
+    color: var(--ink-muted) !important;
+    margin-bottom: 4px;
 }
 
 .eb-hero-number {
-    font-size: 2.85rem;
+    font-size: 2.65rem;
     font-weight: 700;
     letter-spacing: -0.035em;
-    color: var(--ink-primary);
-    line-height: 1.08;
-    margin: 2px 0 6px 0;
+    color: var(--apple-black) !important;
+    line-height: 1.06;
+    margin: 2px 0 4px 0;
     font-variant-numeric: tabular-nums;
 }
 
 .eb-hero-decimal {
-    font-size: 1.65rem;
+    font-size: 1.55rem;
     font-weight: 500;
-    color: var(--ink-faint);
+    color: var(--ink-faint) !important;
     margin-left: 2px;
 }
 
 .eb-hero-delta {
-    font-size: 0.84rem;
+    font-size: 0.82rem;
     font-weight: 600;
-    color: var(--sage);
-    margin-bottom: 0.75rem;
+    color: var(--sage) !important;
+    margin-bottom: 0.35rem;
 }
 
 .eb-hero-delta span.muted {
-    color: var(--ink-muted);
+    color: var(--ink-muted) !important;
     font-weight: 500;
     margin-left: 4px;
 }
 
-/* 4-Column Divided Footer inside Hero Card */
 .eb-stat-strip {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     border-top: 1px solid var(--border-divider);
-    margin: 14px -28px -22px -28px;
     background: var(--bg-card);
-    border-bottom-left-radius: var(--radius-card);
-    border-bottom-right-radius: var(--radius-card);
 }
 
 .eb-stat-cell {
-    padding: 18px 24px 20px 24px;
+    padding: 15px 22px 16px 22px;
     border-right: 1px solid var(--border-divider);
 }
 
@@ -294,53 +450,62 @@ section[data-testid="stSidebar"] .block-container {
 }
 
 .eb-stat-val {
-    font-size: 1.42rem;
+    font-size: 1.32rem;
     font-weight: 700;
     letter-spacing: -0.025em;
-    color: var(--ink-primary);
-    margin: 4px 0 4px 0;
+    color: var(--apple-black) !important;
+    margin: 3px 0 2px 0;
     font-variant-numeric: tabular-nums;
 }
 
 .eb-stat-val.sage {
-    color: var(--sage);
-}
-
-.eb-stat-val.terracotta {
-    color: var(--terracotta);
+    color: var(--sage) !important;
 }
 
 .eb-stat-sub {
-    font-size: 0.76rem;
-    color: var(--ink-muted);
+    font-size: 0.74rem;
+    color: var(--ink-muted) !important;
     font-weight: 500;
 }
 
+.eb-progress-track {
+    width: 100%;
+    height: 3.5px;
+    background: #E8E3D9;
+    border-radius: var(--radius-pill);
+    overflow: hidden;
+    margin-top: 7px;
+}
+
+.eb-progress-fill {
+    height: 100%;
+    border-radius: var(--radius-pill);
+    background: var(--sage);
+}
+
+.eb-progress-fill.bronze {
+    background: var(--bronze-btn);
+}
+
 /* ============================================================================
-   5. SECONDARY CARD — MINIMAL 8-CLASS CALENDAR-STYLE GRID
+   6. COMPACT 8-EMOTION PROBABILITY GRID
    ============================================================================ */
 .eb-grid-8 {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
-    margin-top: 16px;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 8px;
+    margin-top: 10px;
 }
 
 .eb-cell {
     background: #F7F4ED;
     border: 1px solid var(--border-hairline);
     border-radius: var(--radius-cell);
-    padding: 14px 16px;
-    min-height: 92px;
+    padding: 11px 12px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    transition: all 0.22s var(--ease-out);
-}
-
-.eb-cell:hover {
-    background: #EFECE3;
-    transform: translateY(-1px);
+    min-height: 76px;
 }
 
 .eb-cell.active {
@@ -355,204 +520,48 @@ section[data-testid="stSidebar"] .block-container {
 }
 
 .eb-cell-name {
-    font-size: 0.78rem;
+    font-size: 0.73rem;
     font-weight: 600;
-    color: var(--ink-secondary);
+    color: var(--apple-black) !important;
     text-transform: capitalize;
 }
 
 .eb-cell.active .eb-cell-name {
-    color: var(--bronze);
+    color: var(--bronze) !important;
     font-weight: 700;
 }
 
 .eb-rank-badge {
-    width: 22px;
-    height: 22px;
+    width: 19px;
+    height: 19px;
     border-radius: 50%;
-    font-size: 0.70rem;
+    font-size: 0.66rem;
     font-weight: 700;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    color: var(--ink-muted);
-    background: transparent;
+    color: var(--apple-black) !important;
 }
 
 .eb-cell.active .eb-rank-badge {
     background: var(--bronze-btn);
-    color: #FFFFFF;
+    color: #FFFFFF !important;
 }
 
 .eb-cell-val {
-    font-size: 1.35rem;
+    font-size: 1.12rem;
     font-weight: 700;
-    letter-spacing: -0.025em;
-    color: var(--ink-primary);
+    letter-spacing: -0.02em;
+    color: var(--apple-black) !important;
     font-variant-numeric: tabular-nums;
-    margin-top: 8px;
+    margin-top: 6px;
 }
 
-.eb-cell.active .eb-cell-val {
-    color: var(--ink-primary);
-}
-
-/* ============================================================================
-   6. STREAMLIT WIDGET STYLING (PILL SWITCHERS, BUTTONS, INPUTS)
-   ============================================================================ */
-
-/* Pill Segmented Radio Controls (like 1W | 1M | All) */
-div[data-testid="stRadio"] > div[role="radiogroup"] {
-    background: #EFECE4 !important;
-    border: 1px solid var(--border-hairline) !important;
-    border-radius: var(--radius-pill) !important;
-    padding: 3px !important;
-    gap: 2px !important;
-    display: inline-flex !important;
-}
-
-div[data-testid="stRadio"] label {
-    border-radius: var(--radius-pill) !important;
-    padding: 4px 13px !important;
-    margin: 0 !important;
-    font-size: 0.78rem !important;
-    font-weight: 600 !important;
-    color: var(--ink-secondary) !important;
-    transition: all 0.18s var(--ease-out) !important;
-}
-
-div[data-testid="stRadio"] label:has(input:checked) {
-    background: var(--bg-card) !important;
-    color: var(--ink-primary) !important;
-    box-shadow: 0 1px 3px rgba(28, 25, 23, 0.08) !important;
-}
-
-/* Hide radio circle dot for clean segmented pill look */
-div[data-testid="stRadio"] label > div:first-child {
-    display: none !important;
-}
-
-/* Sidebar Navigation Radio override (vertical list like Home / Feed / Lessons) */
-section[data-testid="stSidebar"] div[data-testid="stRadio"] > div[role="radiogroup"] {
-    background: transparent !important;
-    border: none !important;
-    border-radius: 10px !important;
-    padding: 0 !important;
-    gap: 4px !important;
-    display: flex !important;
-    flex-direction: column !important;
-}
-
-section[data-testid="stSidebar"] div[data-testid="stRadio"] label {
-    width: 100% !important;
-    border-radius: 10px !important;
-    padding: 9px 14px !important;
-    font-size: 0.86rem !important;
-    font-weight: 500 !important;
-    color: var(--ink-secondary) !important;
-    border: 1px solid transparent !important;
-}
-
-section[data-testid="stSidebar"] div[data-testid="stRadio"] label:hover {
-    background: #EFECE3 !important;
-    color: var(--ink-primary) !important;
-}
-
-section[data-testid="stSidebar"] div[data-testid="stRadio"] label:has(input:checked) {
-    background: var(--bg-card) !important;
-    border: 1px solid var(--border-hairline) !important;
-    color: var(--ink-primary) !important;
-    font-weight: 600 !important;
-    box-shadow: 0 1px 2px rgba(28, 25, 23, 0.04) !important;
-}
-
-/* Streamlit places the radio caption inside nested text elements.  Set their
-   colour explicitly so the navigation does not disappear on light themes. */
-section[data-testid="stSidebar"] div[data-testid="stRadio"] label,
-section[data-testid="stSidebar"] div[data-testid="stRadio"] label * {
-    color: var(--ink-secondary) !important;
-    opacity: 1 !important;
-}
-
-section[data-testid="stSidebar"] div[data-testid="stRadio"] label:has(input:checked),
-section[data-testid="stSidebar"] div[data-testid="stRadio"] label:has(input:checked) * {
-    color: var(--ink-primary) !important;
-}
-
-/* Buttons (Warm Ochre Bronze Primary Pill & Ivory Secondary Pill) */
-.stButton > button {
-    background: var(--bronze-btn) !important;
-    color: #FFFFFF !important;
-    border: 1px solid rgba(120, 89, 43, 0.25) !important;
-    border-radius: var(--radius-pill) !important;
-    padding: 0.48rem 1.25rem !important;
-    font-size: 0.82rem !important;
-    font-weight: 600 !important;
-    letter-spacing: -0.01em !important;
-    box-shadow: 0 1px 2px rgba(28, 25, 23, 0.08) !important;
-    transition: all 0.2s var(--ease-out) !important;
-}
-
-.stButton > button:hover {
-    background: var(--bronze-btn-hover) !important;
-    transform: translateY(-1px) !important;
-}
-
-/* Microphone input: keep the record control legible and easy to find. */
-div[data-testid="stAudioInput"] {
-    background: var(--bg-card) !important;
-    border: 1px solid var(--border-hairline) !important;
-    border-radius: 12px !important;
-    padding: 0.3rem 0.45rem !important;
-}
-
-div[data-testid="stAudioInput"] button {
-    background: var(--sage) !important;
-    border: 1px solid var(--sage) !important;
-    color: #FFFFFF !important;
-    opacity: 1 !important;
-}
-
-div[data-testid="stAudioInput"] button:hover {
-    background: #20593E !important;
-    border-color: #20593E !important;
-}
-
-div[data-testid="stAudioInput"] button svg,
-div[data-testid="stAudioInput"] button path {
-    fill: currentColor !important;
-    stroke: currentColor !important;
-    opacity: 1 !important;
-}
-
-/* Selectboxes */
-div[data-baseweb="select"] > div {
-    background: var(--bg-card) !important;
-    border: 1px solid var(--border-hairline) !important;
-    border-radius: 10px !important;
-    color: var(--ink-primary) !important;
-    font-size: 0.84rem !important;
-    min-height: 38px !important;
-}
-
-/* File Uploader Dropzone */
-section[data-testid="stFileUploaderDropzone"] {
-    background: var(--bg-card-subtle) !important;
-    border: 1px dashed #C7C0B3 !important;
-    border-radius: 12px !important;
-    padding: 0.9rem !important;
-    color: var(--ink-secondary) !important;
-}
-
-/* Audio Player */
-audio {
-    width: 100% !important;
-    height: 36px !important;
-    border-radius: var(--radius-pill) !important;
-}
-
-@media (max-width: 900px) {
-    .eb-stat-strip, .eb-grid-8 {
+@media (max-width: 960px) {
+    .eb-stat-strip {
         grid-template-columns: repeat(2, 1fr);
+    }
+    .eb-grid-8 {
+        grid-template-columns: repeat(4, 1fr);
     }
 }

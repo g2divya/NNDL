@@ -1,17 +1,17 @@
-"""RAVDESS discovery and log-mel/MFCC/chroma feature extraction with Librosa and SciPy/NumPy fallback."""
+"""RAVDESS discovery, audio preprocessing, and log-mel/MFCC/chroma feature extraction."""
 from __future__ import annotations
 
 import io
 import os
 import tempfile
 import wave
+from math import gcd
 from pathlib import Path
 import numpy as np
 from scipy.fft import dct
 from scipy.signal import resample_poly
-from math import gcd
 
-from .config import LABELS, SAMPLE_RATE, MAX_SECONDS, N_MFCC, N_MELS, N_CHROMA
+from .config import LABELS, SAMPLE_RATE, MAX_SECONDS, N_MFCC, N_MELS, N_CHROMA, FEATURE_DIM
 
 try:
     import librosa  # type: ignore
@@ -21,20 +21,115 @@ except ImportError:
     HAS_LIBROSA = False
 
 
+def _parse_ravdess_parts(path: Path) -> list[str]:
+    parts = Path(path).stem.split("-")
+    if len(parts) != 7 or not all(p.isdigit() for p in parts):
+        raise ValueError(
+            f"Invalid RAVDESS filename {Path(path).name!r}; expected 7 numeric fields "
+            "(modality-vocal_channel-emotion-intensity-statement-repetition-actor.wav)."
+        )
+    return parts
+
+
 def emotion_from_path(path: Path) -> int:
     # RAVDESS filename: modality-vocal_channel-emotion-intensity-statement-repetition-actor.wav
-    code = int(path.stem.split("-")[2])
+    parts = _parse_ravdess_parts(Path(path))
+    code = int(parts[2])
     mapping = {
         1: "neutral", 2: "calm", 3: "happy", 4: "sad",
         5: "angry", 6: "fearful", 7: "disgust", 8: "surprised",
     }
     if code not in mapping:
-        raise ValueError(f"Unknown RAVDESS emotion code in {path.name}")
+        raise ValueError(f"Unknown RAVDESS emotion code {code} in {Path(path).name}")
     return LABELS.index(mapping[code])
 
 
 def actor_id(path: Path) -> int:
-    return int(path.stem.split("-")[-1])
+    parts = _parse_ravdess_parts(Path(path))
+    actor = int(parts[-1])
+    if actor < 1:
+        raise ValueError(f"Invalid actor ID {actor} in {Path(path).name}")
+    return actor
+
+
+# ---------------------------------------------------------------------------
+# Signal Preprocessing: Silence Trimming, DC-Offset Removal & Peak Norm
+# ---------------------------------------------------------------------------
+def trim_silence(y: np.ndarray, sr: int = SAMPLE_RATE, top_db: float = 28.0) -> np.ndarray:
+    """Idempotently trim leading and trailing silence using sample threshold and frame RMS energy."""
+    y = np.asarray(y, dtype=np.float32)
+    non_zero = np.where(np.abs(y) > 1e-5)[0]
+    if len(non_zero) == 0:
+        return y
+    y = y[int(non_zero[0]) : int(non_zero[-1]) + 1]
+    if HAS_LIBROSA:
+        y_trimmed, _ = librosa.effects.trim(y, top_db=top_db, frame_length=2048, hop_length=512)
+        if len(y_trimmed) > 0:
+            nz = np.where(np.abs(y_trimmed) > 1e-5)[0]
+            return y_trimmed[int(nz[0]) : int(nz[-1]) + 1] if len(nz) > 0 else y_trimmed
+        return y
+
+    rms = compute_rms_energy(y, frame_length=2048, hop_length=512)
+    ref = float(np.max(rms))
+    if ref < 1e-6:
+        return y
+    db = 20.0 * np.log10(np.maximum(rms, 1e-10) / ref)
+    active = np.where(db > -top_db)[0]
+    if len(active) == 0:
+        return y
+    start = max(0, int(active[0]) * 512)
+    end = min(len(y), int(active[-1] + 1) * 512)
+    y_sub = y[start:end] if end > start else y
+    nz = np.where(np.abs(y_sub) > 1e-5)[0]
+    return y_sub[int(nz[0]) : int(nz[-1]) + 1] if len(nz) > 0 else y_sub
+
+
+def preprocess_waveform(
+    y: np.ndarray,
+    sr: int = SAMPLE_RATE,
+    max_seconds: float = MAX_SECONDS,
+    trim_db: float = 28.0,
+) -> tuple[np.ndarray, int]:
+    """
+    Idempotent speech preprocessing pipeline:
+      1. Convert to 1D float32 and trim leading/trailing silence (top_db=28).
+      2. Remove DC offset on the active voiced segment and re-trim any residual silence.
+      3. Peak-normalize active speech to 0.95 (-0.45 dBFS) to match studio recording levels.
+      4. Pad or trim to exactly sr * max_seconds (88,200 samples) and return (y_padded, active_frames).
+    """
+    target = int(sr * max_seconds)
+    y = np.asarray(y, dtype=np.float32)
+    if y.ndim > 1:
+        y = np.mean(y, axis=-1).astype(np.float32)
+    if len(y) == 0:
+        return np.zeros(target, dtype=np.float32), 1
+
+    # 1. Trim leading and trailing silence before DC removal so zero-padded tails stay zero
+    y_trimmed = trim_silence(y, sr=sr, top_db=trim_db)
+    if len(y_trimmed) < int(0.15 * sr):
+        y_trimmed = y
+
+    # 2. Remove DC offset on the active speech segment and re-trim
+    y_trimmed = y_trimmed - float(np.mean(y_trimmed))
+    y_trimmed = trim_silence(y_trimmed, sr=sr, top_db=trim_db)
+
+    # 3. Peak-normalize active waveform
+    peak = float(np.max(np.abs(y_trimmed))) if len(y_trimmed) > 0 else 0.0
+    if peak > 1e-5:
+        y_trimmed = (y_trimmed / peak) * 0.95
+
+    # 4. Compute active frame count (hop_length=512, total 173 frames for 4.0s)
+    total_frames = 1 + int(target) // 512
+    clipped_len = min(len(y_trimmed), target)
+    active_frames = min(total_frames, max(1, 1 + clipped_len // 512))
+
+    # 5. Pad or trim to 4.0 seconds
+    if len(y_trimmed) < target:
+        y_out = np.pad(y_trimmed, (0, target - len(y_trimmed)))
+    else:
+        y_out = y_trimmed[:target]
+
+    return y_out.astype(np.float32), int(active_frames)
 
 
 # ---------------------------------------------------------------------------
@@ -161,8 +256,10 @@ def frames_to_time(n_frames: int, sr: int = SAMPLE_RATE, hop_length: int = 512) 
     return (np.arange(n_frames, dtype=np.float32) * hop_length) / float(sr)
 
 
-def _decode_wav_Fallback(raw_bytes: bytes, target_sr: int = SAMPLE_RATE, max_seconds: float = MAX_SECONDS) -> np.ndarray:
-    """Decode WAV bytes using standard library wave or scipy.io.wavfile and resample to target_sr."""
+def _decode_wav_fallback(raw_bytes: bytes, target_sr: int = SAMPLE_RATE) -> np.ndarray:
+    """Decode WAV bytes using scipy.io.wavfile or wave and resample to target_sr."""
+    if not raw_bytes:
+        raise ValueError("Empty audio input provided.")
     try:
         from scipy.io import wavfile
         sr, data = wavfile.read(io.BytesIO(raw_bytes))
@@ -177,21 +274,24 @@ def _decode_wav_Fallback(raw_bytes: bytes, target_sr: int = SAMPLE_RATE, max_sec
         if y.ndim > 1:
             y = np.mean(y, axis=1)
     except Exception:
-        with wave.open(io.BytesIO(raw_bytes), "rb") as wf:
-            sr = wf.getframerate()
-            n_channels = wf.getnchannels()
-            sampwidth = wf.getsampwidth()
-            raw_frames = wf.readframes(wf.getnframes())
-            if sampwidth == 2:
-                y = np.frombuffer(raw_frames, dtype=np.int16).astype(np.float32) / 32768.0
-            elif sampwidth == 4:
-                y = np.frombuffer(raw_frames, dtype=np.int32).astype(np.float32) / 2147483648.0
-            else:
-                y = (np.frombuffer(raw_frames, dtype=np.uint8).astype(np.float32) - 128.0) / 128.0
-            if n_channels > 1:
-                y = y.reshape(-1, n_channels).mean(axis=1)
-    max_src_samples = int(sr * max_seconds)
-    y = y[:max_src_samples]
+        try:
+            with wave.open(io.BytesIO(raw_bytes), "rb") as wf:
+                sr = wf.getframerate()
+                n_channels = wf.getnchannels()
+                sampwidth = wf.getsampwidth()
+                raw_frames = wf.readframes(wf.getnframes())
+                if sampwidth == 2:
+                    y = np.frombuffer(raw_frames, dtype=np.int16).astype(np.float32) / 32768.0
+                elif sampwidth == 4:
+                    y = np.frombuffer(raw_frames, dtype=np.int32).astype(np.float32) / 2147483648.0
+                else:
+                    y = (np.frombuffer(raw_frames, dtype=np.uint8).astype(np.float32) - 128.0) / 128.0
+                if n_channels > 1:
+                    y = y.reshape(-1, n_channels).mean(axis=1)
+        except Exception as exc:
+            raise ValueError(
+                "Could not decode audio bytes. Ensure the file is a valid audio recording."
+            ) from exc
     if sr != target_sr and len(y) > 0:
         g = gcd(int(target_sr), int(sr))
         y = resample_poly(y, int(target_sr) // g, int(sr) // g).astype(np.float32)
@@ -199,48 +299,42 @@ def _decode_wav_Fallback(raw_bytes: bytes, target_sr: int = SAMPLE_RATE, max_sec
 
 
 def load_audio_bytes(raw_bytes: bytes, sr: int = SAMPLE_RATE, max_seconds: float = MAX_SECONDS) -> np.ndarray:
-    """Decode audio bytes into a padded/trimmed float32 mono waveform of length sr * max_seconds."""
-    target = int(sr * max_seconds)
+    """Decode audio bytes, apply speech preprocessing (DC removal, silence trim, peak norm), and pad/trim to 4.0s."""
+    if not raw_bytes:
+        raise ValueError("Empty audio payload.")
     y = None
     if HAS_LIBROSA:
         try:
-            y, _ = librosa.load(io.BytesIO(raw_bytes), sr=sr, mono=True, duration=max_seconds)
+            y, _ = librosa.load(io.BytesIO(raw_bytes), sr=sr, mono=True)
         except Exception:
             tmp_path = None
             try:
                 fd, tmp_path = tempfile.mkstemp(suffix=".audio")
                 os.close(fd)
                 Path(tmp_path).write_bytes(raw_bytes)
-                y, _ = librosa.load(tmp_path, sr=sr, mono=True, duration=max_seconds)
+                y, _ = librosa.load(tmp_path, sr=sr, mono=True)
+            except Exception:
+                y = None
             finally:
                 if tmp_path and os.path.exists(tmp_path):
                     os.unlink(tmp_path)
     if y is None:
-        y = _decode_wav_Fallback(raw_bytes, target_sr=sr, max_seconds=max_seconds)
-    y = np.asarray(y, dtype=np.float32)
-    if len(y) < target:
-        y = np.pad(y, (0, target - len(y)))
-    else:
-        y = y[:target]
-    return y.astype(np.float32)
+        y = _decode_wav_fallback(raw_bytes, target_sr=sr)
+    y_clean, _ = preprocess_waveform(y, sr=sr, max_seconds=max_seconds)
+    return y_clean
 
 
 def extract_features_from_waveform(y: np.ndarray, sr: int = SAMPLE_RATE) -> np.ndarray:
-    """Return [time, 116] float32 standardized features directly from a mono waveform."""
-    target = int(sr * MAX_SECONDS)
-    y = np.asarray(y, dtype=np.float32)
-    if len(y) < target:
-        y = np.pad(y, (0, target - len(y)))
-    else:
-        y = y[:target]
+    """Return [time, 116] float32 standardized features from a mono waveform after preprocessing."""
+    y_proc, active_frames = preprocess_waveform(y, sr=sr, max_seconds=MAX_SECONDS)
 
     if HAS_LIBROSA:
-        mfcc = librosa.feature.mfcc(y=y, sr=sr, n_mfcc=N_MFCC, n_fft=2048, hop_length=512)
-        mel = librosa.feature.melspectrogram(y=y, sr=sr, n_mels=N_MELS, n_fft=2048, hop_length=512)
+        mfcc = librosa.feature.mfcc(y=y_proc, sr=sr, n_mfcc=N_MFCC, n_fft=2048, hop_length=512)
+        mel = librosa.feature.melspectrogram(y=y_proc, sr=sr, n_mels=N_MELS, n_fft=2048, hop_length=512)
         mel_db = librosa.power_to_db(mel, ref=np.max)
-        chroma = librosa.feature.chroma_stft(y=y, sr=sr, n_fft=2048, hop_length=512)
+        chroma = librosa.feature.chroma_stft(y=y_proc, sr=sr, n_fft=2048, hop_length=512)
     else:
-        power = _stft_power(y, n_fft=2048, hop_length=512)
+        power = _stft_power(y_proc, n_fft=2048, hop_length=512)
         mel = _mel_filterbank(sr=sr, n_fft=2048, n_mels=N_MELS) @ power
         mel_db = power_to_db(mel, ref_max=True)
         mel_db_mfcc = power_to_db(mel, ref_max=False)
@@ -249,19 +343,30 @@ def extract_features_from_waveform(y: np.ndarray, sr: int = SAMPLE_RATE) -> np.n
         chroma = (chroma_raw / np.maximum(np.max(chroma_raw, axis=0, keepdims=True), 1e-10)).astype(np.float32)
 
     feat = np.concatenate([mfcc, mel_db, chroma], axis=0).T.astype(np.float32)
+    if feat.shape[1] != FEATURE_DIM:
+        raise RuntimeError(f"Expected feature dimension {FEATURE_DIM}, got {feat.shape[1]}")
     feat = np.nan_to_num(feat, nan=0.0, posinf=0.0, neginf=0.0)
-    mean = feat.mean(axis=0, keepdims=True)
-    std = feat.std(axis=0, keepdims=True)
-    return ((feat - mean) / np.maximum(std, 1e-5)).astype(np.float32)
+
+    # Standardize using active (non-padded) speech frames so trailing zero-padding
+    # does not skew the utterance mean/std, and zero out padded tail frames.
+    ref_slice = feat[:active_frames] if active_frames >= 4 else feat
+    mean = ref_slice.mean(axis=0, keepdims=True)
+    std = ref_slice.std(axis=0, keepdims=True)
+    norm_feat = ((feat - mean) / np.maximum(std, 1e-5)).astype(np.float32)
+    if active_frames < norm_feat.shape[0]:
+        norm_feat[active_frames:] = 0.0
+    return norm_feat
 
 
 def extract_features(path: str | Path) -> np.ndarray:
-    """Return [time, 116] float32 features; pad/trim audio to four seconds."""
+    """Return [time, 116] float32 features; preprocess and pad/trim audio to four seconds."""
     path_obj = Path(path)
+    if not path_obj.is_file():
+        raise FileNotFoundError(f"Audio file not found: {path_obj}")
     if HAS_LIBROSA:
-        y, _ = librosa.load(path_obj, sr=SAMPLE_RATE, mono=True, duration=MAX_SECONDS)
-    else:
-        y = load_audio_bytes(path_obj.read_bytes(), sr=SAMPLE_RATE, max_seconds=MAX_SECONDS)
+        y, _ = librosa.load(path_obj, sr=SAMPLE_RATE, mono=True)
+        return extract_features_from_waveform(y, sr=SAMPLE_RATE)
+    y = load_audio_bytes(path_obj.read_bytes(), sr=SAMPLE_RATE, max_seconds=MAX_SECONDS)
     return extract_features_from_waveform(y, sr=SAMPLE_RATE)
 
 
@@ -277,12 +382,18 @@ def build_cache(data_dir: str | Path, output: str | Path):
             "03-01-01-01-01-01-01.wav), then run prepare_data.py again. "
             "The small files in demo_audio are synthetic UI samples and cannot train the SER model."
         )
-    xs, ys, actors, paths = [], [], [], []
+    xs, ys, actors, lengths, paths = [], [], [], [], []
     for i, path in enumerate(files, 1):
         try:
-            xs.append(extract_features(path))
+            if HAS_LIBROSA:
+                raw_y, _ = librosa.load(path, sr=SAMPLE_RATE, mono=True)
+            else:
+                raw_y = _decode_wav_fallback(path.read_bytes(), target_sr=SAMPLE_RATE)
+            _, act_len = preprocess_waveform(raw_y, sr=SAMPLE_RATE, max_seconds=MAX_SECONDS)
+            xs.append(extract_features_from_waveform(raw_y, sr=SAMPLE_RATE))
             ys.append(emotion_from_path(path))
             actors.append(actor_id(path))
+            lengths.append(act_len)
             paths.append(str(path))
         except Exception as exc:
             raise RuntimeError(f"Failed processing {path}: {exc}") from exc
@@ -294,6 +405,7 @@ def build_cache(data_dir: str | Path, output: str | Path):
         X=np.asarray(xs),
         y=np.asarray(ys, dtype=np.int64),
         actors=np.asarray(actors, dtype=np.int64),
+        lengths=np.asarray(lengths, dtype=np.int64),
         paths=np.asarray(paths),
     )
-    print(f"Saved {len(xs)} utterances to {output}")
+    print(f"Saved {len(xs)} preprocessed utterances to {output}")
