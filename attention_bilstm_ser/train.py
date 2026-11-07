@@ -1,40 +1,85 @@
 """Train comparable LSTM, BiLSTM, and attention-BiLSTM models using actor holdout."""
-import argparse, json, random
+from __future__ import annotations
+
+import argparse
+import json
+import random
 from pathlib import Path
 import numpy as np
-import torch
-from torch import nn
-from torch.utils.data import DataLoader, TensorDataset
 from sklearn.metrics import accuracy_score, classification_report, confusion_matrix, f1_score
 from sklearn.model_selection import GroupShuffleSplit
 from sklearn.utils.class_weight import compute_class_weight
 import matplotlib.pyplot as plt
 import seaborn as sns
-from src.config import FEATURE_CACHE, ARTIFACT_DIR, LABELS, SEED
-from src.models import EmotionRNN
+
+from src.config import FEATURE_CACHE, ARTIFACT_DIR, LABELS, SAMPLE_RATE, SEED
+from src.models import EmotionRNN, HAS_TORCH
+
+if HAS_TORCH:
+    import torch
+    from torch import nn
+    from torch.utils.data import DataLoader, TensorDataset
+else:
+    torch = None  # type: ignore
+    nn = None  # type: ignore
+    DataLoader = None  # type: ignore
+    TensorDataset = None  # type: ignore
 
 
-def seed_all(seed):
+def seed_all(seed: int):
     random.seed(seed)
     np.random.seed(seed)
-    torch.manual_seed(seed)
-    if torch.cuda.is_available():
-        torch.cuda.manual_seed_all(seed)
+    if HAS_TORCH:
+        torch.manual_seed(seed)
+        if torch.cuda.is_available():
+            torch.cuda.manual_seed_all(seed)
 
 
-def train_one(kind, X, y, train_idx, val_idx, test_idx, args, device):
-    tr = DataLoader(TensorDataset(torch.tensor(X[train_idx]), torch.tensor(y[train_idx])), batch_size=args.batch_size, shuffle=True)
-    va = DataLoader(TensorDataset(torch.tensor(X[val_idx]), torch.tensor(y[val_idx])), batch_size=args.batch_size)
-    te = DataLoader(TensorDataset(torch.tensor(X[test_idx]), torch.tensor(y[test_idx])), batch_size=args.batch_size)
-    model = EmotionRNN(input_dim=X.shape[-1], hidden=args.hidden, num_classes=len(LABELS), kind=kind).to(device)
+def actor_disjoint_split(
+    X: np.ndarray, y: np.ndarray, actors: np.ndarray, seed: int = SEED
+) -> tuple[np.ndarray, np.ndarray, np.ndarray]:
+    """Return actor-disjoint (train_idx, val_idx, test_idx) indices (~70/15/15 split)."""
+    unique_actors = np.unique(actors)
+    if len(unique_actors) < 3:
+        raise ValueError(f"Actor-disjoint split requires at least 3 distinct actors, got {len(unique_actors)}.")
+    split1 = GroupShuffleSplit(n_splits=1, test_size=0.15, random_state=seed)
+    trainval_idx, test_idx = next(split1.split(X, y, groups=actors))
+    split2 = GroupShuffleSplit(n_splits=1, test_size=0.1765, random_state=seed + 1)
+    tr_rel, va_rel = next(split2.split(X[trainval_idx], y[trainval_idx], groups=actors[trainval_idx]))
+    train_idx, val_idx = trainval_idx[tr_rel], trainval_idx[va_rel]
+    return train_idx, val_idx, test_idx
+
+
+def compute_balanced_weights(y_train: np.ndarray, num_classes: int = len(LABELS)) -> np.ndarray:
+    """Compute class-balanced loss weights safely even if a subset of classes is present."""
+    weights = np.ones(num_classes, dtype=np.float32)
+    present = np.unique(y_train)
+    if len(present) > 0:
+        present_weights = compute_class_weight(class_weight="balanced", classes=present, y=y_train)
+        for cls_idx, w in zip(present, present_weights):
+            if 0 <= int(cls_idx) < num_classes:
+                weights[int(cls_idx)] = float(w)
+    return weights
+
+
+def train_one(kind: str, X: np.ndarray, y: np.ndarray, train_idx: np.ndarray, val_idx: np.ndarray, test_idx: np.ndarray, args, device):
+    if not HAS_TORCH:
+        raise RuntimeError("PyTorch is required for model training. Install dependencies from requirements.txt.")
+
+    X_tensor = torch.tensor(X, dtype=torch.float32)
+    y_tensor = torch.tensor(y, dtype=torch.long)
+    tr = DataLoader(TensorDataset(X_tensor[train_idx], y_tensor[train_idx]), batch_size=args.batch_size, shuffle=True)
+    va = DataLoader(TensorDataset(X_tensor[val_idx], y_tensor[val_idx]), batch_size=args.batch_size)
+    te = DataLoader(TensorDataset(X_tensor[test_idx], y_tensor[test_idx]), batch_size=args.batch_size)
+
+    model = EmotionRNN(input_dim=int(X.shape[-1]), hidden=args.hidden, num_classes=len(LABELS), kind=kind).to(device)
     optimizer = torch.optim.AdamW(model.parameters(), lr=args.lr, weight_decay=1e-4)
     scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(optimizer, mode="min", factor=0.5, patience=3)
 
-    # Class-balanced weights counter the 1:2 RAVDESS neutral class imbalance
-    classes = np.arange(len(LABELS))
-    weights = compute_class_weight(class_weight="balanced", classes=classes, y=y[train_idx])
+    # Class-balanced weights counter the 1:2 RAVDESS neutral class imbalance.
+    cls_weights = compute_balanced_weights(y[train_idx], num_classes=len(LABELS))
     criterion = nn.CrossEntropyLoss(
-        weight=torch.tensor(weights, dtype=torch.float32, device=device),
+        weight=torch.tensor(cls_weights, dtype=torch.float32, device=device),
         label_smoothing=0.05,
     )
 
@@ -69,7 +114,9 @@ def train_one(kind, X, y, train_idx, val_idx, test_idx, args, device):
             wait += 1
             if wait >= args.patience:
                 break
-    model.load_state_dict(best_state)
+
+    if best_state is not None:
+        model.load_state_dict(best_state)
     model.eval()
     preds, probs = [], []
     with torch.no_grad():
@@ -80,7 +127,7 @@ def train_one(kind, X, y, train_idx, val_idx, test_idx, args, device):
     truth = y[test_idx]
     metrics = {
         "accuracy": float(accuracy_score(truth, preds)),
-        "macro_f1": float(f1_score(truth, preds, average="macro")),
+        "macro_f1": float(f1_score(truth, preds, average="macro", zero_division=0)),
         "classification_report": classification_report(
             truth, preds, labels=np.arange(len(LABELS)), target_names=LABELS, output_dict=True, zero_division=0
         ),
@@ -90,10 +137,10 @@ def train_one(kind, X, y, train_idx, val_idx, test_idx, args, device):
         {
             "state_dict": model.state_dict(),
             "kind": kind,
-            "input_dim": X.shape[-1],
-            "hidden": args.hidden,
+            "input_dim": int(X.shape[-1]),
+            "hidden": int(args.hidden),
             "labels": LABELS,
-            "sample_rate": 22050,
+            "sample_rate": SAMPLE_RATE,
         },
         ARTIFACT_DIR / f"{kind}.pt",
     )
@@ -140,16 +187,16 @@ def main():
             f"Feature cache not found: {args.cache}. First download/extract RAVDESS and run "
             "`python prepare_data.py`; training cannot run on the synthetic demo clips."
         )
+    if not HAS_TORCH:
+        raise RuntimeError("PyTorch is required to run train.py. Install requirements.txt first.")
     seed_all(args.seed)
     data = np.load(args.cache)
     X, y, actors = data["X"], data["y"], data["actors"]
-    # Actor-disjoint 70/15/15 split prevents speaker identity leakage across evaluation sets.
-    split1 = GroupShuffleSplit(n_splits=1, test_size=0.15, random_state=args.seed)
-    trainval_idx, test_idx = next(split1.split(X, y, groups=actors))
-    split2 = GroupShuffleSplit(n_splits=1, test_size=0.1765, random_state=args.seed + 1)
-    tr_rel, va_rel = next(split2.split(X[trainval_idx], y[trainval_idx], groups=actors[trainval_idx]))
-    train_idx, val_idx = trainval_idx[tr_rel], trainval_idx[va_rel]
-    print(f"Utterances: {len(y)}; actors train/val/test: {len(set(actors[train_idx]))}/{len(set(actors[val_idx]))}/{len(set(actors[test_idx]))}")
+    train_idx, val_idx, test_idx = actor_disjoint_split(X, y, actors, seed=args.seed)
+    print(
+        f"Utterances: {len(y)}; actors train/val/test: "
+        f"{len(set(actors[train_idx]))}/{len(set(actors[val_idx]))}/{len(set(actors[test_idx]))}"
+    )
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     results = []
     for kind in ("lstm", "bilstm", "attention_bilstm"):

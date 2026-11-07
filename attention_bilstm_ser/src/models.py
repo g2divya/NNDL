@@ -1,4 +1,4 @@
-"""Sequence baselines and additive temporal attention model with PyTorch and NumPy inference support."""
+"""Sequence baselines and additive temporal attention model."""
 from __future__ import annotations
 
 import io
@@ -7,6 +7,8 @@ import zipfile
 from pathlib import Path
 import numpy as np
 from scipy.special import expit as sigmoid, softmax
+
+VALID_KINDS = ("lstm", "bilstm", "attention_bilstm")
 
 try:
     import torch
@@ -22,7 +24,12 @@ if HAS_TORCH:
     class EmotionRNN(nn.Module):
         def __init__(self, input_dim=116, hidden=128, num_classes=8, kind="attention_bilstm", dropout=0.3):
             super().__init__()
+            if kind not in VALID_KINDS:
+                raise ValueError(f"Unsupported model kind {kind!r}; expected one of {VALID_KINDS}")
             self.kind = kind
+            self.input_dim = int(input_dim)
+            self.hidden = int(hidden)
+            self.num_classes = int(num_classes)
             bidirectional = kind != "lstm"
             self.rnn = nn.LSTM(
                 input_dim,
@@ -41,6 +48,10 @@ if HAS_TORCH:
             self.classifier = nn.Sequential(nn.Dropout(dropout), nn.Linear(out_dim, num_classes))
 
         def forward(self, x, lengths=None, return_attention=False):
+            if x.ndim == 2:
+                x = x.unsqueeze(0)
+            if x.ndim != 3 or x.size(-1) != self.input_dim:
+                raise ValueError(f"Expected input tensor of shape [batch, time, {self.input_dim}], got {tuple(x.shape)}")
             seq, (hidden_state, _) = self.rnn(x)
             if self.attention is None:
                 if self.rnn.bidirectional:
@@ -52,6 +63,7 @@ if HAS_TORCH:
             else:
                 scores = self.attention(seq).squeeze(-1)
                 if lengths is not None:
+                    lengths = lengths.to(device=x.device)
                     positions = torch.arange(seq.size(1), device=x.device).unsqueeze(0)
                     scores = scores.masked_fill(
                         positions >= lengths.unsqueeze(1), torch.finfo(scores.dtype).min
@@ -65,15 +77,22 @@ else:
 
 
 class NumpyEmotionRNN:
-    """Exact NumPy/SciPy inference engine for trained EmotionRNN checkpoints."""
+    """Portable NumPy/SciPy inference engine for trained EmotionRNN checkpoints."""
 
     def __init__(self, checkpoint: dict):
+        kind = checkpoint.get("kind", "attention_bilstm")
+        if kind not in VALID_KINDS:
+            raise ValueError(f"Unsupported model kind {kind!r}; expected one of {VALID_KINDS}")
         self.checkpoint = checkpoint
         self.state_dict = checkpoint["state_dict"]
-        self.kind = checkpoint.get("kind", "attention_bilstm")
+        self.kind = kind
         self.hidden = int(checkpoint.get("hidden", 128))
         self.input_dim = int(checkpoint.get("input_dim", 116))
         self.labels = list(checkpoint.get("labels", []))
+        self.num_classes = len(self.labels) if self.labels else int(self.state_dict["classifier.1.bias"].shape[0])
+
+    def eval(self):
+        return self
 
     @staticmethod
     def _lstm_direction(
@@ -102,14 +121,14 @@ class NumpyEmotionRNN:
             out[t] = h
         return out, h
 
-    def predict(self, feat: np.ndarray, return_attention: bool = True) -> tuple[np.ndarray, np.ndarray, np.ndarray | None]:
-        """Run forward pass on [T, D] or [1, T, D] features; returns (logits, probs, attention_weights)."""
-        x = np.asarray(feat, dtype=np.float32)
-        if x.ndim == 3:
-            x = x[0]
+    def _forward_single(
+        self, x: np.ndarray, length: int | None = None
+    ) -> tuple[np.ndarray, np.ndarray, np.ndarray | None]:
+        if x.ndim != 2 or x.shape[1] != self.input_dim:
+            raise ValueError(f"Expected 2D feature array of shape [time, {self.input_dim}], got {x.shape}")
         sd = self.state_dict
         bidirectional = self.kind != "lstm"
-        seq = x
+        seq = x.astype(np.float32)
         last_f, last_b = None, None
         for layer in range(2):
             out_f, last_f = self._lstm_direction(
@@ -136,6 +155,9 @@ class NumpyEmotionRNN:
         if self.kind == "attention_bilstm" and "attention.0.weight" in sd:
             att_h = np.tanh(seq @ sd["attention.0.weight"].T + sd["attention.0.bias"])
             scores = (att_h @ sd["attention.2.weight"].T).squeeze(-1)
+            if length is not None:
+                mask = np.arange(seq.shape[0]) >= int(length)
+                scores = np.where(mask, np.finfo(np.float32).min, scores)
             weights = softmax(scores).astype(np.float32)
             pooled = np.sum(seq * weights[:, None], axis=0)
         else:
@@ -144,14 +166,42 @@ class NumpyEmotionRNN:
 
         logits = (pooled @ sd["classifier.1.weight"].T + sd["classifier.1.bias"]).astype(np.float32)
         probs = softmax(logits).astype(np.float32)
-        return (logits, probs, weights) if return_attention else (logits, probs, None)
+        return logits, probs, weights
+
+    def predict(
+        self, feat: np.ndarray, return_attention: bool = True, lengths: np.ndarray | None = None
+    ) -> tuple[np.ndarray, np.ndarray, np.ndarray | None]:
+        """Run forward pass on [T, D] or [B, T, D] features; returns (logits, probs, attention_weights)."""
+        x = np.asarray(feat, dtype=np.float32)
+        if x.ndim == 2:
+            length = int(lengths[0]) if lengths is not None else None
+            logits, probs, weights = self._forward_single(x, length=length)
+            return (logits, probs, weights) if return_attention else (logits, probs, None)
+        if x.ndim == 3:
+            if x.shape[0] == 1:
+                length = int(lengths[0]) if lengths is not None else None
+                logits, probs, weights = self._forward_single(x[0], length=length)
+                return (logits, probs, weights) if return_attention else (logits, probs, None)
+            logits_list, probs_list, weights_list = [], [], []
+            for i in range(x.shape[0]):
+                l_i = int(lengths[i]) if lengths is not None else None
+                lg, pr, wt = self._forward_single(x[i], length=l_i)
+                logits_list.append(lg)
+                probs_list.append(pr)
+                if wt is not None:
+                    weights_list.append(wt)
+            logits_b = np.stack(logits_list, axis=0)
+            probs_b = np.stack(probs_list, axis=0)
+            weights_b = np.stack(weights_list, axis=0) if weights_list else None
+            return (logits_b, probs_b, weights_b) if return_attention else (logits_b, probs_b, None)
+        raise ValueError(f"Expected 2D or 3D input array, got shape {x.shape}")
 
 
 def load_checkpoint_numpy(pt_path: str | Path) -> dict:
     """Load a PyTorch zip checkpoint directly into NumPy arrays without requiring torch."""
     with zipfile.ZipFile(pt_path, "r") as zf:
         prefix = zf.namelist()[0].split("/")[0]
-        storages: dict[str, np.ndarray] = {}
+        storages: dict[str, object] = {}
 
         class _StorageHolder:
             def __init__(self, key: str, dtype: np.dtype):
