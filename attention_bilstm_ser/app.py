@@ -1,6 +1,7 @@
 """Single-Page Minimalist Dashboard (Apple / Edgebook Inspired) for Attention-BiLSTM SER."""
 from __future__ import annotations
 
+from datetime import datetime
 import hashlib
 import json
 from pathlib import Path
@@ -15,6 +16,7 @@ from src.features import (
     extract_features_from_waveform,
     frames_to_time,
     load_audio_bytes,
+    preprocess_waveform,
 )
 from src.models import load_inference_model
 
@@ -23,19 +25,33 @@ DEMO_DIR = ROOT_DIR / "demo_audio"
 CSS_PATH = ROOT_DIR / "style.css"
 DEMO_FREQUENCIES = np.array([220, 260, 330, 390, 470, 560, 670, 800], dtype=float)
 
-# Crisp Apple SF-Symbol-Style Inline SVGs
+# Crisp Apple SF-Symbol-Style Inline SVGs (Rendered in #1D1D1F Apple Black)
 SVG_MIC = (
-    '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" '
+    '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1D1D1F" '
     'stroke-width="2" stroke-linecap="round" stroke-linejoin="round">'
     '<path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/>'
     '<path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" x2="12" y1="19" y2="22"/></svg>'
 )
 
 SVG_UPLOAD = (
-    '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" '
+    '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1D1D1F" '
     'stroke-width="2" stroke-linecap="round" stroke-linejoin="round">'
     '<path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>'
     '<polyline points="17 8 12 3 7 8"/><line x1="12" x2="12" y1="3" y2="15"/></svg>'
+)
+
+SVG_WAVE = (
+    '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1D1D1F" '
+    'stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">'
+    '<line x1="4" y1="10" x2="4" y2="14"/><line x1="8" y1="6" x2="8" y2="18"/>'
+    '<line x1="12" y1="3" x2="12" y2="21"/><line x1="16" y1="7" x2="16" y2="17"/>'
+    '<line x1="20" y1="10" x2="20" y2="14"/></svg>'
+)
+
+SVG_CLOCK = (
+    '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1D1D1F" '
+    'stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">'
+    '<circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>'
 )
 
 st.set_page_config(
@@ -123,8 +139,8 @@ def plot_edgebook_curve(x: np.ndarray, y_vals: np.ndarray, unit_label: str = "",
         textcoords="offset points",
         ha="center",
         fontsize=7.8,
-        color="#857F74",
-        fontweight="500",
+        color="#1D1D1F",
+        fontweight="600",
     )
     ax.scatter([x_dense[-1]], [y_dense[-1]], s=46, color="#2A6F4E", zorder=6)
 
@@ -140,13 +156,13 @@ def plot_edgebook_curve(x: np.ndarray, y_vals: np.ndarray, unit_label: str = "",
     ax.set_yticks([y_min + 0.1 * span, y_max * 0.92])
     ax.set_yticklabels(
         [y_fmt.format(y_min + 0.1 * span) + unit_label, y_fmt.format(y_max * 0.92) + unit_label],
-        color="#857F74",
+        color="#1D1D1F",
         fontsize=7.8,
     )
 
     xticks = np.linspace(float(x_dense[0]), float(x_dense[-1]), 4)
     ax.set_xticks(xticks)
-    ax.set_xticklabels([f"{t:.1f}s" for t in xticks], color="#857F74", fontsize=7.8)
+    ax.set_xticklabels([f"{t:.1f}s" for t in xticks], color="#1D1D1F", fontsize=7.8)
     ax.tick_params(axis="both", length=0, pad=6)
 
     for spine in ax.spines.values():
@@ -188,14 +204,25 @@ if "last_upload_hash" not in st.session_state:
     st.session_state.last_upload_hash = None
 
 # ---------------------------------------------------------------------------
-# 1. Minimal Header ("Hi.")
+# 1. Minimal Header ("Hi." + Crisp Apple Black Top-Right Icons & Time)
 # ---------------------------------------------------------------------------
-status_label = "Attention BiLSTM Ready" if primary_model is not None else "Demo Mode · Checkpoint Missing"
+status_label = "Attention BiLSTM · VAD Preprocessing Active" if primary_model is not None else "Demo Mode · Checkpoint Missing"
+current_time_str = datetime.now().strftime("%I:%M %p").lstrip("0")
 st.markdown(
     f"""
     <div class="eb-topbar">
         <h1 class="eb-greeting">Hi.</h1>
-        <span class="eb-session-pill"><span class="eb-dot"></span> {status_label}</span>
+        <div class="apple-topright-bar">
+            <span class="apple-status-chip">
+                {SVG_WAVE}
+                <span class="eb-dot"></span>
+                <span>{status_label}</span>
+            </span>
+            <span class="apple-time-chip">
+                {SVG_CLOCK}
+                <span>{current_time_str}</span>
+            </span>
+        </div>
     </div>
     """,
     unsafe_allow_html=True,
@@ -214,7 +241,7 @@ with dock_left:
                 f"""
                 <div class="apple-input-header">
                     <span class="apple-input-title">
-                        <span class="apple-icon-badge active">{SVG_MIC}</span>
+                        <span class="apple-icon-badge">{SVG_MIC}</span>
                         <span>Record Voice</span>
                     </span>
                 </div>
@@ -276,16 +303,16 @@ source_tag = ""
 
 if st.session_state.last_active_source == "mic" and mic_bytes is not None:
     raw_audio = mic_bytes
-    source_tag = f"LIVE MICROPHONE · #{st.session_state.last_mic_hash.upper()}"
+    source_tag = f"LIVE MICROPHONE · #{st.session_state.last_mic_hash.upper()} · SILENCE TRIMMED & PEAK NORMALIZED"
 elif st.session_state.last_active_source == "upload" and upload_bytes is not None:
     raw_audio = upload_bytes
-    source_tag = f"UPLOADED AUDIO · {uploaded_file.name.upper()}"
+    source_tag = f"UPLOADED AUDIO · {uploaded_file.name.upper()} · SILENCE TRIMMED & PEAK NORMALIZED"
 elif mic_bytes is not None:
     raw_audio = mic_bytes
-    source_tag = f"LIVE MICROPHONE · #{hashlib.sha256(mic_bytes).hexdigest()[:8].upper()}"
+    source_tag = f"LIVE MICROPHONE · #{hashlib.sha256(mic_bytes).hexdigest()[:8].upper()} · SILENCE TRIMMED & PEAK NORMALIZED"
 elif upload_bytes is not None:
     raw_audio = upload_bytes
-    source_tag = f"UPLOADED AUDIO · {uploaded_file.name.upper()}"
+    source_tag = f"UPLOADED AUDIO · {uploaded_file.name.upper()} · SILENCE TRIMMED & PEAK NORMALIZED"
 else:
     is_demo_sample = True
     sample_files = sorted(DEMO_DIR.glob("demo_*.wav")) if DEMO_DIR.is_dir() else []
@@ -303,7 +330,9 @@ else:
 if raw_audio is not None:
     try:
         y_wave = load_audio_bytes(raw_audio, sr=SAMPLE_RATE, max_seconds=MAX_SECONDS)
+        _, active_frames = preprocess_waveform(y_wave, sr=SAMPLE_RATE, max_seconds=MAX_SECONDS)
         feat = extract_features_from_waveform(y_wave, sr=SAMPLE_RATE)
+        len_arr = np.array([active_frames], dtype=np.int64)
 
         if primary_model is None:
             weights = None
@@ -322,12 +351,12 @@ if raw_audio is not None:
         else:
             if is_demo_sample:
                 probs = demo_probabilities(y_wave)
-                _, _, weights = primary_model.predict(feat, return_attention=True)
+                _, _, weights = primary_model.predict(feat, return_attention=True, lengths=len_arr)
             else:
-                _, probs, weights = primary_model.predict(feat, return_attention=True)
+                _, probs, weights = primary_model.predict(feat, return_attention=True, lengths=len_arr)
 
-        p_bi = models["bilstm"].predict(feat, return_attention=False)[1] if "bilstm" in models else None
-        p_ls = models["lstm"].predict(feat, return_attention=False)[1] if "lstm" in models else None
+        p_bi = models["bilstm"].predict(feat, return_attention=False, lengths=len_arr)[1] if "bilstm" in models else None
+        p_ls = models["lstm"].predict(feat, return_attention=False, lengths=len_arr)[1] if "lstm" in models else None
 
         rms_vals = compute_rms_energy(y_wave)
         att_curve = weights if weights is not None else rms_vals
@@ -337,7 +366,6 @@ if raw_audio is not None:
         # Measured held-out metrics from comparison.json (never fabricated)
         att_m = measured.get("attention_bilstm")
         bi_m = measured.get("bilstm")
-        ls_m = measured.get("lstm")
         if att_m is not None:
             att_acc_val = float(att_m["accuracy"]) * 100.0
             att_f1_val = float(att_m["macro_f1"]) * 100.0
@@ -374,7 +402,7 @@ if raw_audio is not None:
                         <div class="eb-micro-label">{source_tag}</div>
                         <div class="eb-hero-number">{top_emotion} &nbsp;{whole_str}<span class="eb-hero-decimal">{dec_str}</span></div>
                         <div class="eb-hero-delta">
-                            {metric_kind} · +{margin:.1f}% margin <span class="muted">over {LABELS[second_idx].title()} · Peak focus at {peak_time:.2f}s</span>
+                            {metric_kind} · +{margin:.1f}% margin <span class="muted">over {LABELS[second_idx].title()} · Peak focus at {peak_time:.2f}s ({active_frames}/173 active frames)</span>
                         </div>
                         """,
                         unsafe_allow_html=True,
@@ -417,7 +445,7 @@ if raw_audio is not None:
 
             conf_str = f"{top_pct:.1f}%" if probs is not None else "N/A"
             conf_sub = ("Template score (UI fixture)" if is_demo_sample else f"Top-1 · {top_emotion}") if probs is not None else "No checkpoint"
-            focus_sub = "Attention α_t frame" if weights is not None else "Frame RMS energy"
+            focus_sub = f"Active {active_frames}/173 frames" if weights is not None else "Frame RMS energy"
 
             st.markdown(
                 f"""

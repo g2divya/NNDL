@@ -62,15 +62,63 @@ def compute_balanced_weights(y_train: np.ndarray, num_classes: int = len(LABELS)
     return weights
 
 
-def train_one(kind: str, X: np.ndarray, y: np.ndarray, train_idx: np.ndarray, val_idx: np.ndarray, test_idx: np.ndarray, args, device):
+def infer_lengths_from_features(X: np.ndarray) -> np.ndarray:
+    """Infer active frame lengths from [N, T, D] standardized feature arrays."""
+    n_samples, t_steps, _ = X.shape
+    lengths = np.full(n_samples, t_steps, dtype=np.int64)
+    for i in range(n_samples):
+        nonzero = np.where(np.linalg.norm(X[i], axis=-1) > 1e-4)[0]
+        if len(nonzero) > 0:
+            lengths[i] = min(t_steps, max(1, int(nonzero[-1]) + 1))
+    return lengths
+
+
+def apply_spec_augment(xb: "torch.Tensor", time_mask_max: int = 16, freq_mask_max: int = 12) -> "torch.Tensor":
+    """Apply SpecAugment time and feature-channel masking on training batches to reduce speaker overfitting."""
+    xb_aug = xb.clone()
+    _, t_steps, f_dim = xb_aug.shape
+    if t_steps > time_mask_max and time_mask_max > 0:
+        t_len = int(torch.randint(1, time_mask_max + 1, (1,)).item())
+        t0 = int(torch.randint(0, t_steps - t_len, (1,)).item())
+        xb_aug[:, t0 : t0 + t_len, :] = 0.0
+    if f_dim > freq_mask_max and freq_mask_max > 0:
+        f_len = int(torch.randint(1, freq_mask_max + 1, (1,)).item())
+        f0 = int(torch.randint(0, f_dim - f_len, (1,)).item())
+        xb_aug[:, :, f0 : f0 + f_len] = 0.0
+    return xb_aug
+
+
+def train_one(
+    kind: str,
+    X: np.ndarray,
+    y: np.ndarray,
+    lengths: np.ndarray,
+    train_idx: np.ndarray,
+    val_idx: np.ndarray,
+    test_idx: np.ndarray,
+    args,
+    device,
+):
     if not HAS_TORCH:
         raise RuntimeError("PyTorch is required for model training. Install dependencies from requirements.txt.")
 
     X_tensor = torch.tensor(X, dtype=torch.float32)
     y_tensor = torch.tensor(y, dtype=torch.long)
-    tr = DataLoader(TensorDataset(X_tensor[train_idx], y_tensor[train_idx]), batch_size=args.batch_size, shuffle=True)
-    va = DataLoader(TensorDataset(X_tensor[val_idx], y_tensor[val_idx]), batch_size=args.batch_size)
-    te = DataLoader(TensorDataset(X_tensor[test_idx], y_tensor[test_idx]), batch_size=args.batch_size)
+    len_tensor = torch.tensor(lengths, dtype=torch.long)
+
+    tr = DataLoader(
+        TensorDataset(X_tensor[train_idx], y_tensor[train_idx], len_tensor[train_idx]),
+        batch_size=args.batch_size,
+        shuffle=True,
+    )
+    va = DataLoader(
+        TensorDataset(X_tensor[val_idx], y_tensor[val_idx], len_tensor[val_idx]),
+        batch_size=args.batch_size,
+    )
+    te = DataLoader(
+        TensorDataset(X_tensor[test_idx], y_tensor[test_idx], len_tensor[test_idx]),
+        batch_size=args.batch_size,
+    )
 
     model = EmotionRNN(input_dim=int(X.shape[-1]), hidden=args.hidden, num_classes=len(LABELS), kind=kind).to(device)
     optimizer = torch.optim.AdamW(model.parameters(), lr=args.lr, weight_decay=1e-4)
@@ -88,10 +136,11 @@ def train_one(kind: str, X: np.ndarray, y: np.ndarray, train_idx: np.ndarray, va
     for epoch in range(args.epochs):
         model.train()
         losses = []
-        for xb, yb in tr:
-            xb, yb = xb.to(device), yb.to(device)
+        for xb, yb, lb in tr:
+            xb, yb, lb = xb.to(device), yb.to(device), lb.to(device)
+            xb_in = apply_spec_augment(xb)
             optimizer.zero_grad()
-            loss = criterion(model(xb), yb)
+            loss = criterion(model(xb_in, lengths=lb), yb)
             loss.backward()
             nn.utils.clip_grad_norm_(model.parameters(), 1.0)
             optimizer.step()
@@ -99,9 +148,9 @@ def train_one(kind: str, X: np.ndarray, y: np.ndarray, train_idx: np.ndarray, va
         model.eval()
         val_losses = []
         with torch.no_grad():
-            for xb, yb in va:
-                xb, yb = xb.to(device), yb.to(device)
-                val_losses.append(criterion(model(xb), yb).item())
+            for xb, yb, lb in va:
+                xb, yb, lb = xb.to(device), yb.to(device), lb.to(device)
+                val_losses.append(criterion(model(xb, lengths=lb), yb).item())
         tl, vl = float(np.mean(losses)), float(np.mean(val_losses))
         scheduler.step(vl)
         history["train_loss"].append(tl)
@@ -120,8 +169,8 @@ def train_one(kind: str, X: np.ndarray, y: np.ndarray, train_idx: np.ndarray, va
     model.eval()
     preds, probs = [], []
     with torch.no_grad():
-        for xb, _ in te:
-            p = torch.softmax(model(xb.to(device)), dim=1).cpu().numpy()
+        for xb, _, lb in te:
+            p = torch.softmax(model(xb.to(device), lengths=lb.to(device)), dim=1).cpu().numpy()
             probs.extend(p)
             preds.extend(p.argmax(1))
     truth = y[test_idx]
@@ -192,6 +241,7 @@ def main():
     seed_all(args.seed)
     data = np.load(args.cache)
     X, y, actors = data["X"], data["y"], data["actors"]
+    lengths = data["lengths"] if "lengths" in data.files else infer_lengths_from_features(X)
     train_idx, val_idx, test_idx = actor_disjoint_split(X, y, actors, seed=args.seed)
     print(
         f"Utterances: {len(y)}; actors train/val/test: "
@@ -200,7 +250,7 @@ def main():
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     results = []
     for kind in ("lstm", "bilstm", "attention_bilstm"):
-        results.append(train_one(kind, X, y, train_idx, val_idx, test_idx, args, device))
+        results.append(train_one(kind, X, y, lengths, train_idx, val_idx, test_idx, args, device))
     ARTIFACT_DIR.mkdir(parents=True, exist_ok=True)
     with open(ARTIFACT_DIR / "comparison.json", "w") as f:
         json.dump(results, f, indent=2)

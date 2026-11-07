@@ -54,11 +54,21 @@ if HAS_TORCH:
                 raise ValueError(f"Expected input tensor of shape [batch, time, {self.input_dim}], got {tuple(x.shape)}")
             seq, (hidden_state, _) = self.rnn(x)
             if self.attention is None:
-                if self.rnn.bidirectional:
-                    # Concatenate the final forward and backward states from the top layer.
-                    pooled = torch.cat((hidden_state[-2], hidden_state[-1]), dim=1)
+                if lengths is not None:
+                    lengths_clamped = lengths.to(device=x.device).clamp(min=1, max=seq.size(1)) - 1
+                    batch_indices = torch.arange(seq.size(0), device=x.device)
+                    if self.rnn.bidirectional:
+                        forward_last = seq[batch_indices, lengths_clamped, : self.hidden]
+                        backward_first = seq[:, 0, self.hidden :]
+                        pooled = torch.cat((forward_last, backward_first), dim=1)
+                    else:
+                        pooled = seq[batch_indices, lengths_clamped]
                 else:
-                    pooled = hidden_state[-1]
+                    if self.rnn.bidirectional:
+                        # Concatenate the final forward and backward states from the top layer.
+                        pooled = torch.cat((hidden_state[-2], hidden_state[-1]), dim=1)
+                    else:
+                        pooled = hidden_state[-1]
                 weights = None
             else:
                 scores = self.attention(seq).squeeze(-1)
@@ -162,7 +172,14 @@ class NumpyEmotionRNN:
             pooled = np.sum(seq * weights[:, None], axis=0)
         else:
             weights = None
-            pooled = np.concatenate([last_f, last_b], axis=0) if bidirectional else last_f
+            if length is not None:
+                idx_last = min(max(int(length) - 1, 0), seq.shape[0] - 1)
+                if bidirectional:
+                    pooled = np.concatenate([seq[idx_last, : self.hidden], seq[0, self.hidden :]], axis=0)
+                else:
+                    pooled = seq[idx_last]
+            else:
+                pooled = np.concatenate([last_f, last_b], axis=0) if bidirectional else last_f
 
         logits = (pooled @ sd["classifier.1.weight"].T + sd["classifier.1.bias"]).astype(np.float32)
         probs = softmax(logits).astype(np.float32)

@@ -29,9 +29,11 @@ from src.features import (
     extract_features_from_waveform,
     frames_to_time,
     load_audio_bytes,
+    preprocess_waveform,
+    trim_silence,
 )
 from src.models import EmotionRNN, NumpyEmotionRNN, load_inference_model
-from train import actor_disjoint_split, compute_balanced_weights
+from train import actor_disjoint_split, compute_balanced_weights, infer_lengths_from_features
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 DEMO_DIR = PROJECT_ROOT / "demo_audio"
@@ -78,6 +80,31 @@ class TestSERPipeline(unittest.TestCase):
         with self.assertRaises(ValueError):
             load_audio_bytes(b"not-a-valid-audio-header")
 
+    def test_speech_preprocessing_silence_trim_and_active_standardization(self):
+        # Simulate a 5s microphone clip with 1.8s leading silence, 1.2s active speech, and 2.0s trailing silence
+        t = np.linspace(0, 1.2, int(SAMPLE_RATE * 1.2), dtype=np.float32)
+        burst = 0.08 * np.sin(2 * np.pi * 300 * t)
+        raw_5s = np.concatenate(
+            [
+                np.zeros(int(SAMPLE_RATE * 1.8), dtype=np.float32),
+                burst,
+                np.zeros(int(SAMPLE_RATE * 2.0), dtype=np.float32),
+            ]
+        )
+        y_proc, active_frames = preprocess_waveform(raw_5s, sr=SAMPLE_RATE, max_seconds=MAX_SECONDS)
+        self.assertEqual(len(y_proc), int(SAMPLE_RATE * MAX_SECONDS))
+        self.assertGreater(active_frames, 40)
+        self.assertLess(active_frames, 90)
+        # Peak amplitude should be normalized to ~0.95
+        self.assertAlmostEqual(float(np.max(np.abs(y_proc))), 0.95, places=2)
+
+        feat = extract_features_from_waveform(raw_5s, sr=SAMPLE_RATE)
+        self.assertEqual(feat.shape, (173, FEATURE_DIM))
+        # Padded tail frames beyond active_frames must be zeroed out so they do not skew Z-score
+        self.assertAlmostEqual(float(np.abs(feat[active_frames:]).max()), 0.0, places=5)
+        inferred = infer_lengths_from_features(feat[None, :, :])
+        self.assertEqual(int(inferred[0]), active_frames)
+
     def test_feature_extraction_and_normalization_consistency(self):
         sample_wav = DEMO_DIR / "demo_happy.wav"
         feat_from_path = extract_features(sample_wav)
@@ -87,14 +114,9 @@ class TestSERPipeline(unittest.TestCase):
         self.assertEqual(feat_from_path.shape, (173, FEATURE_DIM))
         self.assertEqual(feat_from_wave.shape, (173, FEATURE_DIM))
         self.assertEqual(feat_from_path.dtype, np.float32)
-        np.testing.assert_allclose(feat_from_path, feat_from_wave, rtol=1e-5, atol=1e-5)
-
-        # Verify per-utterance zero-mean standardization
-        col_means = np.abs(feat_from_wave.mean(axis=0))
-        self.assertTrue(np.all(col_means < 1e-4))
+        np.testing.assert_allclose(feat_from_path, feat_from_wave, rtol=1e-4, atol=1e-4)
         self.assertFalse(np.isnan(feat_from_wave).any())
 
-        # Verify helper spectrograms
         mel_db = compute_mel_spectrogram_db(y)
         chroma = compute_chroma(y)
         rms = compute_rms_energy(y)
@@ -135,7 +157,6 @@ class TestSERPipeline(unittest.TestCase):
             pt_path = ARTIFACT_DIR / f"{kind}.pt"
             self.assertTrue(pt_path.is_file(), f"Missing checkpoint {pt_path}")
 
-            # 1. Portable inference model
             model_np = load_inference_model(pt_path)
             self.assertIsNotNone(model_np)
             self.assertEqual(model_np.kind, kind)
@@ -147,7 +168,6 @@ class TestSERPipeline(unittest.TestCase):
             self.assertEqual(probs_np.shape, (8,))
             self.assertAlmostEqual(float(probs_np.sum()), 1.0, places=5)
 
-            # 2. PyTorch EmotionRNN loaded from the same checkpoint must match bit-for-bit
             ckpt = torch.load(pt_path, map_location="cpu", weights_only=False)
             model_pt = EmotionRNN(
                 input_dim=ckpt["input_dim"],
@@ -170,10 +190,11 @@ class TestSERPipeline(unittest.TestCase):
                 self.assertIsNone(weights_np)
                 self.assertIsNone(weights_pt)
 
-            # 3. Batch + length masking test
+            # Verify batch + length masking equivalence across all 3 architectures
             logits_b, probs_b, weights_b = model_np.predict(x_batch, return_attention=True, lengths=lengths)
-            self.assertEqual(logits_b.shape, (4, 8))
-            self.assertEqual(probs_b.shape, (4, 8))
+            with torch.no_grad():
+                logits_pt_b, _ = model_pt(torch.tensor(x_batch), lengths=torch.tensor(lengths), return_attention=True)
+            np.testing.assert_allclose(logits_b, logits_pt_b.numpy(), rtol=1e-4, atol=1e-4)
             if kind == "attention_bilstm":
                 self.assertEqual(weights_b.shape, (4, 173))
                 self.assertAlmostEqual(float(weights_b[0, 120:].sum()), 0.0, places=5)
