@@ -3,7 +3,7 @@ import numpy as np
 import os
 import glob
 
-DATA_PATH = r"C:\Users\Prachi Singh\OneDrive\เอกสาร\Downloads\RAVDESS\Audio_Speech_Actors_01-24_16k"
+DATA_PATH = r"C:\Downloads\RAVDESS\Audio_Speech_Actors_01-24_16k"
 
 SAMPLE_RATE = 16000
 DURATION = 3
