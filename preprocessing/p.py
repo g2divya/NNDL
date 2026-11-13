@@ -1,7 +1,7 @@
 import glob
 import os
 
-DATA_PATH = r"C:\Users\Prachi Singh\OneDrive\เอกสาร\Downloads\RAVDESS"
+DATA_PATH = r"C:Downloads\RAVDESS"
 
 files = glob.glob(
     os.path.join(DATA_PATH, "**", "*.wav"),
