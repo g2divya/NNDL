@@ -13,7 +13,7 @@ print(files[:5])
 
 import os
 
-DATA_PATH = r"C:\Users\Prachi Singh\OneDrive\เอกสาร\Downloads\RAVDESS"
+DATA_PATH = r":\Downloads\RAVDESS"
 
 print("Path exists:", os.path.exists(DATA_PATH))
 
