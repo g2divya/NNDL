@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent
 
 MODEL_PATH = (
     BASE_DIR
-    / "CREMA-CNN-BILSTM-ATTENTION-RESULTS"
+    
     / "best_crema_bilstm_attention.keras"
 )
 
