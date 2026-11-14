@@ -23,7 +23,7 @@ st.set_page_config(
 BASE_DIR = Path(__file__).resolve().parent
 PROJECT_ROOT = BASE_DIR.parent
 
-MODEL_FILENAME = "best_crema_bilstm_attention.keras"
+MODEL_FILENAME = "best_crema_bilstm_attention.py"
 
 POSSIBLE_PATHS = [
     BASE_DIR / MODEL_FILENAME,
