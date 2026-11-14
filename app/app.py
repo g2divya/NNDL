@@ -1,6 +1,5 @@
 
 import io
-import zipfile
 from pathlib import Path
 
 import numpy as np
@@ -8,11 +7,12 @@ import pandas as pd
 import streamlit as st
 import tensorflow as tf
 import librosa
+import matplotlib.pyplot as plt
 
 
-# =====================================================
+# =========================================================
 # 1. CONFIGURATION
-# =====================================================
+# =========================================================
 
 st.set_page_config(
     page_title="Speech Emotion Recognition",
@@ -21,16 +21,12 @@ st.set_page_config(
 )
 
 BASE_DIR = Path(__file__).resolve().parent
-PROJECT_ROOT = BASE_DIR.parent
 
-MODEL_FILENAME = "best_crema_bilstm_attention.py"
-
-POSSIBLE_PATHS = [
-    BASE_DIR / MODEL_FILENAME,
-    PROJECT_ROOT / MODEL_FILENAME,
-    PROJECT_ROOT / "models" / MODEL_FILENAME,
-    BASE_DIR / "models" / MODEL_FILENAME,
-]
+MODEL_PATH = (
+    BASE_DIR
+    / "CREMA-CNN-BILSTM-ATTENTION-RESULTS"
+    / "best_crema_bilstm_attention.keras"
+)
 
 SAMPLE_RATE = 16000
 DURATION = 5
@@ -54,9 +50,9 @@ CLASS_NAMES = [
 ]
 
 
-# =====================================================
+# =========================================================
 # 2. CUSTOM FREQUENCY POOLING LAYER
-# =====================================================
+# =========================================================
 
 @tf.keras.utils.register_keras_serializable(
     package="CREMA",
@@ -71,168 +67,34 @@ class FrequencyPooling(tf.keras.layers.Layer):
         return super().get_config()
 
 
-# =====================================================
-# 3. FIND MODEL AUTOMATICALLY
-# =====================================================
-
-def find_model():
-
-    for path in POSSIBLE_PATHS:
-        if path.is_file():
-            return path
-
-    # Search project directories for the exact filename
-    search_roots = [BASE_DIR, PROJECT_ROOT]
-
-    for root in search_roots:
-        if root.exists():
-            matches = list(
-                root.rglob(MODEL_FILENAME)
-            )
-
-            if matches:
-                return matches[0]
-
-    return None
-
-
-MODEL_PATH = find_model()
-
-
-# =====================================================
-# 4. VALIDATE MODEL FILE
-# =====================================================
-
-def validate_model_file(path):
-
-    if not path.exists():
-        raise FileNotFoundError(
-            f"Model file does not exist: {path}"
-        )
-
-    if path.stat().st_size == 0:
-        raise ValueError(
-            "The model file is empty."
-        )
-
-    if path.stat().st_size < 1024:
-        raise ValueError(
-            "The model file is unusually small. "
-            "It may be a Git LFS pointer or an incorrect file."
-        )
-
-    # Check whether it is a real Keras ZIP archive
-    if not zipfile.is_zipfile(path):
-        with open(path, "rb") as file:
-            beginning = file.read(300)
-
-        if b"git-lfs.github.com/spec/v1" in beginning:
-            raise ValueError(
-                "Git LFS pointer detected instead of the actual "
-                "model. Download the real model and upload it "
-                "using Git LFS or another supported hosting method."
-            )
-
-        if beginning.lstrip().startswith(
-            (b"import ", b"#", b"from ", b"def ", b"class ")
-        ):
-            raise ValueError(
-                "The uploaded file contains Python source code, "
-                "not a trained Keras model. Save the trained model "
-                "using model.save('best_crema_bilstm_attention.keras')."
-            )
-
-        raise ValueError(
-            "Invalid Keras archive. The file may be corrupted "
-            "or may not be a genuine .keras model."
-        )
-
-    # Inspect archive integrity
-    try:
-        with zipfile.ZipFile(path, "r") as archive:
-
-            bad_file = archive.testzip()
-
-            if bad_file is not None:
-                raise ValueError(
-                    f"Corrupted model archive: {bad_file}"
-                )
-
-            files = archive.namelist()
-
-            if "config.json" not in files:
-                raise ValueError(
-                    "Invalid Keras archive: config.json is missing."
-                )
-
-            if "metadata.json" not in files:
-                raise ValueError(
-                    "Invalid Keras archive: metadata.json is missing."
-                )
-
-    except zipfile.BadZipFile:
-        raise ValueError(
-            "The Keras model archive is corrupted."
-        )
-
-
-# =====================================================
-# 5. LOAD TRAINED MODEL
-# =====================================================
+# =========================================================
+# 3. LOAD TRAINED MODEL
+# =========================================================
 
 @st.cache_resource
 def load_model():
 
-    if MODEL_PATH is None:
-
-        checked_paths = "\n".join(
-            str(path) for path in POSSIBLE_PATHS
-        )
-
+    if not MODEL_PATH.exists():
         raise FileNotFoundError(
-            "Trained model not found.\n\n"
-            "Expected locations:\n" + checked_paths
+            f"Model not found: {MODEL_PATH}"
         )
 
-    validate_model_file(MODEL_PATH)
-
-    try:
-
-        model = tf.keras.models.load_model(
-            MODEL_PATH,
-            custom_objects={
-                "FrequencyPooling": FrequencyPooling,
-                "CREMA>FrequencyPooling": FrequencyPooling
-            },
-            compile=False,
-            safe_mode=True
-        )
-
-    except Exception as error:
-
-        raise RuntimeError(
-            "The model archive is valid, but TensorFlow "
-            "could not load the model.\n\n"
-            f"Original error: {str(error)}"
-        ) from error
-
-    if len(model.output_shape) != 2:
-        raise ValueError(
-            f"Unexpected model output shape: {model.output_shape}"
-        )
-
-    if model.output_shape[-1] != len(CLASS_NAMES):
-        raise ValueError(
-            f"Expected 6 output classes, "
-            f"but model has {model.output_shape[-1]}."
-        )
+    model = tf.keras.models.load_model(
+        MODEL_PATH,
+        custom_objects={
+            "FrequencyPooling": FrequencyPooling,
+            "CREMA>FrequencyPooling": FrequencyPooling
+        },
+        compile=False,
+        safe_mode=True
+    )
 
     return model
 
 
-# =====================================================
-# 6. CREATE MEL FILTER BANK
-# =====================================================
+# =========================================================
+# 4. CREATE MEL FILTER BANK
+# =========================================================
 
 @st.cache_resource
 def create_mel_matrix():
@@ -246,32 +108,27 @@ def create_mel_matrix():
     )
 
 
-# =====================================================
-# 7. AUDIO PREPROCESSING
-# =====================================================
+# =========================================================
+# 5. AUDIO PREPROCESSING
+# MUST MATCH TRAINING PREPROCESSING
+# =========================================================
 
 def preprocess_audio(audio_bytes):
 
+    # Load audio and resample to 16 kHz.
     audio, _ = librosa.load(
         io.BytesIO(audio_bytes),
         sr=SAMPLE_RATE,
         mono=True
     )
 
-    if len(audio) == 0:
-        raise ValueError(
-            "The uploaded audio contains no samples."
-        )
-
     audio = audio.astype(np.float32)
 
-    # Crop or pad to 5 seconds
+    # Crop or pad to 5 seconds.
     if len(audio) > NUM_SAMPLES:
-
         audio = audio[:NUM_SAMPLES]
 
     elif len(audio) < NUM_SAMPLES:
-
         audio = np.pad(
             audio,
             (0, NUM_SAMPLES - len(audio))
@@ -282,7 +139,7 @@ def preprocess_audio(audio_bytes):
         dtype=tf.float32
     )
 
-    # STFT
+    # STFT.
     stft = tf.signal.stft(
         audio,
         frame_length=FRAME_LENGTH,
@@ -291,12 +148,13 @@ def preprocess_audio(audio_bytes):
         pad_end=True
     )
 
-    # Power spectrogram
+    # Power spectrogram.
+    # Important: Do NOT replace with abs(stft).
     power_spectrogram = tf.square(
         tf.abs(stft)
     )
 
-    # Mel spectrogram
+    # Mel spectrogram.
     mel_matrix = create_mel_matrix()
 
     mel_spectrogram = tf.matmul(
@@ -304,12 +162,12 @@ def preprocess_audio(audio_bytes):
         mel_matrix
     )
 
-    # Log Mel spectrogram
+    # Log Mel spectrogram.
     log_mel = tf.math.log(
         mel_spectrogram + 1e-6
     )
 
-    # Per-recording normalization
+    # Per-recording normalization.
     mean = tf.reduce_mean(log_mel)
     std = tf.math.reduce_std(log_mel)
 
@@ -317,13 +175,13 @@ def preprocess_audio(audio_bytes):
         log_mel - mean
     ) / (std + 1e-6)
 
-    # Add channel dimension
+    # Add channel dimension.
     log_mel = tf.expand_dims(
         log_mel,
         axis=-1
     )
 
-    # Add batch dimension
+    # Add batch dimension.
     log_mel = tf.expand_dims(
         log_mel,
         axis=0
@@ -332,46 +190,28 @@ def preprocess_audio(audio_bytes):
     return log_mel
 
 
-# =====================================================
-# 8. PREDICTION
-# =====================================================
+# =========================================================
+# 6. PREDICTION
+# =========================================================
 
 def predict_emotion(model, audio_bytes):
 
     features = preprocess_audio(audio_bytes)
 
-    expected_shape = tuple(
-        model.input_shape[1:]
-    )
+    expected_shape = tuple(model.input_shape[1:])
 
-    actual_shape = tuple(
-        features.shape[1:]
-    )
+    actual_shape = tuple(features.shape[1:])
 
     if actual_shape != expected_shape:
-
         raise ValueError(
-            f"Input shape mismatch.\n"
-            f"Expected: {expected_shape}\n"
-            f"Received: {actual_shape}\n"
-            "Check that deployment preprocessing matches "
-            "the preprocessing used during model training."
+            f"Input shape mismatch. "
+            f"Expected {expected_shape}, got {actual_shape}"
         )
 
     probabilities = model(
         features,
         training=False
     ).numpy()[0]
-
-    if len(probabilities) != len(CLASS_NAMES):
-        raise ValueError(
-            "The model output does not match the configured classes."
-        )
-
-    if not np.all(np.isfinite(probabilities)):
-        raise ValueError(
-            "Model returned invalid probabilities."
-        )
 
     predicted_index = int(
         np.argmax(probabilities)
@@ -392,9 +232,9 @@ def predict_emotion(model, audio_bytes):
     )
 
 
-# =====================================================
-# 9. STREAMLIT USER INTERFACE
-# =====================================================
+# =========================================================
+# 7. USER INTERFACE
+# =========================================================
 
 st.title("🎙️ Speech Emotion Recognition")
 
@@ -404,18 +244,14 @@ st.markdown(
     **CNN + BiLSTM + Attention** model predict the
     emotion expressed in the audio.
 
-    **Supported emotions:** Angry, Disgust, Fear,
+    **Supported emotion classes:** Angry, Disgust, Fear,
     Happy, Neutral and Sad.
     """
 )
 
 st.divider()
 
-
-# =====================================================
-# SIDEBAR
-# =====================================================
-
+# Sidebar.
 st.sidebar.title("About the Model")
 
 st.sidebar.markdown(
@@ -424,7 +260,7 @@ st.sidebar.markdown(
 
     - CNN feature extractor
     - Bidirectional LSTM
-    - Attention mechanism
+    - Multi-Head Attention
     - Feed-forward network
     - Softmax classification
 
@@ -436,40 +272,18 @@ st.sidebar.markdown(
     """
 )
 
-if MODEL_PATH is not None:
+st.sidebar.info(
+    "The model was evaluated on an actor-independent "
+    "CREMA-D test split with 57.93% accuracy."
+)
 
-    st.sidebar.success(
-        f"Model found: {MODEL_PATH.name}"
-    )
-
-    st.sidebar.caption(
-        f"Location: {MODEL_PATH}"
-    )
-
-else:
-
-    st.sidebar.error(
-        "Trained model file not found."
-    )
-
-
-# =====================================================
-# AUDIO UPLOAD
-# =====================================================
-
+# Upload audio.
 st.subheader("Upload your speech recording")
 
 uploaded_file = st.file_uploader(
     "Choose an audio file",
-    type=[
-        "wav",
-        "mp3",
-        "flac",
-        "ogg",
-        "m4a"
-    ]
+    type=["wav", "mp3", "flac", "ogg", "m4a"]
 )
-
 
 if uploaded_file is not None:
 
@@ -513,7 +327,7 @@ if uploaded_file is not None:
 
             st.divider()
 
-            # Main prediction
+            # Main prediction.
             st.subheader("Predicted Emotion")
 
             col1, col2 = st.columns(2)
@@ -534,10 +348,8 @@ if uploaded_file is not None:
 
             st.divider()
 
-            # Probability chart
-            st.subheader(
-                "Emotion Probability Distribution"
-            )
+            # Probability chart.
+            st.subheader("Emotion Probability Distribution")
 
             probability_df = pd.DataFrame({
                 "Emotion": CLASS_NAMES,
@@ -555,7 +367,7 @@ if uploaded_file is not None:
 
             st.divider()
 
-            # Top three predictions
+            # Top three predictions.
             st.subheader("Top 3 Predictions")
 
             top_indices = np.argsort(
@@ -569,9 +381,7 @@ if uploaded_file is not None:
 
                 emotion = CLASS_NAMES[index]
 
-                score = float(
-                    probabilities[index] * 100
-                )
+                score = probabilities[index] * 100
 
                 st.write(
                     f"**{rank}. {emotion}** — {score:.2f}%"
@@ -583,7 +393,7 @@ if uploaded_file is not None:
 
             st.divider()
 
-            # Detailed results
+            # Detailed table.
             st.subheader("Detailed Results")
 
             detailed_df = pd.DataFrame({
@@ -604,9 +414,10 @@ if uploaded_file is not None:
             )
 
             st.caption(
-                "Probabilities are model outputs, not calibrated "
-                "measures of certainty. Predictions may be affected "
-                "by recording quality, background noise and speaking style."
+                "Probabilities are model outputs, not "
+                "calibrated measures of certainty. "
+                "Predictions may be affected by recording "
+                "quality, background noise and speaking style."
             )
 
         except Exception as error:
@@ -622,9 +433,9 @@ else:
     )
 
 
-# =====================================================
-# 10. FOOTER
-# =====================================================
+# =========================================================
+# 8. FOOTER
+# =========================================================
 
 st.divider()
 
@@ -632,7 +443,7 @@ st.markdown(
     """
     <div style="text-align:center;">
         <p>Speech Emotion Recognition</p>
-        <p>CNN + BiLSTM + Attention | Streamlit</p>
+        <p>CNN + BiLSTM + Attention | TensorFlow | Streamlit</p>
     </div>
     """,
     unsafe_allow_html=True
