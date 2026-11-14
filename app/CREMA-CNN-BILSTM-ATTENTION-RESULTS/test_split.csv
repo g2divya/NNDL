@@ -1,0 +1,1149 @@
+filename,filepath,actor_id,emotion,emotion_code,emotion_intensity,sentence,source_file
+1001_DFA_ANG_XX.wav,CREMA-D-WAV/1001_DFA_ANG_XX.wav,1001,0,ANG,Unspecified,Don't forget a jacket,1001_DFA_ANG_XX.wav
+1001_DFA_DIS_XX.wav,CREMA-D-WAV/1001_DFA_DIS_XX.wav,1001,1,DIS,Unspecified,Don't forget a jacket,1001_DFA_DIS_XX.wav
+1001_DFA_FEA_XX.wav,CREMA-D-WAV/1001_DFA_FEA_XX.wav,1001,2,FEA,Unspecified,Don't forget a jacket,1001_DFA_FEA_XX.wav
+1001_DFA_HAP_XX.wav,CREMA-D-WAV/1001_DFA_HAP_XX.wav,1001,3,HAP,Unspecified,Don't forget a jacket,1001_DFA_HAP_XX.wav
+1001_DFA_NEU_XX.wav,CREMA-D-WAV/1001_DFA_NEU_XX.wav,1001,4,NEU,Unspecified,Don't forget a jacket,1001_DFA_NEU_XX.wav
+1001_DFA_SAD_XX.wav,CREMA-D-WAV/1001_DFA_SAD_XX.wav,1001,5,SAD,Unspecified,Don't forget a jacket,1001_DFA_SAD_XX.wav
+1001_IEO_ANG_HI.wav,CREMA-D-WAV/1001_IEO_ANG_HI.wav,1001,0,ANG,High,It's eleven o'clock,1001_IEO_ANG_HI.wav
+1001_IEO_ANG_LO.wav,CREMA-D-WAV/1001_IEO_ANG_LO.wav,1001,0,ANG,Low,It's eleven o'clock,1001_IEO_ANG_LO.wav
+1001_IEO_ANG_MD.wav,CREMA-D-WAV/1001_IEO_ANG_MD.wav,1001,0,ANG,Medium,It's eleven o'clock,1001_IEO_ANG_MD.wav
+1001_IEO_DIS_HI.wav,CREMA-D-WAV/1001_IEO_DIS_HI.wav,1001,1,DIS,High,It's eleven o'clock,1001_IEO_DIS_HI.wav
+1001_IEO_DIS_LO.wav,CREMA-D-WAV/1001_IEO_DIS_LO.wav,1001,1,DIS,Low,It's eleven o'clock,1001_IEO_DIS_LO.wav
+1001_IEO_DIS_MD.wav,CREMA-D-WAV/1001_IEO_DIS_MD.wav,1001,1,DIS,Medium,It's eleven o'clock,1001_IEO_DIS_MD.wav
+1001_IEO_FEA_HI.wav,CREMA-D-WAV/1001_IEO_FEA_HI.wav,1001,2,FEA,High,It's eleven o'clock,1001_IEO_FEA_HI.wav
+1001_IEO_FEA_LO.wav,CREMA-D-WAV/1001_IEO_FEA_LO.wav,1001,2,FEA,Low,It's eleven o'clock,1001_IEO_FEA_LO.wav
+1001_IEO_FEA_MD.wav,CREMA-D-WAV/1001_IEO_FEA_MD.wav,1001,2,FEA,Medium,It's eleven o'clock,1001_IEO_FEA_MD.wav
+1001_IEO_HAP_HI.wav,CREMA-D-WAV/1001_IEO_HAP_HI.wav,1001,3,HAP,High,It's eleven o'clock,1001_IEO_HAP_HI.wav
+1001_IEO_HAP_LO.wav,CREMA-D-WAV/1001_IEO_HAP_LO.wav,1001,3,HAP,Low,It's eleven o'clock,1001_IEO_HAP_LO.wav
+1001_IEO_HAP_MD.wav,CREMA-D-WAV/1001_IEO_HAP_MD.wav,1001,3,HAP,Medium,It's eleven o'clock,1001_IEO_HAP_MD.wav
+1001_IEO_NEU_XX.wav,CREMA-D-WAV/1001_IEO_NEU_XX.wav,1001,4,NEU,Unspecified,It's eleven o'clock,1001_IEO_NEU_XX.wav
+1001_IEO_SAD_HI.wav,CREMA-D-WAV/1001_IEO_SAD_HI.wav,1001,5,SAD,High,It's eleven o'clock,1001_IEO_SAD_HI.wav
+1001_IEO_SAD_LO.wav,CREMA-D-WAV/1001_IEO_SAD_LO.wav,1001,5,SAD,Low,It's eleven o'clock,1001_IEO_SAD_LO.wav
+1001_IEO_SAD_MD.wav,CREMA-D-WAV/1001_IEO_SAD_MD.wav,1001,5,SAD,Medium,It's eleven o'clock,1001_IEO_SAD_MD.wav
+1001_IOM_ANG_XX.wav,CREMA-D-WAV/1001_IOM_ANG_XX.wav,1001,0,ANG,Unspecified,I'm on my way to the meeting,1001_IOM_ANG_XX.wav
+1001_IOM_DIS_XX.wav,CREMA-D-WAV/1001_IOM_DIS_XX.wav,1001,1,DIS,Unspecified,I'm on my way to the meeting,1001_IOM_DIS_XX.wav
+1001_IOM_FEA_XX.wav,CREMA-D-WAV/1001_IOM_FEA_XX.wav,1001,2,FEA,Unspecified,I'm on my way to the meeting,1001_IOM_FEA_XX.wav
+1001_IOM_HAP_XX.wav,CREMA-D-WAV/1001_IOM_HAP_XX.wav,1001,3,HAP,Unspecified,I'm on my way to the meeting,1001_IOM_HAP_XX.wav
+1001_IOM_NEU_XX.wav,CREMA-D-WAV/1001_IOM_NEU_XX.wav,1001,4,NEU,Unspecified,I'm on my way to the meeting,1001_IOM_NEU_XX.wav
+1001_IOM_SAD_XX.wav,CREMA-D-WAV/1001_IOM_SAD_XX.wav,1001,5,SAD,Unspecified,I'm on my way to the meeting,1001_IOM_SAD_XX.wav
+1001_ITH_ANG_XX.wav,CREMA-D-WAV/1001_ITH_ANG_XX.wav,1001,0,ANG,Unspecified,I think I have a doctor's appointment,1001_ITH_ANG_XX.wav
+1001_ITH_DIS_XX.wav,CREMA-D-WAV/1001_ITH_DIS_XX.wav,1001,1,DIS,Unspecified,I think I have a doctor's appointment,1001_ITH_DIS_XX.wav
+1001_ITH_FEA_XX.wav,CREMA-D-WAV/1001_ITH_FEA_XX.wav,1001,2,FEA,Unspecified,I think I have a doctor's appointment,1001_ITH_FEA_XX.wav
+1001_ITH_HAP_XX.wav,CREMA-D-WAV/1001_ITH_HAP_XX.wav,1001,3,HAP,Unspecified,I think I have a doctor's appointment,1001_ITH_HAP_XX.wav
+1001_ITH_NEU_XX.wav,CREMA-D-WAV/1001_ITH_NEU_XX.wav,1001,4,NEU,Unspecified,I think I have a doctor's appointment,1001_ITH_NEU_XX.wav
+1001_ITH_SAD_XX.wav,CREMA-D-WAV/1001_ITH_SAD_XX.wav,1001,5,SAD,Unspecified,I think I have a doctor's appointment,1001_ITH_SAD_XX.wav
+1001_ITS_ANG_XX.wav,CREMA-D-WAV/1001_ITS_ANG_XX.wav,1001,0,ANG,Unspecified,I think I've seen this before,1001_ITS_ANG_XX.wav
+1001_ITS_DIS_XX.wav,CREMA-D-WAV/1001_ITS_DIS_XX.wav,1001,1,DIS,Unspecified,I think I've seen this before,1001_ITS_DIS_XX.wav
+1001_ITS_FEA_XX.wav,CREMA-D-WAV/1001_ITS_FEA_XX.wav,1001,2,FEA,Unspecified,I think I've seen this before,1001_ITS_FEA_XX.wav
+1001_ITS_HAP_XX.wav,CREMA-D-WAV/1001_ITS_HAP_XX.wav,1001,3,HAP,Unspecified,I think I've seen this before,1001_ITS_HAP_XX.wav
+1001_ITS_NEU_XX.wav,CREMA-D-WAV/1001_ITS_NEU_XX.wav,1001,4,NEU,Unspecified,I think I've seen this before,1001_ITS_NEU_XX.wav
+1001_ITS_SAD_XX.wav,CREMA-D-WAV/1001_ITS_SAD_XX.wav,1001,5,SAD,Unspecified,I think I've seen this before,1001_ITS_SAD_XX.wav
+1001_IWL_ANG_XX.wav,CREMA-D-WAV/1001_IWL_ANG_XX.wav,1001,0,ANG,Unspecified,I would like a new alarm clock,1001_IWL_ANG_XX.wav
+1001_IWL_DIS_XX.wav,CREMA-D-WAV/1001_IWL_DIS_XX.wav,1001,1,DIS,Unspecified,I would like a new alarm clock,1001_IWL_DIS_XX.wav
+1001_IWL_FEA_XX.wav,CREMA-D-WAV/1001_IWL_FEA_XX.wav,1001,2,FEA,Unspecified,I would like a new alarm clock,1001_IWL_FEA_XX.wav
+1001_IWL_HAP_XX.wav,CREMA-D-WAV/1001_IWL_HAP_XX.wav,1001,3,HAP,Unspecified,I would like a new alarm clock,1001_IWL_HAP_XX.wav
+1001_IWL_NEU_XX.wav,CREMA-D-WAV/1001_IWL_NEU_XX.wav,1001,4,NEU,Unspecified,I would like a new alarm clock,1001_IWL_NEU_XX.wav
+1001_IWL_SAD_XX.wav,CREMA-D-WAV/1001_IWL_SAD_XX.wav,1001,5,SAD,Unspecified,I would like a new alarm clock,1001_IWL_SAD_XX.wav
+1001_IWW_ANG_XX.wav,CREMA-D-WAV/1001_IWW_ANG_XX.wav,1001,0,ANG,Unspecified,I wonder what this is about,1001_IWW_ANG_XX.wav
+1001_IWW_DIS_XX.wav,CREMA-D-WAV/1001_IWW_DIS_XX.wav,1001,1,DIS,Unspecified,I wonder what this is about,1001_IWW_DIS_XX.wav
+1001_IWW_FEA_XX.wav,CREMA-D-WAV/1001_IWW_FEA_XX.wav,1001,2,FEA,Unspecified,I wonder what this is about,1001_IWW_FEA_XX.wav
+1001_IWW_HAP_XX.wav,CREMA-D-WAV/1001_IWW_HAP_XX.wav,1001,3,HAP,Unspecified,I wonder what this is about,1001_IWW_HAP_XX.wav
+1001_IWW_NEU_XX.wav,CREMA-D-WAV/1001_IWW_NEU_XX.wav,1001,4,NEU,Unspecified,I wonder what this is about,1001_IWW_NEU_XX.wav
+1001_IWW_SAD_XX.wav,CREMA-D-WAV/1001_IWW_SAD_XX.wav,1001,5,SAD,Unspecified,I wonder what this is about,1001_IWW_SAD_XX.wav
+1001_MTI_ANG_XX.wav,CREMA-D-WAV/1001_MTI_ANG_XX.wav,1001,0,ANG,Unspecified,Maybe tomorrow it will be cold,1001_MTI_ANG_XX.wav
+1001_MTI_DIS_XX.wav,CREMA-D-WAV/1001_MTI_DIS_XX.wav,1001,1,DIS,Unspecified,Maybe tomorrow it will be cold,1001_MTI_DIS_XX.wav
+1001_MTI_FEA_XX.wav,CREMA-D-WAV/1001_MTI_FEA_XX.wav,1001,2,FEA,Unspecified,Maybe tomorrow it will be cold,1001_MTI_FEA_XX.wav
+1001_MTI_HAP_XX.wav,CREMA-D-WAV/1001_MTI_HAP_XX.wav,1001,3,HAP,Unspecified,Maybe tomorrow it will be cold,1001_MTI_HAP_XX.wav
+1001_MTI_NEU_XX.wav,CREMA-D-WAV/1001_MTI_NEU_XX.wav,1001,4,NEU,Unspecified,Maybe tomorrow it will be cold,1001_MTI_NEU_XX.wav
+1001_MTI_SAD_XX.wav,CREMA-D-WAV/1001_MTI_SAD_XX.wav,1001,5,SAD,Unspecified,Maybe tomorrow it will be cold,1001_MTI_SAD_XX.wav
+1001_TAI_ANG_XX.wav,CREMA-D-WAV/1001_TAI_ANG_XX.wav,1001,0,ANG,Unspecified,The airplane is almost full,1001_TAI_ANG_XX.wav
+1001_TAI_DIS_XX.wav,CREMA-D-WAV/1001_TAI_DIS_XX.wav,1001,1,DIS,Unspecified,The airplane is almost full,1001_TAI_DIS_XX.wav
+1001_TAI_FEA_XX.wav,CREMA-D-WAV/1001_TAI_FEA_XX.wav,1001,2,FEA,Unspecified,The airplane is almost full,1001_TAI_FEA_XX.wav
+1001_TAI_HAP_XX.wav,CREMA-D-WAV/1001_TAI_HAP_XX.wav,1001,3,HAP,Unspecified,The airplane is almost full,1001_TAI_HAP_XX.wav
+1001_TAI_NEU_XX.wav,CREMA-D-WAV/1001_TAI_NEU_XX.wav,1001,4,NEU,Unspecified,The airplane is almost full,1001_TAI_NEU_XX.wav
+1001_TAI_SAD_XX.wav,CREMA-D-WAV/1001_TAI_SAD_XX.wav,1001,5,SAD,Unspecified,The airplane is almost full,1001_TAI_SAD_XX.wav
+1001_TIE_ANG_XX.wav,CREMA-D-WAV/1001_TIE_ANG_XX.wav,1001,0,ANG,Unspecified,That is exactly what happened,1001_TIE_ANG_XX.wav
+1001_TIE_DIS_XX.wav,CREMA-D-WAV/1001_TIE_DIS_XX.wav,1001,1,DIS,Unspecified,That is exactly what happened,1001_TIE_DIS_XX.wav
+1001_TIE_FEA_XX.wav,CREMA-D-WAV/1001_TIE_FEA_XX.wav,1001,2,FEA,Unspecified,That is exactly what happened,1001_TIE_FEA_XX.wav
+1001_TIE_HAP_XX.wav,CREMA-D-WAV/1001_TIE_HAP_XX.wav,1001,3,HAP,Unspecified,That is exactly what happened,1001_TIE_HAP_XX.wav
+1001_TIE_NEU_XX.wav,CREMA-D-WAV/1001_TIE_NEU_XX.wav,1001,4,NEU,Unspecified,That is exactly what happened,1001_TIE_NEU_XX.wav
+1001_TIE_SAD_XX.wav,CREMA-D-WAV/1001_TIE_SAD_XX.wav,1001,5,SAD,Unspecified,That is exactly what happened,1001_TIE_SAD_XX.wav
+1001_TSI_ANG_XX.wav,CREMA-D-WAV/1001_TSI_ANG_XX.wav,1001,0,ANG,Unspecified,The surface is slick,1001_TSI_ANG_XX.wav
+1001_TSI_DIS_XX.wav,CREMA-D-WAV/1001_TSI_DIS_XX.wav,1001,1,DIS,Unspecified,The surface is slick,1001_TSI_DIS_XX.wav
+1001_TSI_FEA_XX.wav,CREMA-D-WAV/1001_TSI_FEA_XX.wav,1001,2,FEA,Unspecified,The surface is slick,1001_TSI_FEA_XX.wav
+1001_TSI_HAP_XX.wav,CREMA-D-WAV/1001_TSI_HAP_XX.wav,1001,3,HAP,Unspecified,The surface is slick,1001_TSI_HAP_XX.wav
+1001_TSI_NEU_XX.wav,CREMA-D-WAV/1001_TSI_NEU_XX.wav,1001,4,NEU,Unspecified,The surface is slick,1001_TSI_NEU_XX.wav
+1001_TSI_SAD_XX.wav,CREMA-D-WAV/1001_TSI_SAD_XX.wav,1001,5,SAD,Unspecified,The surface is slick,1001_TSI_SAD_XX.wav
+1001_WSI_ANG_XX.wav,CREMA-D-WAV/1001_WSI_ANG_XX.wav,1001,0,ANG,Unspecified,We'll stop in a couple of minutes,1001_WSI_ANG_XX.wav
+1001_WSI_DIS_XX.wav,CREMA-D-WAV/1001_WSI_DIS_XX.wav,1001,1,DIS,Unspecified,We'll stop in a couple of minutes,1001_WSI_DIS_XX.wav
+1001_WSI_FEA_XX.wav,CREMA-D-WAV/1001_WSI_FEA_XX.wav,1001,2,FEA,Unspecified,We'll stop in a couple of minutes,1001_WSI_FEA_XX.wav
+1001_WSI_HAP_XX.wav,CREMA-D-WAV/1001_WSI_HAP_XX.wav,1001,3,HAP,Unspecified,We'll stop in a couple of minutes,1001_WSI_HAP_XX.wav
+1001_WSI_NEU_XX.wav,CREMA-D-WAV/1001_WSI_NEU_XX.wav,1001,4,NEU,Unspecified,We'll stop in a couple of minutes,1001_WSI_NEU_XX.wav
+1001_WSI_SAD_XX.wav,CREMA-D-WAV/1001_WSI_SAD_XX.wav,1001,5,SAD,Unspecified,We'll stop in a couple of minutes,1001_WSI_SAD_XX.wav
+1011_DFA_ANG_XX.wav,CREMA-D-WAV/1011_DFA_ANG_XX.wav,1011,0,ANG,Unspecified,Don't forget a jacket,1011_DFA_ANG_XX.wav
+1011_DFA_DIS_XX.wav,CREMA-D-WAV/1011_DFA_DIS_XX.wav,1011,1,DIS,Unspecified,Don't forget a jacket,1011_DFA_DIS_XX.wav
+1011_DFA_FEA_XX.wav,CREMA-D-WAV/1011_DFA_FEA_XX.wav,1011,2,FEA,Unspecified,Don't forget a jacket,1011_DFA_FEA_XX.wav
+1011_DFA_HAP_XX.wav,CREMA-D-WAV/1011_DFA_HAP_XX.wav,1011,3,HAP,Unspecified,Don't forget a jacket,1011_DFA_HAP_XX.wav
+1011_DFA_NEU_XX.wav,CREMA-D-WAV/1011_DFA_NEU_XX.wav,1011,4,NEU,Unspecified,Don't forget a jacket,1011_DFA_NEU_XX.wav
+1011_DFA_SAD_XX.wav,CREMA-D-WAV/1011_DFA_SAD_XX.wav,1011,5,SAD,Unspecified,Don't forget a jacket,1011_DFA_SAD_XX.wav
+1011_IEO_ANG_HI.wav,CREMA-D-WAV/1011_IEO_ANG_HI.wav,1011,0,ANG,High,It's eleven o'clock,1011_IEO_ANG_HI.wav
+1011_IEO_ANG_LO.wav,CREMA-D-WAV/1011_IEO_ANG_LO.wav,1011,0,ANG,Low,It's eleven o'clock,1011_IEO_ANG_LO.wav
+1011_IEO_ANG_MD.wav,CREMA-D-WAV/1011_IEO_ANG_MD.wav,1011,0,ANG,Medium,It's eleven o'clock,1011_IEO_ANG_MD.wav
+1011_IEO_DIS_HI.wav,CREMA-D-WAV/1011_IEO_DIS_HI.wav,1011,1,DIS,High,It's eleven o'clock,1011_IEO_DIS_HI.wav
+1011_IEO_DIS_LO.wav,CREMA-D-WAV/1011_IEO_DIS_LO.wav,1011,1,DIS,Low,It's eleven o'clock,1011_IEO_DIS_LO.wav
+1011_IEO_DIS_MD.wav,CREMA-D-WAV/1011_IEO_DIS_MD.wav,1011,1,DIS,Medium,It's eleven o'clock,1011_IEO_DIS_MD.wav
+1011_IEO_FEA_HI.wav,CREMA-D-WAV/1011_IEO_FEA_HI.wav,1011,2,FEA,High,It's eleven o'clock,1011_IEO_FEA_HI.wav
+1011_IEO_FEA_LO.wav,CREMA-D-WAV/1011_IEO_FEA_LO.wav,1011,2,FEA,Low,It's eleven o'clock,1011_IEO_FEA_LO.wav
+1011_IEO_FEA_MD.wav,CREMA-D-WAV/1011_IEO_FEA_MD.wav,1011,2,FEA,Medium,It's eleven o'clock,1011_IEO_FEA_MD.wav
+1011_IEO_HAP_HI.wav,CREMA-D-WAV/1011_IEO_HAP_HI.wav,1011,3,HAP,High,It's eleven o'clock,1011_IEO_HAP_HI.wav
+1011_IEO_HAP_LO.wav,CREMA-D-WAV/1011_IEO_HAP_LO.wav,1011,3,HAP,Low,It's eleven o'clock,1011_IEO_HAP_LO.wav
+1011_IEO_HAP_MD.wav,CREMA-D-WAV/1011_IEO_HAP_MD.wav,1011,3,HAP,Medium,It's eleven o'clock,1011_IEO_HAP_MD.wav
+1011_IEO_NEU_XX.wav,CREMA-D-WAV/1011_IEO_NEU_XX.wav,1011,4,NEU,Unspecified,It's eleven o'clock,1011_IEO_NEU_XX.wav
+1011_IEO_SAD_HI.wav,CREMA-D-WAV/1011_IEO_SAD_HI.wav,1011,5,SAD,High,It's eleven o'clock,1011_IEO_SAD_HI.wav
+1011_IEO_SAD_LO.wav,CREMA-D-WAV/1011_IEO_SAD_LO.wav,1011,5,SAD,Low,It's eleven o'clock,1011_IEO_SAD_LO.wav
+1011_IEO_SAD_MD.wav,CREMA-D-WAV/1011_IEO_SAD_MD.wav,1011,5,SAD,Medium,It's eleven o'clock,1011_IEO_SAD_MD.wav
+1011_IOM_ANG_XX.wav,CREMA-D-WAV/1011_IOM_ANG_XX.wav,1011,0,ANG,Unspecified,I'm on my way to the meeting,1011_IOM_ANG_XX.wav
+1011_IOM_DIS_XX.wav,CREMA-D-WAV/1011_IOM_DIS_XX.wav,1011,1,DIS,Unspecified,I'm on my way to the meeting,1011_IOM_DIS_XX.wav
+1011_IOM_FEA_XX.wav,CREMA-D-WAV/1011_IOM_FEA_XX.wav,1011,2,FEA,Unspecified,I'm on my way to the meeting,1011_IOM_FEA_XX.wav
+1011_IOM_HAP_XX.wav,CREMA-D-WAV/1011_IOM_HAP_XX.wav,1011,3,HAP,Unspecified,I'm on my way to the meeting,1011_IOM_HAP_XX.wav
+1011_IOM_NEU_XX.wav,CREMA-D-WAV/1011_IOM_NEU_XX.wav,1011,4,NEU,Unspecified,I'm on my way to the meeting,1011_IOM_NEU_XX.wav
+1011_IOM_SAD_XX.wav,CREMA-D-WAV/1011_IOM_SAD_XX.wav,1011,5,SAD,Unspecified,I'm on my way to the meeting,1011_IOM_SAD_XX.wav
+1011_ITH_ANG_XX.wav,CREMA-D-WAV/1011_ITH_ANG_XX.wav,1011,0,ANG,Unspecified,I think I have a doctor's appointment,1011_ITH_ANG_XX.wav
+1011_ITH_DIS_XX.wav,CREMA-D-WAV/1011_ITH_DIS_XX.wav,1011,1,DIS,Unspecified,I think I have a doctor's appointment,1011_ITH_DIS_XX.wav
+1011_ITH_FEA_XX.wav,CREMA-D-WAV/1011_ITH_FEA_XX.wav,1011,2,FEA,Unspecified,I think I have a doctor's appointment,1011_ITH_FEA_XX.wav
+1011_ITH_HAP_XX.wav,CREMA-D-WAV/1011_ITH_HAP_XX.wav,1011,3,HAP,Unspecified,I think I have a doctor's appointment,1011_ITH_HAP_XX.wav
+1011_ITH_NEU_XX.wav,CREMA-D-WAV/1011_ITH_NEU_XX.wav,1011,4,NEU,Unspecified,I think I have a doctor's appointment,1011_ITH_NEU_XX.wav
+1011_ITH_SAD_XX.wav,CREMA-D-WAV/1011_ITH_SAD_XX.wav,1011,5,SAD,Unspecified,I think I have a doctor's appointment,1011_ITH_SAD_XX.wav
+1011_ITS_ANG_XX.wav,CREMA-D-WAV/1011_ITS_ANG_XX.wav,1011,0,ANG,Unspecified,I think I've seen this before,1011_ITS_ANG_XX.wav
+1011_ITS_DIS_XX.wav,CREMA-D-WAV/1011_ITS_DIS_XX.wav,1011,1,DIS,Unspecified,I think I've seen this before,1011_ITS_DIS_XX.wav
+1011_ITS_FEA_XX.wav,CREMA-D-WAV/1011_ITS_FEA_XX.wav,1011,2,FEA,Unspecified,I think I've seen this before,1011_ITS_FEA_XX.wav
+1011_ITS_HAP_XX.wav,CREMA-D-WAV/1011_ITS_HAP_XX.wav,1011,3,HAP,Unspecified,I think I've seen this before,1011_ITS_HAP_XX.wav
+1011_ITS_NEU_XX.wav,CREMA-D-WAV/1011_ITS_NEU_XX.wav,1011,4,NEU,Unspecified,I think I've seen this before,1011_ITS_NEU_XX.wav
+1011_ITS_SAD_XX.wav,CREMA-D-WAV/1011_ITS_SAD_XX.wav,1011,5,SAD,Unspecified,I think I've seen this before,1011_ITS_SAD_XX.wav
+1011_IWL_ANG_XX.wav,CREMA-D-WAV/1011_IWL_ANG_XX.wav,1011,0,ANG,Unspecified,I would like a new alarm clock,1011_IWL_ANG_XX.wav
+1011_IWL_DIS_XX.wav,CREMA-D-WAV/1011_IWL_DIS_XX.wav,1011,1,DIS,Unspecified,I would like a new alarm clock,1011_IWL_DIS_XX.wav
+1011_IWL_FEA_XX.wav,CREMA-D-WAV/1011_IWL_FEA_XX.wav,1011,2,FEA,Unspecified,I would like a new alarm clock,1011_IWL_FEA_XX.wav
+1011_IWL_HAP_XX.wav,CREMA-D-WAV/1011_IWL_HAP_XX.wav,1011,3,HAP,Unspecified,I would like a new alarm clock,1011_IWL_HAP_XX.wav
+1011_IWL_NEU_XX.wav,CREMA-D-WAV/1011_IWL_NEU_XX.wav,1011,4,NEU,Unspecified,I would like a new alarm clock,1011_IWL_NEU_XX.wav
+1011_IWL_SAD_XX.wav,CREMA-D-WAV/1011_IWL_SAD_XX.wav,1011,5,SAD,Unspecified,I would like a new alarm clock,1011_IWL_SAD_XX.wav
+1011_IWW_ANG_XX.wav,CREMA-D-WAV/1011_IWW_ANG_XX.wav,1011,0,ANG,Unspecified,I wonder what this is about,1011_IWW_ANG_XX.wav
+1011_IWW_DIS_XX.wav,CREMA-D-WAV/1011_IWW_DIS_XX.wav,1011,1,DIS,Unspecified,I wonder what this is about,1011_IWW_DIS_XX.wav
+1011_IWW_FEA_XX.wav,CREMA-D-WAV/1011_IWW_FEA_XX.wav,1011,2,FEA,Unspecified,I wonder what this is about,1011_IWW_FEA_XX.wav
+1011_IWW_HAP_XX.wav,CREMA-D-WAV/1011_IWW_HAP_XX.wav,1011,3,HAP,Unspecified,I wonder what this is about,1011_IWW_HAP_XX.wav
+1011_IWW_NEU_XX.wav,CREMA-D-WAV/1011_IWW_NEU_XX.wav,1011,4,NEU,Unspecified,I wonder what this is about,1011_IWW_NEU_XX.wav
+1011_IWW_SAD_XX.wav,CREMA-D-WAV/1011_IWW_SAD_XX.wav,1011,5,SAD,Unspecified,I wonder what this is about,1011_IWW_SAD_XX.wav
+1011_MTI_ANG_XX.wav,CREMA-D-WAV/1011_MTI_ANG_XX.wav,1011,0,ANG,Unspecified,Maybe tomorrow it will be cold,1011_MTI_ANG_XX.wav
+1011_MTI_DIS_XX.wav,CREMA-D-WAV/1011_MTI_DIS_XX.wav,1011,1,DIS,Unspecified,Maybe tomorrow it will be cold,1011_MTI_DIS_XX.wav
+1011_MTI_FEA_XX.wav,CREMA-D-WAV/1011_MTI_FEA_XX.wav,1011,2,FEA,Unspecified,Maybe tomorrow it will be cold,1011_MTI_FEA_XX.wav
+1011_MTI_HAP_XX.wav,CREMA-D-WAV/1011_MTI_HAP_XX.wav,1011,3,HAP,Unspecified,Maybe tomorrow it will be cold,1011_MTI_HAP_XX.wav
+1011_MTI_NEU_XX.wav,CREMA-D-WAV/1011_MTI_NEU_XX.wav,1011,4,NEU,Unspecified,Maybe tomorrow it will be cold,1011_MTI_NEU_XX.wav
+1011_MTI_SAD_XX.wav,CREMA-D-WAV/1011_MTI_SAD_XX.wav,1011,5,SAD,Unspecified,Maybe tomorrow it will be cold,1011_MTI_SAD_XX.wav
+1011_TAI_ANG_XX.wav,CREMA-D-WAV/1011_TAI_ANG_XX.wav,1011,0,ANG,Unspecified,The airplane is almost full,1011_TAI_ANG_XX.wav
+1011_TAI_DIS_XX.wav,CREMA-D-WAV/1011_TAI_DIS_XX.wav,1011,1,DIS,Unspecified,The airplane is almost full,1011_TAI_DIS_XX.wav
+1011_TAI_FEA_XX.wav,CREMA-D-WAV/1011_TAI_FEA_XX.wav,1011,2,FEA,Unspecified,The airplane is almost full,1011_TAI_FEA_XX.wav
+1011_TAI_HAP_XX.wav,CREMA-D-WAV/1011_TAI_HAP_XX.wav,1011,3,HAP,Unspecified,The airplane is almost full,1011_TAI_HAP_XX.wav
+1011_TAI_NEU_XX.wav,CREMA-D-WAV/1011_TAI_NEU_XX.wav,1011,4,NEU,Unspecified,The airplane is almost full,1011_TAI_NEU_XX.wav
+1011_TAI_SAD_XX.wav,CREMA-D-WAV/1011_TAI_SAD_XX.wav,1011,5,SAD,Unspecified,The airplane is almost full,1011_TAI_SAD_XX.wav
+1011_TIE_ANG_XX.wav,CREMA-D-WAV/1011_TIE_ANG_XX.wav,1011,0,ANG,Unspecified,That is exactly what happened,1011_TIE_ANG_XX.wav
+1011_TIE_DIS_XX.wav,CREMA-D-WAV/1011_TIE_DIS_XX.wav,1011,1,DIS,Unspecified,That is exactly what happened,1011_TIE_DIS_XX.wav
+1011_TIE_FEA_XX.wav,CREMA-D-WAV/1011_TIE_FEA_XX.wav,1011,2,FEA,Unspecified,That is exactly what happened,1011_TIE_FEA_XX.wav
+1011_TIE_HAP_XX.wav,CREMA-D-WAV/1011_TIE_HAP_XX.wav,1011,3,HAP,Unspecified,That is exactly what happened,1011_TIE_HAP_XX.wav
+1011_TIE_NEU_XX.wav,CREMA-D-WAV/1011_TIE_NEU_XX.wav,1011,4,NEU,Unspecified,That is exactly what happened,1011_TIE_NEU_XX.wav
+1011_TIE_SAD_XX.wav,CREMA-D-WAV/1011_TIE_SAD_XX.wav,1011,5,SAD,Unspecified,That is exactly what happened,1011_TIE_SAD_XX.wav
+1011_TSI_ANG_XX.wav,CREMA-D-WAV/1011_TSI_ANG_XX.wav,1011,0,ANG,Unspecified,The surface is slick,1011_TSI_ANG_XX.wav
+1011_TSI_DIS_XX.wav,CREMA-D-WAV/1011_TSI_DIS_XX.wav,1011,1,DIS,Unspecified,The surface is slick,1011_TSI_DIS_XX.wav
+1011_TSI_FEA_XX.wav,CREMA-D-WAV/1011_TSI_FEA_XX.wav,1011,2,FEA,Unspecified,The surface is slick,1011_TSI_FEA_XX.wav
+1011_TSI_HAP_XX.wav,CREMA-D-WAV/1011_TSI_HAP_XX.wav,1011,3,HAP,Unspecified,The surface is slick,1011_TSI_HAP_XX.wav
+1011_TSI_NEU_XX.wav,CREMA-D-WAV/1011_TSI_NEU_XX.wav,1011,4,NEU,Unspecified,The surface is slick,1011_TSI_NEU_XX.wav
+1011_TSI_SAD_XX.wav,CREMA-D-WAV/1011_TSI_SAD_XX.wav,1011,5,SAD,Unspecified,The surface is slick,1011_TSI_SAD_XX.wav
+1011_WSI_ANG_XX.wav,CREMA-D-WAV/1011_WSI_ANG_XX.wav,1011,0,ANG,Unspecified,We'll stop in a couple of minutes,1011_WSI_ANG_XX.wav
+1011_WSI_DIS_XX.wav,CREMA-D-WAV/1011_WSI_DIS_XX.wav,1011,1,DIS,Unspecified,We'll stop in a couple of minutes,1011_WSI_DIS_XX.wav
+1011_WSI_FEA_XX.wav,CREMA-D-WAV/1011_WSI_FEA_XX.wav,1011,2,FEA,Unspecified,We'll stop in a couple of minutes,1011_WSI_FEA_XX.wav
+1011_WSI_HAP_XX.wav,CREMA-D-WAV/1011_WSI_HAP_XX.wav,1011,3,HAP,Unspecified,We'll stop in a couple of minutes,1011_WSI_HAP_XX.wav
+1011_WSI_NEU_XX.wav,CREMA-D-WAV/1011_WSI_NEU_XX.wav,1011,4,NEU,Unspecified,We'll stop in a couple of minutes,1011_WSI_NEU_XX.wav
+1011_WSI_SAD_XX.wav,CREMA-D-WAV/1011_WSI_SAD_XX.wav,1011,5,SAD,Unspecified,We'll stop in a couple of minutes,1011_WSI_SAD_XX.wav
+1023_DFA_ANG_XX.wav,CREMA-D-WAV/1023_DFA_ANG_XX.wav,1023,0,ANG,Unspecified,Don't forget a jacket,1023_DFA_ANG_XX.wav
+1023_DFA_DIS_XX.wav,CREMA-D-WAV/1023_DFA_DIS_XX.wav,1023,1,DIS,Unspecified,Don't forget a jacket,1023_DFA_DIS_XX.wav
+1023_DFA_FEA_XX.wav,CREMA-D-WAV/1023_DFA_FEA_XX.wav,1023,2,FEA,Unspecified,Don't forget a jacket,1023_DFA_FEA_XX.wav
+1023_DFA_HAP_XX.wav,CREMA-D-WAV/1023_DFA_HAP_XX.wav,1023,3,HAP,Unspecified,Don't forget a jacket,1023_DFA_HAP_XX.wav
+1023_DFA_NEU_XX.wav,CREMA-D-WAV/1023_DFA_NEU_XX.wav,1023,4,NEU,Unspecified,Don't forget a jacket,1023_DFA_NEU_XX.wav
+1023_DFA_SAD_XX.wav,CREMA-D-WAV/1023_DFA_SAD_XX.wav,1023,5,SAD,Unspecified,Don't forget a jacket,1023_DFA_SAD_XX.wav
+1023_IEO_ANG_HI.wav,CREMA-D-WAV/1023_IEO_ANG_HI.wav,1023,0,ANG,High,It's eleven o'clock,1023_IEO_ANG_HI.wav
+1023_IEO_ANG_LO.wav,CREMA-D-WAV/1023_IEO_ANG_LO.wav,1023,0,ANG,Low,It's eleven o'clock,1023_IEO_ANG_LO.wav
+1023_IEO_ANG_MD.wav,CREMA-D-WAV/1023_IEO_ANG_MD.wav,1023,0,ANG,Medium,It's eleven o'clock,1023_IEO_ANG_MD.wav
+1023_IEO_DIS_HI.wav,CREMA-D-WAV/1023_IEO_DIS_HI.wav,1023,1,DIS,High,It's eleven o'clock,1023_IEO_DIS_HI.wav
+1023_IEO_DIS_LO.wav,CREMA-D-WAV/1023_IEO_DIS_LO.wav,1023,1,DIS,Low,It's eleven o'clock,1023_IEO_DIS_LO.wav
+1023_IEO_DIS_MD.wav,CREMA-D-WAV/1023_IEO_DIS_MD.wav,1023,1,DIS,Medium,It's eleven o'clock,1023_IEO_DIS_MD.wav
+1023_IEO_FEA_HI.wav,CREMA-D-WAV/1023_IEO_FEA_HI.wav,1023,2,FEA,High,It's eleven o'clock,1023_IEO_FEA_HI.wav
+1023_IEO_FEA_LO.wav,CREMA-D-WAV/1023_IEO_FEA_LO.wav,1023,2,FEA,Low,It's eleven o'clock,1023_IEO_FEA_LO.wav
+1023_IEO_FEA_MD.wav,CREMA-D-WAV/1023_IEO_FEA_MD.wav,1023,2,FEA,Medium,It's eleven o'clock,1023_IEO_FEA_MD.wav
+1023_IEO_HAP_HI.wav,CREMA-D-WAV/1023_IEO_HAP_HI.wav,1023,3,HAP,High,It's eleven o'clock,1023_IEO_HAP_HI.wav
+1023_IEO_HAP_LO.wav,CREMA-D-WAV/1023_IEO_HAP_LO.wav,1023,3,HAP,Low,It's eleven o'clock,1023_IEO_HAP_LO.wav
+1023_IEO_HAP_MD.wav,CREMA-D-WAV/1023_IEO_HAP_MD.wav,1023,3,HAP,Medium,It's eleven o'clock,1023_IEO_HAP_MD.wav
+1023_IEO_NEU_XX.wav,CREMA-D-WAV/1023_IEO_NEU_XX.wav,1023,4,NEU,Unspecified,It's eleven o'clock,1023_IEO_NEU_XX.wav
+1023_IEO_SAD_HI.wav,CREMA-D-WAV/1023_IEO_SAD_HI.wav,1023,5,SAD,High,It's eleven o'clock,1023_IEO_SAD_HI.wav
+1023_IEO_SAD_LO.wav,CREMA-D-WAV/1023_IEO_SAD_LO.wav,1023,5,SAD,Low,It's eleven o'clock,1023_IEO_SAD_LO.wav
+1023_IEO_SAD_MD.wav,CREMA-D-WAV/1023_IEO_SAD_MD.wav,1023,5,SAD,Medium,It's eleven o'clock,1023_IEO_SAD_MD.wav
+1023_IOM_ANG_XX.wav,CREMA-D-WAV/1023_IOM_ANG_XX.wav,1023,0,ANG,Unspecified,I'm on my way to the meeting,1023_IOM_ANG_XX.wav
+1023_IOM_DIS_XX.wav,CREMA-D-WAV/1023_IOM_DIS_XX.wav,1023,1,DIS,Unspecified,I'm on my way to the meeting,1023_IOM_DIS_XX.wav
+1023_IOM_FEA_XX.wav,CREMA-D-WAV/1023_IOM_FEA_XX.wav,1023,2,FEA,Unspecified,I'm on my way to the meeting,1023_IOM_FEA_XX.wav
+1023_IOM_HAP_XX.wav,CREMA-D-WAV/1023_IOM_HAP_XX.wav,1023,3,HAP,Unspecified,I'm on my way to the meeting,1023_IOM_HAP_XX.wav
+1023_IOM_NEU_XX.wav,CREMA-D-WAV/1023_IOM_NEU_XX.wav,1023,4,NEU,Unspecified,I'm on my way to the meeting,1023_IOM_NEU_XX.wav
+1023_IOM_SAD_XX.wav,CREMA-D-WAV/1023_IOM_SAD_XX.wav,1023,5,SAD,Unspecified,I'm on my way to the meeting,1023_IOM_SAD_XX.wav
+1023_ITH_ANG_XX.wav,CREMA-D-WAV/1023_ITH_ANG_XX.wav,1023,0,ANG,Unspecified,I think I have a doctor's appointment,1023_ITH_ANG_XX.wav
+1023_ITH_DIS_XX.wav,CREMA-D-WAV/1023_ITH_DIS_XX.wav,1023,1,DIS,Unspecified,I think I have a doctor's appointment,1023_ITH_DIS_XX.wav
+1023_ITH_FEA_XX.wav,CREMA-D-WAV/1023_ITH_FEA_XX.wav,1023,2,FEA,Unspecified,I think I have a doctor's appointment,1023_ITH_FEA_XX.wav
+1023_ITH_HAP_XX.wav,CREMA-D-WAV/1023_ITH_HAP_XX.wav,1023,3,HAP,Unspecified,I think I have a doctor's appointment,1023_ITH_HAP_XX.wav
+1023_ITH_NEU_XX.wav,CREMA-D-WAV/1023_ITH_NEU_XX.wav,1023,4,NEU,Unspecified,I think I have a doctor's appointment,1023_ITH_NEU_XX.wav
+1023_ITH_SAD_XX.wav,CREMA-D-WAV/1023_ITH_SAD_XX.wav,1023,5,SAD,Unspecified,I think I have a doctor's appointment,1023_ITH_SAD_XX.wav
+1023_ITS_ANG_XX.wav,CREMA-D-WAV/1023_ITS_ANG_XX.wav,1023,0,ANG,Unspecified,I think I've seen this before,1023_ITS_ANG_XX.wav
+1023_ITS_DIS_XX.wav,CREMA-D-WAV/1023_ITS_DIS_XX.wav,1023,1,DIS,Unspecified,I think I've seen this before,1023_ITS_DIS_XX.wav
+1023_ITS_FEA_XX.wav,CREMA-D-WAV/1023_ITS_FEA_XX.wav,1023,2,FEA,Unspecified,I think I've seen this before,1023_ITS_FEA_XX.wav
+1023_ITS_HAP_XX.wav,CREMA-D-WAV/1023_ITS_HAP_XX.wav,1023,3,HAP,Unspecified,I think I've seen this before,1023_ITS_HAP_XX.wav
+1023_ITS_NEU_XX.wav,CREMA-D-WAV/1023_ITS_NEU_XX.wav,1023,4,NEU,Unspecified,I think I've seen this before,1023_ITS_NEU_XX.wav
+1023_ITS_SAD_XX.wav,CREMA-D-WAV/1023_ITS_SAD_XX.wav,1023,5,SAD,Unspecified,I think I've seen this before,1023_ITS_SAD_XX.wav
+1023_IWL_ANG_XX.wav,CREMA-D-WAV/1023_IWL_ANG_XX.wav,1023,0,ANG,Unspecified,I would like a new alarm clock,1023_IWL_ANG_XX.wav
+1023_IWL_DIS_XX.wav,CREMA-D-WAV/1023_IWL_DIS_XX.wav,1023,1,DIS,Unspecified,I would like a new alarm clock,1023_IWL_DIS_XX.wav
+1023_IWL_FEA_XX.wav,CREMA-D-WAV/1023_IWL_FEA_XX.wav,1023,2,FEA,Unspecified,I would like a new alarm clock,1023_IWL_FEA_XX.wav
+1023_IWL_HAP_XX.wav,CREMA-D-WAV/1023_IWL_HAP_XX.wav,1023,3,HAP,Unspecified,I would like a new alarm clock,1023_IWL_HAP_XX.wav
+1023_IWL_NEU_XX.wav,CREMA-D-WAV/1023_IWL_NEU_XX.wav,1023,4,NEU,Unspecified,I would like a new alarm clock,1023_IWL_NEU_XX.wav
+1023_IWL_SAD_XX.wav,CREMA-D-WAV/1023_IWL_SAD_XX.wav,1023,5,SAD,Unspecified,I would like a new alarm clock,1023_IWL_SAD_XX.wav
+1023_IWW_ANG_XX.wav,CREMA-D-WAV/1023_IWW_ANG_XX.wav,1023,0,ANG,Unspecified,I wonder what this is about,1023_IWW_ANG_XX.wav
+1023_IWW_DIS_XX.wav,CREMA-D-WAV/1023_IWW_DIS_XX.wav,1023,1,DIS,Unspecified,I wonder what this is about,1023_IWW_DIS_XX.wav
+1023_IWW_FEA_XX.wav,CREMA-D-WAV/1023_IWW_FEA_XX.wav,1023,2,FEA,Unspecified,I wonder what this is about,1023_IWW_FEA_XX.wav
+1023_IWW_HAP_XX.wav,CREMA-D-WAV/1023_IWW_HAP_XX.wav,1023,3,HAP,Unspecified,I wonder what this is about,1023_IWW_HAP_XX.wav
+1023_IWW_NEU_XX.wav,CREMA-D-WAV/1023_IWW_NEU_XX.wav,1023,4,NEU,Unspecified,I wonder what this is about,1023_IWW_NEU_XX.wav
+1023_IWW_SAD_XX.wav,CREMA-D-WAV/1023_IWW_SAD_XX.wav,1023,5,SAD,Unspecified,I wonder what this is about,1023_IWW_SAD_XX.wav
+1023_MTI_ANG_XX.wav,CREMA-D-WAV/1023_MTI_ANG_XX.wav,1023,0,ANG,Unspecified,Maybe tomorrow it will be cold,1023_MTI_ANG_XX.wav
+1023_MTI_DIS_XX.wav,CREMA-D-WAV/1023_MTI_DIS_XX.wav,1023,1,DIS,Unspecified,Maybe tomorrow it will be cold,1023_MTI_DIS_XX.wav
+1023_MTI_FEA_XX.wav,CREMA-D-WAV/1023_MTI_FEA_XX.wav,1023,2,FEA,Unspecified,Maybe tomorrow it will be cold,1023_MTI_FEA_XX.wav
+1023_MTI_HAP_XX.wav,CREMA-D-WAV/1023_MTI_HAP_XX.wav,1023,3,HAP,Unspecified,Maybe tomorrow it will be cold,1023_MTI_HAP_XX.wav
+1023_MTI_NEU_XX.wav,CREMA-D-WAV/1023_MTI_NEU_XX.wav,1023,4,NEU,Unspecified,Maybe tomorrow it will be cold,1023_MTI_NEU_XX.wav
+1023_MTI_SAD_XX.wav,CREMA-D-WAV/1023_MTI_SAD_XX.wav,1023,5,SAD,Unspecified,Maybe tomorrow it will be cold,1023_MTI_SAD_XX.wav
+1023_TAI_ANG_XX.wav,CREMA-D-WAV/1023_TAI_ANG_XX.wav,1023,0,ANG,Unspecified,The airplane is almost full,1023_TAI_ANG_XX.wav
+1023_TAI_DIS_XX.wav,CREMA-D-WAV/1023_TAI_DIS_XX.wav,1023,1,DIS,Unspecified,The airplane is almost full,1023_TAI_DIS_XX.wav
+1023_TAI_FEA_XX.wav,CREMA-D-WAV/1023_TAI_FEA_XX.wav,1023,2,FEA,Unspecified,The airplane is almost full,1023_TAI_FEA_XX.wav
+1023_TAI_HAP_XX.wav,CREMA-D-WAV/1023_TAI_HAP_XX.wav,1023,3,HAP,Unspecified,The airplane is almost full,1023_TAI_HAP_XX.wav
+1023_TAI_NEU_XX.wav,CREMA-D-WAV/1023_TAI_NEU_XX.wav,1023,4,NEU,Unspecified,The airplane is almost full,1023_TAI_NEU_XX.wav
+1023_TAI_SAD_XX.wav,CREMA-D-WAV/1023_TAI_SAD_XX.wav,1023,5,SAD,Unspecified,The airplane is almost full,1023_TAI_SAD_XX.wav
+1023_TIE_ANG_XX.wav,CREMA-D-WAV/1023_TIE_ANG_XX.wav,1023,0,ANG,Unspecified,That is exactly what happened,1023_TIE_ANG_XX.wav
+1023_TIE_DIS_XX.wav,CREMA-D-WAV/1023_TIE_DIS_XX.wav,1023,1,DIS,Unspecified,That is exactly what happened,1023_TIE_DIS_XX.wav
+1023_TIE_FEA_XX.wav,CREMA-D-WAV/1023_TIE_FEA_XX.wav,1023,2,FEA,Unspecified,That is exactly what happened,1023_TIE_FEA_XX.wav
+1023_TIE_HAP_XX.wav,CREMA-D-WAV/1023_TIE_HAP_XX.wav,1023,3,HAP,Unspecified,That is exactly what happened,1023_TIE_HAP_XX.wav
+1023_TIE_NEU_XX.wav,CREMA-D-WAV/1023_TIE_NEU_XX.wav,1023,4,NEU,Unspecified,That is exactly what happened,1023_TIE_NEU_XX.wav
+1023_TIE_SAD_XX.wav,CREMA-D-WAV/1023_TIE_SAD_XX.wav,1023,5,SAD,Unspecified,That is exactly what happened,1023_TIE_SAD_XX.wav
+1023_TSI_ANG_XX.wav,CREMA-D-WAV/1023_TSI_ANG_XX.wav,1023,0,ANG,Unspecified,The surface is slick,1023_TSI_ANG_XX.wav
+1023_TSI_DIS_XX.wav,CREMA-D-WAV/1023_TSI_DIS_XX.wav,1023,1,DIS,Unspecified,The surface is slick,1023_TSI_DIS_XX.wav
+1023_TSI_FEA_XX.wav,CREMA-D-WAV/1023_TSI_FEA_XX.wav,1023,2,FEA,Unspecified,The surface is slick,1023_TSI_FEA_XX.wav
+1023_TSI_HAP_XX.wav,CREMA-D-WAV/1023_TSI_HAP_XX.wav,1023,3,HAP,Unspecified,The surface is slick,1023_TSI_HAP_XX.wav
+1023_TSI_NEU_XX.wav,CREMA-D-WAV/1023_TSI_NEU_XX.wav,1023,4,NEU,Unspecified,The surface is slick,1023_TSI_NEU_XX.wav
+1023_TSI_SAD_XX.wav,CREMA-D-WAV/1023_TSI_SAD_XX.wav,1023,5,SAD,Unspecified,The surface is slick,1023_TSI_SAD_XX.wav
+1023_WSI_ANG_XX.wav,CREMA-D-WAV/1023_WSI_ANG_XX.wav,1023,0,ANG,Unspecified,We'll stop in a couple of minutes,1023_WSI_ANG_XX.wav
+1023_WSI_DIS_XX.wav,CREMA-D-WAV/1023_WSI_DIS_XX.wav,1023,1,DIS,Unspecified,We'll stop in a couple of minutes,1023_WSI_DIS_XX.wav
+1023_WSI_FEA_XX.wav,CREMA-D-WAV/1023_WSI_FEA_XX.wav,1023,2,FEA,Unspecified,We'll stop in a couple of minutes,1023_WSI_FEA_XX.wav
+1023_WSI_HAP_XX.wav,CREMA-D-WAV/1023_WSI_HAP_XX.wav,1023,3,HAP,Unspecified,We'll stop in a couple of minutes,1023_WSI_HAP_XX.wav
+1023_WSI_NEU_XX.wav,CREMA-D-WAV/1023_WSI_NEU_XX.wav,1023,4,NEU,Unspecified,We'll stop in a couple of minutes,1023_WSI_NEU_XX.wav
+1023_WSI_SAD_XX.wav,CREMA-D-WAV/1023_WSI_SAD_XX.wav,1023,5,SAD,Unspecified,We'll stop in a couple of minutes,1023_WSI_SAD_XX.wav
+1027_DFA_ANG_XX.wav,CREMA-D-WAV/1027_DFA_ANG_XX.wav,1027,0,ANG,Unspecified,Don't forget a jacket,1027_DFA_ANG_XX.wav
+1027_DFA_DIS_XX.wav,CREMA-D-WAV/1027_DFA_DIS_XX.wav,1027,1,DIS,Unspecified,Don't forget a jacket,1027_DFA_DIS_XX.wav
+1027_DFA_FEA_XX.wav,CREMA-D-WAV/1027_DFA_FEA_XX.wav,1027,2,FEA,Unspecified,Don't forget a jacket,1027_DFA_FEA_XX.wav
+1027_DFA_HAP_XX.wav,CREMA-D-WAV/1027_DFA_HAP_XX.wav,1027,3,HAP,Unspecified,Don't forget a jacket,1027_DFA_HAP_XX.wav
+1027_DFA_NEU_XX.wav,CREMA-D-WAV/1027_DFA_NEU_XX.wav,1027,4,NEU,Unspecified,Don't forget a jacket,1027_DFA_NEU_XX.wav
+1027_DFA_SAD_XX.wav,CREMA-D-WAV/1027_DFA_SAD_XX.wav,1027,5,SAD,Unspecified,Don't forget a jacket,1027_DFA_SAD_XX.wav
+1027_IEO_ANG_HI.wav,CREMA-D-WAV/1027_IEO_ANG_HI.wav,1027,0,ANG,High,It's eleven o'clock,1027_IEO_ANG_HI.wav
+1027_IEO_ANG_LO.wav,CREMA-D-WAV/1027_IEO_ANG_LO.wav,1027,0,ANG,Low,It's eleven o'clock,1027_IEO_ANG_LO.wav
+1027_IEO_ANG_MD.wav,CREMA-D-WAV/1027_IEO_ANG_MD.wav,1027,0,ANG,Medium,It's eleven o'clock,1027_IEO_ANG_MD.wav
+1027_IEO_DIS_HI.wav,CREMA-D-WAV/1027_IEO_DIS_HI.wav,1027,1,DIS,High,It's eleven o'clock,1027_IEO_DIS_HI.wav
+1027_IEO_DIS_LO.wav,CREMA-D-WAV/1027_IEO_DIS_LO.wav,1027,1,DIS,Low,It's eleven o'clock,1027_IEO_DIS_LO.wav
+1027_IEO_DIS_MD.wav,CREMA-D-WAV/1027_IEO_DIS_MD.wav,1027,1,DIS,Medium,It's eleven o'clock,1027_IEO_DIS_MD.wav
+1027_IEO_FEA_HI.wav,CREMA-D-WAV/1027_IEO_FEA_HI.wav,1027,2,FEA,High,It's eleven o'clock,1027_IEO_FEA_HI.wav
+1027_IEO_FEA_LO.wav,CREMA-D-WAV/1027_IEO_FEA_LO.wav,1027,2,FEA,Low,It's eleven o'clock,1027_IEO_FEA_LO.wav
+1027_IEO_FEA_MD.wav,CREMA-D-WAV/1027_IEO_FEA_MD.wav,1027,2,FEA,Medium,It's eleven o'clock,1027_IEO_FEA_MD.wav
+1027_IEO_HAP_HI.wav,CREMA-D-WAV/1027_IEO_HAP_HI.wav,1027,3,HAP,High,It's eleven o'clock,1027_IEO_HAP_HI.wav
+1027_IEO_HAP_LO.wav,CREMA-D-WAV/1027_IEO_HAP_LO.wav,1027,3,HAP,Low,It's eleven o'clock,1027_IEO_HAP_LO.wav
+1027_IEO_HAP_MD.wav,CREMA-D-WAV/1027_IEO_HAP_MD.wav,1027,3,HAP,Medium,It's eleven o'clock,1027_IEO_HAP_MD.wav
+1027_IEO_NEU_XX.wav,CREMA-D-WAV/1027_IEO_NEU_XX.wav,1027,4,NEU,Unspecified,It's eleven o'clock,1027_IEO_NEU_XX.wav
+1027_IEO_SAD_HI.wav,CREMA-D-WAV/1027_IEO_SAD_HI.wav,1027,5,SAD,High,It's eleven o'clock,1027_IEO_SAD_HI.wav
+1027_IEO_SAD_LO.wav,CREMA-D-WAV/1027_IEO_SAD_LO.wav,1027,5,SAD,Low,It's eleven o'clock,1027_IEO_SAD_LO.wav
+1027_IEO_SAD_MD.wav,CREMA-D-WAV/1027_IEO_SAD_MD.wav,1027,5,SAD,Medium,It's eleven o'clock,1027_IEO_SAD_MD.wav
+1027_IOM_ANG_XX.wav,CREMA-D-WAV/1027_IOM_ANG_XX.wav,1027,0,ANG,Unspecified,I'm on my way to the meeting,1027_IOM_ANG_XX.wav
+1027_IOM_DIS_XX.wav,CREMA-D-WAV/1027_IOM_DIS_XX.wav,1027,1,DIS,Unspecified,I'm on my way to the meeting,1027_IOM_DIS_XX.wav
+1027_IOM_FEA_XX.wav,CREMA-D-WAV/1027_IOM_FEA_XX.wav,1027,2,FEA,Unspecified,I'm on my way to the meeting,1027_IOM_FEA_XX.wav
+1027_IOM_HAP_XX.wav,CREMA-D-WAV/1027_IOM_HAP_XX.wav,1027,3,HAP,Unspecified,I'm on my way to the meeting,1027_IOM_HAP_XX.wav
+1027_IOM_NEU_XX.wav,CREMA-D-WAV/1027_IOM_NEU_XX.wav,1027,4,NEU,Unspecified,I'm on my way to the meeting,1027_IOM_NEU_XX.wav
+1027_IOM_SAD_XX.wav,CREMA-D-WAV/1027_IOM_SAD_XX.wav,1027,5,SAD,Unspecified,I'm on my way to the meeting,1027_IOM_SAD_XX.wav
+1027_ITH_ANG_XX.wav,CREMA-D-WAV/1027_ITH_ANG_XX.wav,1027,0,ANG,Unspecified,I think I have a doctor's appointment,1027_ITH_ANG_XX.wav
+1027_ITH_DIS_XX.wav,CREMA-D-WAV/1027_ITH_DIS_XX.wav,1027,1,DIS,Unspecified,I think I have a doctor's appointment,1027_ITH_DIS_XX.wav
+1027_ITH_FEA_XX.wav,CREMA-D-WAV/1027_ITH_FEA_XX.wav,1027,2,FEA,Unspecified,I think I have a doctor's appointment,1027_ITH_FEA_XX.wav
+1027_ITH_HAP_XX.wav,CREMA-D-WAV/1027_ITH_HAP_XX.wav,1027,3,HAP,Unspecified,I think I have a doctor's appointment,1027_ITH_HAP_XX.wav
+1027_ITH_NEU_XX.wav,CREMA-D-WAV/1027_ITH_NEU_XX.wav,1027,4,NEU,Unspecified,I think I have a doctor's appointment,1027_ITH_NEU_XX.wav
+1027_ITH_SAD_XX.wav,CREMA-D-WAV/1027_ITH_SAD_XX.wav,1027,5,SAD,Unspecified,I think I have a doctor's appointment,1027_ITH_SAD_XX.wav
+1027_ITS_ANG_XX.wav,CREMA-D-WAV/1027_ITS_ANG_XX.wav,1027,0,ANG,Unspecified,I think I've seen this before,1027_ITS_ANG_XX.wav
+1027_ITS_DIS_XX.wav,CREMA-D-WAV/1027_ITS_DIS_XX.wav,1027,1,DIS,Unspecified,I think I've seen this before,1027_ITS_DIS_XX.wav
+1027_ITS_FEA_XX.wav,CREMA-D-WAV/1027_ITS_FEA_XX.wav,1027,2,FEA,Unspecified,I think I've seen this before,1027_ITS_FEA_XX.wav
+1027_ITS_HAP_XX.wav,CREMA-D-WAV/1027_ITS_HAP_XX.wav,1027,3,HAP,Unspecified,I think I've seen this before,1027_ITS_HAP_XX.wav
+1027_ITS_NEU_XX.wav,CREMA-D-WAV/1027_ITS_NEU_XX.wav,1027,4,NEU,Unspecified,I think I've seen this before,1027_ITS_NEU_XX.wav
+1027_ITS_SAD_XX.wav,CREMA-D-WAV/1027_ITS_SAD_XX.wav,1027,5,SAD,Unspecified,I think I've seen this before,1027_ITS_SAD_XX.wav
+1027_IWL_ANG_XX.wav,CREMA-D-WAV/1027_IWL_ANG_XX.wav,1027,0,ANG,Unspecified,I would like a new alarm clock,1027_IWL_ANG_XX.wav
+1027_IWL_DIS_XX.wav,CREMA-D-WAV/1027_IWL_DIS_XX.wav,1027,1,DIS,Unspecified,I would like a new alarm clock,1027_IWL_DIS_XX.wav
+1027_IWL_FEA_XX.wav,CREMA-D-WAV/1027_IWL_FEA_XX.wav,1027,2,FEA,Unspecified,I would like a new alarm clock,1027_IWL_FEA_XX.wav
+1027_IWL_HAP_XX.wav,CREMA-D-WAV/1027_IWL_HAP_XX.wav,1027,3,HAP,Unspecified,I would like a new alarm clock,1027_IWL_HAP_XX.wav
+1027_IWL_NEU_XX.wav,CREMA-D-WAV/1027_IWL_NEU_XX.wav,1027,4,NEU,Unspecified,I would like a new alarm clock,1027_IWL_NEU_XX.wav
+1027_IWL_SAD_XX.wav,CREMA-D-WAV/1027_IWL_SAD_XX.wav,1027,5,SAD,Unspecified,I would like a new alarm clock,1027_IWL_SAD_XX.wav
+1027_IWW_ANG_XX.wav,CREMA-D-WAV/1027_IWW_ANG_XX.wav,1027,0,ANG,Unspecified,I wonder what this is about,1027_IWW_ANG_XX.wav
+1027_IWW_DIS_XX.wav,CREMA-D-WAV/1027_IWW_DIS_XX.wav,1027,1,DIS,Unspecified,I wonder what this is about,1027_IWW_DIS_XX.wav
+1027_IWW_FEA_XX.wav,CREMA-D-WAV/1027_IWW_FEA_XX.wav,1027,2,FEA,Unspecified,I wonder what this is about,1027_IWW_FEA_XX.wav
+1027_IWW_HAP_XX.wav,CREMA-D-WAV/1027_IWW_HAP_XX.wav,1027,3,HAP,Unspecified,I wonder what this is about,1027_IWW_HAP_XX.wav
+1027_IWW_NEU_XX.wav,CREMA-D-WAV/1027_IWW_NEU_XX.wav,1027,4,NEU,Unspecified,I wonder what this is about,1027_IWW_NEU_XX.wav
+1027_IWW_SAD_XX.wav,CREMA-D-WAV/1027_IWW_SAD_XX.wav,1027,5,SAD,Unspecified,I wonder what this is about,1027_IWW_SAD_XX.wav
+1027_MTI_ANG_XX.wav,CREMA-D-WAV/1027_MTI_ANG_XX.wav,1027,0,ANG,Unspecified,Maybe tomorrow it will be cold,1027_MTI_ANG_XX.wav
+1027_MTI_DIS_XX.wav,CREMA-D-WAV/1027_MTI_DIS_XX.wav,1027,1,DIS,Unspecified,Maybe tomorrow it will be cold,1027_MTI_DIS_XX.wav
+1027_MTI_FEA_XX.wav,CREMA-D-WAV/1027_MTI_FEA_XX.wav,1027,2,FEA,Unspecified,Maybe tomorrow it will be cold,1027_MTI_FEA_XX.wav
+1027_MTI_HAP_XX.wav,CREMA-D-WAV/1027_MTI_HAP_XX.wav,1027,3,HAP,Unspecified,Maybe tomorrow it will be cold,1027_MTI_HAP_XX.wav
+1027_MTI_NEU_XX.wav,CREMA-D-WAV/1027_MTI_NEU_XX.wav,1027,4,NEU,Unspecified,Maybe tomorrow it will be cold,1027_MTI_NEU_XX.wav
+1027_MTI_SAD_XX.wav,CREMA-D-WAV/1027_MTI_SAD_XX.wav,1027,5,SAD,Unspecified,Maybe tomorrow it will be cold,1027_MTI_SAD_XX.wav
+1027_TAI_ANG_XX.wav,CREMA-D-WAV/1027_TAI_ANG_XX.wav,1027,0,ANG,Unspecified,The airplane is almost full,1027_TAI_ANG_XX.wav
+1027_TAI_DIS_XX.wav,CREMA-D-WAV/1027_TAI_DIS_XX.wav,1027,1,DIS,Unspecified,The airplane is almost full,1027_TAI_DIS_XX.wav
+1027_TAI_FEA_XX.wav,CREMA-D-WAV/1027_TAI_FEA_XX.wav,1027,2,FEA,Unspecified,The airplane is almost full,1027_TAI_FEA_XX.wav
+1027_TAI_HAP_XX.wav,CREMA-D-WAV/1027_TAI_HAP_XX.wav,1027,3,HAP,Unspecified,The airplane is almost full,1027_TAI_HAP_XX.wav
+1027_TAI_NEU_XX.wav,CREMA-D-WAV/1027_TAI_NEU_XX.wav,1027,4,NEU,Unspecified,The airplane is almost full,1027_TAI_NEU_XX.wav
+1027_TAI_SAD_XX.wav,CREMA-D-WAV/1027_TAI_SAD_XX.wav,1027,5,SAD,Unspecified,The airplane is almost full,1027_TAI_SAD_XX.wav
+1027_TIE_ANG_XX.wav,CREMA-D-WAV/1027_TIE_ANG_XX.wav,1027,0,ANG,Unspecified,That is exactly what happened,1027_TIE_ANG_XX.wav
+1027_TIE_DIS_XX.wav,CREMA-D-WAV/1027_TIE_DIS_XX.wav,1027,1,DIS,Unspecified,That is exactly what happened,1027_TIE_DIS_XX.wav
+1027_TIE_FEA_XX.wav,CREMA-D-WAV/1027_TIE_FEA_XX.wav,1027,2,FEA,Unspecified,That is exactly what happened,1027_TIE_FEA_XX.wav
+1027_TIE_HAP_XX.wav,CREMA-D-WAV/1027_TIE_HAP_XX.wav,1027,3,HAP,Unspecified,That is exactly what happened,1027_TIE_HAP_XX.wav
+1027_TIE_NEU_XX.wav,CREMA-D-WAV/1027_TIE_NEU_XX.wav,1027,4,NEU,Unspecified,That is exactly what happened,1027_TIE_NEU_XX.wav
+1027_TIE_SAD_XX.wav,CREMA-D-WAV/1027_TIE_SAD_XX.wav,1027,5,SAD,Unspecified,That is exactly what happened,1027_TIE_SAD_XX.wav
+1027_TSI_ANG_XX.wav,CREMA-D-WAV/1027_TSI_ANG_XX.wav,1027,0,ANG,Unspecified,The surface is slick,1027_TSI_ANG_XX.wav
+1027_TSI_DIS_XX.wav,CREMA-D-WAV/1027_TSI_DIS_XX.wav,1027,1,DIS,Unspecified,The surface is slick,1027_TSI_DIS_XX.wav
+1027_TSI_FEA_XX.wav,CREMA-D-WAV/1027_TSI_FEA_XX.wav,1027,2,FEA,Unspecified,The surface is slick,1027_TSI_FEA_XX.wav
+1027_TSI_HAP_XX.wav,CREMA-D-WAV/1027_TSI_HAP_XX.wav,1027,3,HAP,Unspecified,The surface is slick,1027_TSI_HAP_XX.wav
+1027_TSI_NEU_XX.wav,CREMA-D-WAV/1027_TSI_NEU_XX.wav,1027,4,NEU,Unspecified,The surface is slick,1027_TSI_NEU_XX.wav
+1027_TSI_SAD_XX.wav,CREMA-D-WAV/1027_TSI_SAD_XX.wav,1027,5,SAD,Unspecified,The surface is slick,1027_TSI_SAD_XX.wav
+1027_WSI_ANG_XX.wav,CREMA-D-WAV/1027_WSI_ANG_XX.wav,1027,0,ANG,Unspecified,We'll stop in a couple of minutes,1027_WSI_ANG_XX.wav
+1027_WSI_DIS_XX.wav,CREMA-D-WAV/1027_WSI_DIS_XX.wav,1027,1,DIS,Unspecified,We'll stop in a couple of minutes,1027_WSI_DIS_XX.wav
+1027_WSI_FEA_XX.wav,CREMA-D-WAV/1027_WSI_FEA_XX.wav,1027,2,FEA,Unspecified,We'll stop in a couple of minutes,1027_WSI_FEA_XX.wav
+1027_WSI_HAP_XX.wav,CREMA-D-WAV/1027_WSI_HAP_XX.wav,1027,3,HAP,Unspecified,We'll stop in a couple of minutes,1027_WSI_HAP_XX.wav
+1027_WSI_NEU_XX.wav,CREMA-D-WAV/1027_WSI_NEU_XX.wav,1027,4,NEU,Unspecified,We'll stop in a couple of minutes,1027_WSI_NEU_XX.wav
+1027_WSI_SAD_XX.wav,CREMA-D-WAV/1027_WSI_SAD_XX.wav,1027,5,SAD,Unspecified,We'll stop in a couple of minutes,1027_WSI_SAD_XX.wav
+1036_DFA_ANG_XX.wav,CREMA-D-WAV/1036_DFA_ANG_XX.wav,1036,0,ANG,Unspecified,Don't forget a jacket,1036_DFA_ANG_XX.wav
+1036_DFA_DIS_XX.wav,CREMA-D-WAV/1036_DFA_DIS_XX.wav,1036,1,DIS,Unspecified,Don't forget a jacket,1036_DFA_DIS_XX.wav
+1036_DFA_FEA_XX.wav,CREMA-D-WAV/1036_DFA_FEA_XX.wav,1036,2,FEA,Unspecified,Don't forget a jacket,1036_DFA_FEA_XX.wav
+1036_DFA_HAP_XX.wav,CREMA-D-WAV/1036_DFA_HAP_XX.wav,1036,3,HAP,Unspecified,Don't forget a jacket,1036_DFA_HAP_XX.wav
+1036_DFA_NEU_XX.wav,CREMA-D-WAV/1036_DFA_NEU_XX.wav,1036,4,NEU,Unspecified,Don't forget a jacket,1036_DFA_NEU_XX.wav
+1036_DFA_SAD_XX.wav,CREMA-D-WAV/1036_DFA_SAD_XX.wav,1036,5,SAD,Unspecified,Don't forget a jacket,1036_DFA_SAD_XX.wav
+1036_IEO_ANG_HI.wav,CREMA-D-WAV/1036_IEO_ANG_HI.wav,1036,0,ANG,High,It's eleven o'clock,1036_IEO_ANG_HI.wav
+1036_IEO_ANG_LO.wav,CREMA-D-WAV/1036_IEO_ANG_LO.wav,1036,0,ANG,Low,It's eleven o'clock,1036_IEO_ANG_LO.wav
+1036_IEO_ANG_MD.wav,CREMA-D-WAV/1036_IEO_ANG_MD.wav,1036,0,ANG,Medium,It's eleven o'clock,1036_IEO_ANG_MD.wav
+1036_IEO_DIS_HI.wav,CREMA-D-WAV/1036_IEO_DIS_HI.wav,1036,1,DIS,High,It's eleven o'clock,1036_IEO_DIS_HI.wav
+1036_IEO_DIS_LO.wav,CREMA-D-WAV/1036_IEO_DIS_LO.wav,1036,1,DIS,Low,It's eleven o'clock,1036_IEO_DIS_LO.wav
+1036_IEO_DIS_MD.wav,CREMA-D-WAV/1036_IEO_DIS_MD.wav,1036,1,DIS,Medium,It's eleven o'clock,1036_IEO_DIS_MD.wav
+1036_IEO_FEA_HI.wav,CREMA-D-WAV/1036_IEO_FEA_HI.wav,1036,2,FEA,High,It's eleven o'clock,1036_IEO_FEA_HI.wav
+1036_IEO_FEA_LO.wav,CREMA-D-WAV/1036_IEO_FEA_LO.wav,1036,2,FEA,Low,It's eleven o'clock,1036_IEO_FEA_LO.wav
+1036_IEO_FEA_MD.wav,CREMA-D-WAV/1036_IEO_FEA_MD.wav,1036,2,FEA,Medium,It's eleven o'clock,1036_IEO_FEA_MD.wav
+1036_IEO_HAP_HI.wav,CREMA-D-WAV/1036_IEO_HAP_HI.wav,1036,3,HAP,High,It's eleven o'clock,1036_IEO_HAP_HI.wav
+1036_IEO_HAP_LO.wav,CREMA-D-WAV/1036_IEO_HAP_LO.wav,1036,3,HAP,Low,It's eleven o'clock,1036_IEO_HAP_LO.wav
+1036_IEO_HAP_MD.wav,CREMA-D-WAV/1036_IEO_HAP_MD.wav,1036,3,HAP,Medium,It's eleven o'clock,1036_IEO_HAP_MD.wav
+1036_IEO_NEU_XX.wav,CREMA-D-WAV/1036_IEO_NEU_XX.wav,1036,4,NEU,Unspecified,It's eleven o'clock,1036_IEO_NEU_XX.wav
+1036_IEO_SAD_HI.wav,CREMA-D-WAV/1036_IEO_SAD_HI.wav,1036,5,SAD,High,It's eleven o'clock,1036_IEO_SAD_HI.wav
+1036_IEO_SAD_LO.wav,CREMA-D-WAV/1036_IEO_SAD_LO.wav,1036,5,SAD,Low,It's eleven o'clock,1036_IEO_SAD_LO.wav
+1036_IEO_SAD_MD.wav,CREMA-D-WAV/1036_IEO_SAD_MD.wav,1036,5,SAD,Medium,It's eleven o'clock,1036_IEO_SAD_MD.wav
+1036_IOM_ANG_XX.wav,CREMA-D-WAV/1036_IOM_ANG_XX.wav,1036,0,ANG,Unspecified,I'm on my way to the meeting,1036_IOM_ANG_XX.wav
+1036_IOM_DIS_XX.wav,CREMA-D-WAV/1036_IOM_DIS_XX.wav,1036,1,DIS,Unspecified,I'm on my way to the meeting,1036_IOM_DIS_XX.wav
+1036_IOM_FEA_XX.wav,CREMA-D-WAV/1036_IOM_FEA_XX.wav,1036,2,FEA,Unspecified,I'm on my way to the meeting,1036_IOM_FEA_XX.wav
+1036_IOM_HAP_XX.wav,CREMA-D-WAV/1036_IOM_HAP_XX.wav,1036,3,HAP,Unspecified,I'm on my way to the meeting,1036_IOM_HAP_XX.wav
+1036_IOM_NEU_XX.wav,CREMA-D-WAV/1036_IOM_NEU_XX.wav,1036,4,NEU,Unspecified,I'm on my way to the meeting,1036_IOM_NEU_XX.wav
+1036_IOM_SAD_XX.wav,CREMA-D-WAV/1036_IOM_SAD_XX.wav,1036,5,SAD,Unspecified,I'm on my way to the meeting,1036_IOM_SAD_XX.wav
+1036_ITH_ANG_XX.wav,CREMA-D-WAV/1036_ITH_ANG_XX.wav,1036,0,ANG,Unspecified,I think I have a doctor's appointment,1036_ITH_ANG_XX.wav
+1036_ITH_DIS_XX.wav,CREMA-D-WAV/1036_ITH_DIS_XX.wav,1036,1,DIS,Unspecified,I think I have a doctor's appointment,1036_ITH_DIS_XX.wav
+1036_ITH_FEA_XX.wav,CREMA-D-WAV/1036_ITH_FEA_XX.wav,1036,2,FEA,Unspecified,I think I have a doctor's appointment,1036_ITH_FEA_XX.wav
+1036_ITH_HAP_XX.wav,CREMA-D-WAV/1036_ITH_HAP_XX.wav,1036,3,HAP,Unspecified,I think I have a doctor's appointment,1036_ITH_HAP_XX.wav
+1036_ITH_NEU_XX.wav,CREMA-D-WAV/1036_ITH_NEU_XX.wav,1036,4,NEU,Unspecified,I think I have a doctor's appointment,1036_ITH_NEU_XX.wav
+1036_ITH_SAD_XX.wav,CREMA-D-WAV/1036_ITH_SAD_XX.wav,1036,5,SAD,Unspecified,I think I have a doctor's appointment,1036_ITH_SAD_XX.wav
+1036_ITS_ANG_XX.wav,CREMA-D-WAV/1036_ITS_ANG_XX.wav,1036,0,ANG,Unspecified,I think I've seen this before,1036_ITS_ANG_XX.wav
+1036_ITS_DIS_XX.wav,CREMA-D-WAV/1036_ITS_DIS_XX.wav,1036,1,DIS,Unspecified,I think I've seen this before,1036_ITS_DIS_XX.wav
+1036_ITS_FEA_XX.wav,CREMA-D-WAV/1036_ITS_FEA_XX.wav,1036,2,FEA,Unspecified,I think I've seen this before,1036_ITS_FEA_XX.wav
+1036_ITS_HAP_XX.wav,CREMA-D-WAV/1036_ITS_HAP_XX.wav,1036,3,HAP,Unspecified,I think I've seen this before,1036_ITS_HAP_XX.wav
+1036_ITS_NEU_XX.wav,CREMA-D-WAV/1036_ITS_NEU_XX.wav,1036,4,NEU,Unspecified,I think I've seen this before,1036_ITS_NEU_XX.wav
+1036_ITS_SAD_XX.wav,CREMA-D-WAV/1036_ITS_SAD_XX.wav,1036,5,SAD,Unspecified,I think I've seen this before,1036_ITS_SAD_XX.wav
+1036_IWL_ANG_XX.wav,CREMA-D-WAV/1036_IWL_ANG_XX.wav,1036,0,ANG,Unspecified,I would like a new alarm clock,1036_IWL_ANG_XX.wav
+1036_IWL_DIS_XX.wav,CREMA-D-WAV/1036_IWL_DIS_XX.wav,1036,1,DIS,Unspecified,I would like a new alarm clock,1036_IWL_DIS_XX.wav
+1036_IWL_FEA_XX.wav,CREMA-D-WAV/1036_IWL_FEA_XX.wav,1036,2,FEA,Unspecified,I would like a new alarm clock,1036_IWL_FEA_XX.wav
+1036_IWL_HAP_XX.wav,CREMA-D-WAV/1036_IWL_HAP_XX.wav,1036,3,HAP,Unspecified,I would like a new alarm clock,1036_IWL_HAP_XX.wav
+1036_IWL_NEU_XX.wav,CREMA-D-WAV/1036_IWL_NEU_XX.wav,1036,4,NEU,Unspecified,I would like a new alarm clock,1036_IWL_NEU_XX.wav
+1036_IWL_SAD_XX.wav,CREMA-D-WAV/1036_IWL_SAD_XX.wav,1036,5,SAD,Unspecified,I would like a new alarm clock,1036_IWL_SAD_XX.wav
+1036_IWW_ANG_XX.wav,CREMA-D-WAV/1036_IWW_ANG_XX.wav,1036,0,ANG,Unspecified,I wonder what this is about,1036_IWW_ANG_XX.wav
+1036_IWW_DIS_XX.wav,CREMA-D-WAV/1036_IWW_DIS_XX.wav,1036,1,DIS,Unspecified,I wonder what this is about,1036_IWW_DIS_XX.wav
+1036_IWW_FEA_XX.wav,CREMA-D-WAV/1036_IWW_FEA_XX.wav,1036,2,FEA,Unspecified,I wonder what this is about,1036_IWW_FEA_XX.wav
+1036_IWW_HAP_XX.wav,CREMA-D-WAV/1036_IWW_HAP_XX.wav,1036,3,HAP,Unspecified,I wonder what this is about,1036_IWW_HAP_XX.wav
+1036_IWW_NEU_XX.wav,CREMA-D-WAV/1036_IWW_NEU_XX.wav,1036,4,NEU,Unspecified,I wonder what this is about,1036_IWW_NEU_XX.wav
+1036_IWW_SAD_XX.wav,CREMA-D-WAV/1036_IWW_SAD_XX.wav,1036,5,SAD,Unspecified,I wonder what this is about,1036_IWW_SAD_XX.wav
+1036_MTI_ANG_XX.wav,CREMA-D-WAV/1036_MTI_ANG_XX.wav,1036,0,ANG,Unspecified,Maybe tomorrow it will be cold,1036_MTI_ANG_XX.wav
+1036_MTI_DIS_XX.wav,CREMA-D-WAV/1036_MTI_DIS_XX.wav,1036,1,DIS,Unspecified,Maybe tomorrow it will be cold,1036_MTI_DIS_XX.wav
+1036_MTI_FEA_XX.wav,CREMA-D-WAV/1036_MTI_FEA_XX.wav,1036,2,FEA,Unspecified,Maybe tomorrow it will be cold,1036_MTI_FEA_XX.wav
+1036_MTI_HAP_XX.wav,CREMA-D-WAV/1036_MTI_HAP_XX.wav,1036,3,HAP,Unspecified,Maybe tomorrow it will be cold,1036_MTI_HAP_XX.wav
+1036_MTI_NEU_XX.wav,CREMA-D-WAV/1036_MTI_NEU_XX.wav,1036,4,NEU,Unspecified,Maybe tomorrow it will be cold,1036_MTI_NEU_XX.wav
+1036_MTI_SAD_XX.wav,CREMA-D-WAV/1036_MTI_SAD_XX.wav,1036,5,SAD,Unspecified,Maybe tomorrow it will be cold,1036_MTI_SAD_XX.wav
+1036_TAI_ANG_XX.wav,CREMA-D-WAV/1036_TAI_ANG_XX.wav,1036,0,ANG,Unspecified,The airplane is almost full,1036_TAI_ANG_XX.wav
+1036_TAI_DIS_XX.wav,CREMA-D-WAV/1036_TAI_DIS_XX.wav,1036,1,DIS,Unspecified,The airplane is almost full,1036_TAI_DIS_XX.wav
+1036_TAI_FEA_XX.wav,CREMA-D-WAV/1036_TAI_FEA_XX.wav,1036,2,FEA,Unspecified,The airplane is almost full,1036_TAI_FEA_XX.wav
+1036_TAI_HAP_XX.wav,CREMA-D-WAV/1036_TAI_HAP_XX.wav,1036,3,HAP,Unspecified,The airplane is almost full,1036_TAI_HAP_XX.wav
+1036_TAI_NEU_XX.wav,CREMA-D-WAV/1036_TAI_NEU_XX.wav,1036,4,NEU,Unspecified,The airplane is almost full,1036_TAI_NEU_XX.wav
+1036_TAI_SAD_XX.wav,CREMA-D-WAV/1036_TAI_SAD_XX.wav,1036,5,SAD,Unspecified,The airplane is almost full,1036_TAI_SAD_XX.wav
+1036_TIE_ANG_XX.wav,CREMA-D-WAV/1036_TIE_ANG_XX.wav,1036,0,ANG,Unspecified,That is exactly what happened,1036_TIE_ANG_XX.wav
+1036_TIE_DIS_XX.wav,CREMA-D-WAV/1036_TIE_DIS_XX.wav,1036,1,DIS,Unspecified,That is exactly what happened,1036_TIE_DIS_XX.wav
+1036_TIE_FEA_XX.wav,CREMA-D-WAV/1036_TIE_FEA_XX.wav,1036,2,FEA,Unspecified,That is exactly what happened,1036_TIE_FEA_XX.wav
+1036_TIE_HAP_XX.wav,CREMA-D-WAV/1036_TIE_HAP_XX.wav,1036,3,HAP,Unspecified,That is exactly what happened,1036_TIE_HAP_XX.wav
+1036_TIE_NEU_XX.wav,CREMA-D-WAV/1036_TIE_NEU_XX.wav,1036,4,NEU,Unspecified,That is exactly what happened,1036_TIE_NEU_XX.wav
+1036_TIE_SAD_XX.wav,CREMA-D-WAV/1036_TIE_SAD_XX.wav,1036,5,SAD,Unspecified,That is exactly what happened,1036_TIE_SAD_XX.wav
+1036_TSI_ANG_XX.wav,CREMA-D-WAV/1036_TSI_ANG_XX.wav,1036,0,ANG,Unspecified,The surface is slick,1036_TSI_ANG_XX.wav
+1036_TSI_DIS_XX.wav,CREMA-D-WAV/1036_TSI_DIS_XX.wav,1036,1,DIS,Unspecified,The surface is slick,1036_TSI_DIS_XX.wav
+1036_TSI_FEA_XX.wav,CREMA-D-WAV/1036_TSI_FEA_XX.wav,1036,2,FEA,Unspecified,The surface is slick,1036_TSI_FEA_XX.wav
+1036_TSI_HAP_XX.wav,CREMA-D-WAV/1036_TSI_HAP_XX.wav,1036,3,HAP,Unspecified,The surface is slick,1036_TSI_HAP_XX.wav
+1036_TSI_NEU_XX.wav,CREMA-D-WAV/1036_TSI_NEU_XX.wav,1036,4,NEU,Unspecified,The surface is slick,1036_TSI_NEU_XX.wav
+1036_TSI_SAD_XX.wav,CREMA-D-WAV/1036_TSI_SAD_XX.wav,1036,5,SAD,Unspecified,The surface is slick,1036_TSI_SAD_XX.wav
+1036_WSI_ANG_XX.wav,CREMA-D-WAV/1036_WSI_ANG_XX.wav,1036,0,ANG,Unspecified,We'll stop in a couple of minutes,1036_WSI_ANG_XX.wav
+1036_WSI_DIS_XX.wav,CREMA-D-WAV/1036_WSI_DIS_XX.wav,1036,1,DIS,Unspecified,We'll stop in a couple of minutes,1036_WSI_DIS_XX.wav
+1036_WSI_FEA_XX.wav,CREMA-D-WAV/1036_WSI_FEA_XX.wav,1036,2,FEA,Unspecified,We'll stop in a couple of minutes,1036_WSI_FEA_XX.wav
+1036_WSI_HAP_XX.wav,CREMA-D-WAV/1036_WSI_HAP_XX.wav,1036,3,HAP,Unspecified,We'll stop in a couple of minutes,1036_WSI_HAP_XX.wav
+1036_WSI_NEU_XX.wav,CREMA-D-WAV/1036_WSI_NEU_XX.wav,1036,4,NEU,Unspecified,We'll stop in a couple of minutes,1036_WSI_NEU_XX.wav
+1036_WSI_SAD_XX.wav,CREMA-D-WAV/1036_WSI_SAD_XX.wav,1036,5,SAD,Unspecified,We'll stop in a couple of minutes,1036_WSI_SAD_XX.wav
+1040_DFA_ANG_XX.wav,CREMA-D-WAV/1040_DFA_ANG_XX.wav,1040,0,ANG,Unspecified,Don't forget a jacket,1040_DFA_ANG_XX.wav
+1040_DFA_DIS_XX.wav,CREMA-D-WAV/1040_DFA_DIS_XX.wav,1040,1,DIS,Unspecified,Don't forget a jacket,1040_DFA_DIS_XX.wav
+1040_DFA_FEA_XX.wav,CREMA-D-WAV/1040_DFA_FEA_XX.wav,1040,2,FEA,Unspecified,Don't forget a jacket,1040_DFA_FEA_XX.wav
+1040_DFA_HAP_XX.wav,CREMA-D-WAV/1040_DFA_HAP_XX.wav,1040,3,HAP,Unspecified,Don't forget a jacket,1040_DFA_HAP_XX.wav
+1040_DFA_NEU_XX.wav,CREMA-D-WAV/1040_DFA_NEU_XX.wav,1040,4,NEU,Unspecified,Don't forget a jacket,1040_DFA_NEU_XX.wav
+1040_DFA_SAD_XX.wav,CREMA-D-WAV/1040_DFA_SAD_XX.wav,1040,5,SAD,Unspecified,Don't forget a jacket,1040_DFA_SAD_XX.wav
+1040_IEO_ANG_HI.wav,CREMA-D-WAV/1040_IEO_ANG_HI.wav,1040,0,ANG,High,It's eleven o'clock,1040_IEO_ANG_HI.wav
+1040_IEO_ANG_LO.wav,CREMA-D-WAV/1040_IEO_ANG_LO.wav,1040,0,ANG,Low,It's eleven o'clock,1040_IEO_ANG_LO.wav
+1040_IEO_ANG_MD.wav,CREMA-D-WAV/1040_IEO_ANG_MD.wav,1040,0,ANG,Medium,It's eleven o'clock,1040_IEO_ANG_MD.wav
+1040_IEO_DIS_HI.wav,CREMA-D-WAV/1040_IEO_DIS_HI.wav,1040,1,DIS,High,It's eleven o'clock,1040_IEO_DIS_HI.wav
+1040_IEO_DIS_LO.wav,CREMA-D-WAV/1040_IEO_DIS_LO.wav,1040,1,DIS,Low,It's eleven o'clock,1040_IEO_DIS_LO.wav
+1040_IEO_DIS_MD.wav,CREMA-D-WAV/1040_IEO_DIS_MD.wav,1040,1,DIS,Medium,It's eleven o'clock,1040_IEO_DIS_MD.wav
+1040_IEO_FEA_HI.wav,CREMA-D-WAV/1040_IEO_FEA_HI.wav,1040,2,FEA,High,It's eleven o'clock,1040_IEO_FEA_HI.wav
+1040_IEO_FEA_LO.wav,CREMA-D-WAV/1040_IEO_FEA_LO.wav,1040,2,FEA,Low,It's eleven o'clock,1040_IEO_FEA_LO.wav
+1040_IEO_FEA_MD.wav,CREMA-D-WAV/1040_IEO_FEA_MD.wav,1040,2,FEA,Medium,It's eleven o'clock,1040_IEO_FEA_MD.wav
+1040_IEO_HAP_HI.wav,CREMA-D-WAV/1040_IEO_HAP_HI.wav,1040,3,HAP,High,It's eleven o'clock,1040_IEO_HAP_HI.wav
+1040_IEO_HAP_LO.wav,CREMA-D-WAV/1040_IEO_HAP_LO.wav,1040,3,HAP,Low,It's eleven o'clock,1040_IEO_HAP_LO.wav
+1040_IEO_HAP_MD.wav,CREMA-D-WAV/1040_IEO_HAP_MD.wav,1040,3,HAP,Medium,It's eleven o'clock,1040_IEO_HAP_MD.wav
+1040_IEO_NEU_XX.wav,CREMA-D-WAV/1040_IEO_NEU_XX.wav,1040,4,NEU,Unspecified,It's eleven o'clock,1040_IEO_NEU_XX.wav
+1040_IEO_SAD_HI.wav,CREMA-D-WAV/1040_IEO_SAD_HI.wav,1040,5,SAD,High,It's eleven o'clock,1040_IEO_SAD_HI.wav
+1040_IEO_SAD_LO.wav,CREMA-D-WAV/1040_IEO_SAD_LO.wav,1040,5,SAD,Low,It's eleven o'clock,1040_IEO_SAD_LO.wav
+1040_IEO_SAD_MD.wav,CREMA-D-WAV/1040_IEO_SAD_MD.wav,1040,5,SAD,Medium,It's eleven o'clock,1040_IEO_SAD_MD.wav
+1040_IOM_ANG_XX.wav,CREMA-D-WAV/1040_IOM_ANG_XX.wav,1040,0,ANG,Unspecified,I'm on my way to the meeting,1040_IOM_ANG_XX.wav
+1040_IOM_DIS_XX.wav,CREMA-D-WAV/1040_IOM_DIS_XX.wav,1040,1,DIS,Unspecified,I'm on my way to the meeting,1040_IOM_DIS_XX.wav
+1040_IOM_FEA_XX.wav,CREMA-D-WAV/1040_IOM_FEA_XX.wav,1040,2,FEA,Unspecified,I'm on my way to the meeting,1040_IOM_FEA_XX.wav
+1040_IOM_HAP_XX.wav,CREMA-D-WAV/1040_IOM_HAP_XX.wav,1040,3,HAP,Unspecified,I'm on my way to the meeting,1040_IOM_HAP_XX.wav
+1040_IOM_NEU_XX.wav,CREMA-D-WAV/1040_IOM_NEU_XX.wav,1040,4,NEU,Unspecified,I'm on my way to the meeting,1040_IOM_NEU_XX.wav
+1040_IOM_SAD_XX.wav,CREMA-D-WAV/1040_IOM_SAD_XX.wav,1040,5,SAD,Unspecified,I'm on my way to the meeting,1040_IOM_SAD_XX.wav
+1040_ITH_ANG_XX.wav,CREMA-D-WAV/1040_ITH_ANG_XX.wav,1040,0,ANG,Unspecified,I think I have a doctor's appointment,1040_ITH_ANG_XX.wav
+1040_ITH_DIS_XX.wav,CREMA-D-WAV/1040_ITH_DIS_XX.wav,1040,1,DIS,Unspecified,I think I have a doctor's appointment,1040_ITH_DIS_XX.wav
+1040_ITH_FEA_XX.wav,CREMA-D-WAV/1040_ITH_FEA_XX.wav,1040,2,FEA,Unspecified,I think I have a doctor's appointment,1040_ITH_FEA_XX.wav
+1040_ITH_HAP_XX.wav,CREMA-D-WAV/1040_ITH_HAP_XX.wav,1040,3,HAP,Unspecified,I think I have a doctor's appointment,1040_ITH_HAP_XX.wav
+1040_ITH_NEU_XX.wav,CREMA-D-WAV/1040_ITH_NEU_XX.wav,1040,4,NEU,Unspecified,I think I have a doctor's appointment,1040_ITH_NEU_XX.wav
+1040_ITH_SAD_X.wav,CREMA-D-WAV/1040_ITH_SAD_X.wav,1040,5,SAD,Unspecified,I think I have a doctor's appointment,1040_ITH_SAD_X.wav
+1040_ITS_ANG_XX.wav,CREMA-D-WAV/1040_ITS_ANG_XX.wav,1040,0,ANG,Unspecified,I think I've seen this before,1040_ITS_ANG_XX.wav
+1040_ITS_DIS_XX.wav,CREMA-D-WAV/1040_ITS_DIS_XX.wav,1040,1,DIS,Unspecified,I think I've seen this before,1040_ITS_DIS_XX.wav
+1040_ITS_FEA_XX.wav,CREMA-D-WAV/1040_ITS_FEA_XX.wav,1040,2,FEA,Unspecified,I think I've seen this before,1040_ITS_FEA_XX.wav
+1040_ITS_HAP_XX.wav,CREMA-D-WAV/1040_ITS_HAP_XX.wav,1040,3,HAP,Unspecified,I think I've seen this before,1040_ITS_HAP_XX.wav
+1040_ITS_NEU_XX.wav,CREMA-D-WAV/1040_ITS_NEU_XX.wav,1040,4,NEU,Unspecified,I think I've seen this before,1040_ITS_NEU_XX.wav
+1040_ITS_SAD_XX.wav,CREMA-D-WAV/1040_ITS_SAD_XX.wav,1040,5,SAD,Unspecified,I think I've seen this before,1040_ITS_SAD_XX.wav
+1040_IWL_ANG_XX.wav,CREMA-D-WAV/1040_IWL_ANG_XX.wav,1040,0,ANG,Unspecified,I would like a new alarm clock,1040_IWL_ANG_XX.wav
+1040_IWL_DIS_XX.wav,CREMA-D-WAV/1040_IWL_DIS_XX.wav,1040,1,DIS,Unspecified,I would like a new alarm clock,1040_IWL_DIS_XX.wav
+1040_IWL_FEA_XX.wav,CREMA-D-WAV/1040_IWL_FEA_XX.wav,1040,2,FEA,Unspecified,I would like a new alarm clock,1040_IWL_FEA_XX.wav
+1040_IWL_HAP_XX.wav,CREMA-D-WAV/1040_IWL_HAP_XX.wav,1040,3,HAP,Unspecified,I would like a new alarm clock,1040_IWL_HAP_XX.wav
+1040_IWL_NEU_XX.wav,CREMA-D-WAV/1040_IWL_NEU_XX.wav,1040,4,NEU,Unspecified,I would like a new alarm clock,1040_IWL_NEU_XX.wav
+1040_IWL_SAD_XX.wav,CREMA-D-WAV/1040_IWL_SAD_XX.wav,1040,5,SAD,Unspecified,I would like a new alarm clock,1040_IWL_SAD_XX.wav
+1040_IWW_ANG_XX.wav,CREMA-D-WAV/1040_IWW_ANG_XX.wav,1040,0,ANG,Unspecified,I wonder what this is about,1040_IWW_ANG_XX.wav
+1040_IWW_DIS_XX.wav,CREMA-D-WAV/1040_IWW_DIS_XX.wav,1040,1,DIS,Unspecified,I wonder what this is about,1040_IWW_DIS_XX.wav
+1040_IWW_FEA_XX.wav,CREMA-D-WAV/1040_IWW_FEA_XX.wav,1040,2,FEA,Unspecified,I wonder what this is about,1040_IWW_FEA_XX.wav
+1040_IWW_HAP_XX.wav,CREMA-D-WAV/1040_IWW_HAP_XX.wav,1040,3,HAP,Unspecified,I wonder what this is about,1040_IWW_HAP_XX.wav
+1040_IWW_NEU_XX.wav,CREMA-D-WAV/1040_IWW_NEU_XX.wav,1040,4,NEU,Unspecified,I wonder what this is about,1040_IWW_NEU_XX.wav
+1040_IWW_SAD_XX.wav,CREMA-D-WAV/1040_IWW_SAD_XX.wav,1040,5,SAD,Unspecified,I wonder what this is about,1040_IWW_SAD_XX.wav
+1040_MTI_ANG_XX.wav,CREMA-D-WAV/1040_MTI_ANG_XX.wav,1040,0,ANG,Unspecified,Maybe tomorrow it will be cold,1040_MTI_ANG_XX.wav
+1040_MTI_DIS_XX.wav,CREMA-D-WAV/1040_MTI_DIS_XX.wav,1040,1,DIS,Unspecified,Maybe tomorrow it will be cold,1040_MTI_DIS_XX.wav
+1040_MTI_FEA_XX.wav,CREMA-D-WAV/1040_MTI_FEA_XX.wav,1040,2,FEA,Unspecified,Maybe tomorrow it will be cold,1040_MTI_FEA_XX.wav
+1040_MTI_HAP_XX.wav,CREMA-D-WAV/1040_MTI_HAP_XX.wav,1040,3,HAP,Unspecified,Maybe tomorrow it will be cold,1040_MTI_HAP_XX.wav
+1040_MTI_NEU_XX.wav,CREMA-D-WAV/1040_MTI_NEU_XX.wav,1040,4,NEU,Unspecified,Maybe tomorrow it will be cold,1040_MTI_NEU_XX.wav
+1040_MTI_SAD_XX.wav,CREMA-D-WAV/1040_MTI_SAD_XX.wav,1040,5,SAD,Unspecified,Maybe tomorrow it will be cold,1040_MTI_SAD_XX.wav
+1040_TAI_ANG_XX.wav,CREMA-D-WAV/1040_TAI_ANG_XX.wav,1040,0,ANG,Unspecified,The airplane is almost full,1040_TAI_ANG_XX.wav
+1040_TAI_DIS_XX.wav,CREMA-D-WAV/1040_TAI_DIS_XX.wav,1040,1,DIS,Unspecified,The airplane is almost full,1040_TAI_DIS_XX.wav
+1040_TAI_FEA_XX.wav,CREMA-D-WAV/1040_TAI_FEA_XX.wav,1040,2,FEA,Unspecified,The airplane is almost full,1040_TAI_FEA_XX.wav
+1040_TAI_HAP_XX.wav,CREMA-D-WAV/1040_TAI_HAP_XX.wav,1040,3,HAP,Unspecified,The airplane is almost full,1040_TAI_HAP_XX.wav
+1040_TAI_NEU_XX.wav,CREMA-D-WAV/1040_TAI_NEU_XX.wav,1040,4,NEU,Unspecified,The airplane is almost full,1040_TAI_NEU_XX.wav
+1040_TAI_SAD_XX.wav,CREMA-D-WAV/1040_TAI_SAD_XX.wav,1040,5,SAD,Unspecified,The airplane is almost full,1040_TAI_SAD_XX.wav
+1040_TIE_ANG_XX.wav,CREMA-D-WAV/1040_TIE_ANG_XX.wav,1040,0,ANG,Unspecified,That is exactly what happened,1040_TIE_ANG_XX.wav
+1040_TIE_DIS_XX.wav,CREMA-D-WAV/1040_TIE_DIS_XX.wav,1040,1,DIS,Unspecified,That is exactly what happened,1040_TIE_DIS_XX.wav
+1040_TIE_FEA_XX.wav,CREMA-D-WAV/1040_TIE_FEA_XX.wav,1040,2,FEA,Unspecified,That is exactly what happened,1040_TIE_FEA_XX.wav
+1040_TIE_HAP_XX.wav,CREMA-D-WAV/1040_TIE_HAP_XX.wav,1040,3,HAP,Unspecified,That is exactly what happened,1040_TIE_HAP_XX.wav
+1040_TIE_NEU_XX.wav,CREMA-D-WAV/1040_TIE_NEU_XX.wav,1040,4,NEU,Unspecified,That is exactly what happened,1040_TIE_NEU_XX.wav
+1040_TIE_SAD_XX.wav,CREMA-D-WAV/1040_TIE_SAD_XX.wav,1040,5,SAD,Unspecified,That is exactly what happened,1040_TIE_SAD_XX.wav
+1040_TSI_ANG_XX.wav,CREMA-D-WAV/1040_TSI_ANG_XX.wav,1040,0,ANG,Unspecified,The surface is slick,1040_TSI_ANG_XX.wav
+1040_TSI_DIS_XX.wav,CREMA-D-WAV/1040_TSI_DIS_XX.wav,1040,1,DIS,Unspecified,The surface is slick,1040_TSI_DIS_XX.wav
+1040_TSI_FEA_XX.wav,CREMA-D-WAV/1040_TSI_FEA_XX.wav,1040,2,FEA,Unspecified,The surface is slick,1040_TSI_FEA_XX.wav
+1040_TSI_HAP_XX.wav,CREMA-D-WAV/1040_TSI_HAP_XX.wav,1040,3,HAP,Unspecified,The surface is slick,1040_TSI_HAP_XX.wav
+1040_TSI_NEU_XX.wav,CREMA-D-WAV/1040_TSI_NEU_XX.wav,1040,4,NEU,Unspecified,The surface is slick,1040_TSI_NEU_XX.wav
+1040_TSI_SAD_XX.wav,CREMA-D-WAV/1040_TSI_SAD_XX.wav,1040,5,SAD,Unspecified,The surface is slick,1040_TSI_SAD_XX.wav
+1040_WSI_ANG_XX.wav,CREMA-D-WAV/1040_WSI_ANG_XX.wav,1040,0,ANG,Unspecified,We'll stop in a couple of minutes,1040_WSI_ANG_XX.wav
+1040_WSI_DIS_XX.wav,CREMA-D-WAV/1040_WSI_DIS_XX.wav,1040,1,DIS,Unspecified,We'll stop in a couple of minutes,1040_WSI_DIS_XX.wav
+1040_WSI_FEA_XX.wav,CREMA-D-WAV/1040_WSI_FEA_XX.wav,1040,2,FEA,Unspecified,We'll stop in a couple of minutes,1040_WSI_FEA_XX.wav
+1040_WSI_HAP_XX.wav,CREMA-D-WAV/1040_WSI_HAP_XX.wav,1040,3,HAP,Unspecified,We'll stop in a couple of minutes,1040_WSI_HAP_XX.wav
+1040_WSI_NEU_XX.wav,CREMA-D-WAV/1040_WSI_NEU_XX.wav,1040,4,NEU,Unspecified,We'll stop in a couple of minutes,1040_WSI_NEU_XX.wav
+1040_WSI_SAD_XX.wav,CREMA-D-WAV/1040_WSI_SAD_XX.wav,1040,5,SAD,Unspecified,We'll stop in a couple of minutes,1040_WSI_SAD_XX.wav
+1041_DFA_ANG_XX.wav,CREMA-D-WAV/1041_DFA_ANG_XX.wav,1041,0,ANG,Unspecified,Don't forget a jacket,1041_DFA_ANG_XX.wav
+1041_DFA_DIS_XX.wav,CREMA-D-WAV/1041_DFA_DIS_XX.wav,1041,1,DIS,Unspecified,Don't forget a jacket,1041_DFA_DIS_XX.wav
+1041_DFA_FEA_XX.wav,CREMA-D-WAV/1041_DFA_FEA_XX.wav,1041,2,FEA,Unspecified,Don't forget a jacket,1041_DFA_FEA_XX.wav
+1041_DFA_HAP_XX.wav,CREMA-D-WAV/1041_DFA_HAP_XX.wav,1041,3,HAP,Unspecified,Don't forget a jacket,1041_DFA_HAP_XX.wav
+1041_DFA_NEU_XX.wav,CREMA-D-WAV/1041_DFA_NEU_XX.wav,1041,4,NEU,Unspecified,Don't forget a jacket,1041_DFA_NEU_XX.wav
+1041_DFA_SAD_XX.wav,CREMA-D-WAV/1041_DFA_SAD_XX.wav,1041,5,SAD,Unspecified,Don't forget a jacket,1041_DFA_SAD_XX.wav
+1041_IEO_ANG_HI.wav,CREMA-D-WAV/1041_IEO_ANG_HI.wav,1041,0,ANG,High,It's eleven o'clock,1041_IEO_ANG_HI.wav
+1041_IEO_ANG_LO.wav,CREMA-D-WAV/1041_IEO_ANG_LO.wav,1041,0,ANG,Low,It's eleven o'clock,1041_IEO_ANG_LO.wav
+1041_IEO_ANG_MD.wav,CREMA-D-WAV/1041_IEO_ANG_MD.wav,1041,0,ANG,Medium,It's eleven o'clock,1041_IEO_ANG_MD.wav
+1041_IEO_DIS_HI.wav,CREMA-D-WAV/1041_IEO_DIS_HI.wav,1041,1,DIS,High,It's eleven o'clock,1041_IEO_DIS_HI.wav
+1041_IEO_DIS_LO.wav,CREMA-D-WAV/1041_IEO_DIS_LO.wav,1041,1,DIS,Low,It's eleven o'clock,1041_IEO_DIS_LO.wav
+1041_IEO_DIS_MD.wav,CREMA-D-WAV/1041_IEO_DIS_MD.wav,1041,1,DIS,Medium,It's eleven o'clock,1041_IEO_DIS_MD.wav
+1041_IEO_FEA_HI.wav,CREMA-D-WAV/1041_IEO_FEA_HI.wav,1041,2,FEA,High,It's eleven o'clock,1041_IEO_FEA_HI.wav
+1041_IEO_FEA_LO.wav,CREMA-D-WAV/1041_IEO_FEA_LO.wav,1041,2,FEA,Low,It's eleven o'clock,1041_IEO_FEA_LO.wav
+1041_IEO_FEA_MD.wav,CREMA-D-WAV/1041_IEO_FEA_MD.wav,1041,2,FEA,Medium,It's eleven o'clock,1041_IEO_FEA_MD.wav
+1041_IEO_HAP_HI.wav,CREMA-D-WAV/1041_IEO_HAP_HI.wav,1041,3,HAP,High,It's eleven o'clock,1041_IEO_HAP_HI.wav
+1041_IEO_HAP_LO.wav,CREMA-D-WAV/1041_IEO_HAP_LO.wav,1041,3,HAP,Low,It's eleven o'clock,1041_IEO_HAP_LO.wav
+1041_IEO_HAP_MD.wav,CREMA-D-WAV/1041_IEO_HAP_MD.wav,1041,3,HAP,Medium,It's eleven o'clock,1041_IEO_HAP_MD.wav
+1041_IEO_NEU_XX.wav,CREMA-D-WAV/1041_IEO_NEU_XX.wav,1041,4,NEU,Unspecified,It's eleven o'clock,1041_IEO_NEU_XX.wav
+1041_IEO_SAD_HI.wav,CREMA-D-WAV/1041_IEO_SAD_HI.wav,1041,5,SAD,High,It's eleven o'clock,1041_IEO_SAD_HI.wav
+1041_IEO_SAD_LO.wav,CREMA-D-WAV/1041_IEO_SAD_LO.wav,1041,5,SAD,Low,It's eleven o'clock,1041_IEO_SAD_LO.wav
+1041_IEO_SAD_MD.wav,CREMA-D-WAV/1041_IEO_SAD_MD.wav,1041,5,SAD,Medium,It's eleven o'clock,1041_IEO_SAD_MD.wav
+1041_IOM_ANG_XX.wav,CREMA-D-WAV/1041_IOM_ANG_XX.wav,1041,0,ANG,Unspecified,I'm on my way to the meeting,1041_IOM_ANG_XX.wav
+1041_IOM_DIS_XX.wav,CREMA-D-WAV/1041_IOM_DIS_XX.wav,1041,1,DIS,Unspecified,I'm on my way to the meeting,1041_IOM_DIS_XX.wav
+1041_IOM_FEA_XX.wav,CREMA-D-WAV/1041_IOM_FEA_XX.wav,1041,2,FEA,Unspecified,I'm on my way to the meeting,1041_IOM_FEA_XX.wav
+1041_IOM_HAP_XX.wav,CREMA-D-WAV/1041_IOM_HAP_XX.wav,1041,3,HAP,Unspecified,I'm on my way to the meeting,1041_IOM_HAP_XX.wav
+1041_IOM_NEU_XX.wav,CREMA-D-WAV/1041_IOM_NEU_XX.wav,1041,4,NEU,Unspecified,I'm on my way to the meeting,1041_IOM_NEU_XX.wav
+1041_IOM_SAD_XX.wav,CREMA-D-WAV/1041_IOM_SAD_XX.wav,1041,5,SAD,Unspecified,I'm on my way to the meeting,1041_IOM_SAD_XX.wav
+1041_ITH_ANG_XX.wav,CREMA-D-WAV/1041_ITH_ANG_XX.wav,1041,0,ANG,Unspecified,I think I have a doctor's appointment,1041_ITH_ANG_XX.wav
+1041_ITH_DIS_XX.wav,CREMA-D-WAV/1041_ITH_DIS_XX.wav,1041,1,DIS,Unspecified,I think I have a doctor's appointment,1041_ITH_DIS_XX.wav
+1041_ITH_FEA_XX.wav,CREMA-D-WAV/1041_ITH_FEA_XX.wav,1041,2,FEA,Unspecified,I think I have a doctor's appointment,1041_ITH_FEA_XX.wav
+1041_ITH_HAP_XX.wav,CREMA-D-WAV/1041_ITH_HAP_XX.wav,1041,3,HAP,Unspecified,I think I have a doctor's appointment,1041_ITH_HAP_XX.wav
+1041_ITH_NEU_XX.wav,CREMA-D-WAV/1041_ITH_NEU_XX.wav,1041,4,NEU,Unspecified,I think I have a doctor's appointment,1041_ITH_NEU_XX.wav
+1041_ITH_SAD_XX.wav,CREMA-D-WAV/1041_ITH_SAD_XX.wav,1041,5,SAD,Unspecified,I think I have a doctor's appointment,1041_ITH_SAD_XX.wav
+1041_ITS_ANG_XX.wav,CREMA-D-WAV/1041_ITS_ANG_XX.wav,1041,0,ANG,Unspecified,I think I've seen this before,1041_ITS_ANG_XX.wav
+1041_ITS_DIS_XX.wav,CREMA-D-WAV/1041_ITS_DIS_XX.wav,1041,1,DIS,Unspecified,I think I've seen this before,1041_ITS_DIS_XX.wav
+1041_ITS_FEA_XX.wav,CREMA-D-WAV/1041_ITS_FEA_XX.wav,1041,2,FEA,Unspecified,I think I've seen this before,1041_ITS_FEA_XX.wav
+1041_ITS_HAP_XX.wav,CREMA-D-WAV/1041_ITS_HAP_XX.wav,1041,3,HAP,Unspecified,I think I've seen this before,1041_ITS_HAP_XX.wav
+1041_ITS_NEU_XX.wav,CREMA-D-WAV/1041_ITS_NEU_XX.wav,1041,4,NEU,Unspecified,I think I've seen this before,1041_ITS_NEU_XX.wav
+1041_ITS_SAD_XX.wav,CREMA-D-WAV/1041_ITS_SAD_XX.wav,1041,5,SAD,Unspecified,I think I've seen this before,1041_ITS_SAD_XX.wav
+1041_IWL_ANG_XX.wav,CREMA-D-WAV/1041_IWL_ANG_XX.wav,1041,0,ANG,Unspecified,I would like a new alarm clock,1041_IWL_ANG_XX.wav
+1041_IWL_DIS_XX.wav,CREMA-D-WAV/1041_IWL_DIS_XX.wav,1041,1,DIS,Unspecified,I would like a new alarm clock,1041_IWL_DIS_XX.wav
+1041_IWL_FEA_XX.wav,CREMA-D-WAV/1041_IWL_FEA_XX.wav,1041,2,FEA,Unspecified,I would like a new alarm clock,1041_IWL_FEA_XX.wav
+1041_IWL_HAP_XX.wav,CREMA-D-WAV/1041_IWL_HAP_XX.wav,1041,3,HAP,Unspecified,I would like a new alarm clock,1041_IWL_HAP_XX.wav
+1041_IWL_NEU_XX.wav,CREMA-D-WAV/1041_IWL_NEU_XX.wav,1041,4,NEU,Unspecified,I would like a new alarm clock,1041_IWL_NEU_XX.wav
+1041_IWL_SAD_XX.wav,CREMA-D-WAV/1041_IWL_SAD_XX.wav,1041,5,SAD,Unspecified,I would like a new alarm clock,1041_IWL_SAD_XX.wav
+1041_IWW_ANG_XX.wav,CREMA-D-WAV/1041_IWW_ANG_XX.wav,1041,0,ANG,Unspecified,I wonder what this is about,1041_IWW_ANG_XX.wav
+1041_IWW_DIS_XX.wav,CREMA-D-WAV/1041_IWW_DIS_XX.wav,1041,1,DIS,Unspecified,I wonder what this is about,1041_IWW_DIS_XX.wav
+1041_IWW_FEA_XX.wav,CREMA-D-WAV/1041_IWW_FEA_XX.wav,1041,2,FEA,Unspecified,I wonder what this is about,1041_IWW_FEA_XX.wav
+1041_IWW_HAP_XX.wav,CREMA-D-WAV/1041_IWW_HAP_XX.wav,1041,3,HAP,Unspecified,I wonder what this is about,1041_IWW_HAP_XX.wav
+1041_IWW_NEU_XX.wav,CREMA-D-WAV/1041_IWW_NEU_XX.wav,1041,4,NEU,Unspecified,I wonder what this is about,1041_IWW_NEU_XX.wav
+1041_IWW_SAD_XX.wav,CREMA-D-WAV/1041_IWW_SAD_XX.wav,1041,5,SAD,Unspecified,I wonder what this is about,1041_IWW_SAD_XX.wav
+1041_MTI_ANG_XX.wav,CREMA-D-WAV/1041_MTI_ANG_XX.wav,1041,0,ANG,Unspecified,Maybe tomorrow it will be cold,1041_MTI_ANG_XX.wav
+1041_MTI_DIS_XX.wav,CREMA-D-WAV/1041_MTI_DIS_XX.wav,1041,1,DIS,Unspecified,Maybe tomorrow it will be cold,1041_MTI_DIS_XX.wav
+1041_MTI_FEA_XX.wav,CREMA-D-WAV/1041_MTI_FEA_XX.wav,1041,2,FEA,Unspecified,Maybe tomorrow it will be cold,1041_MTI_FEA_XX.wav
+1041_MTI_HAP_XX.wav,CREMA-D-WAV/1041_MTI_HAP_XX.wav,1041,3,HAP,Unspecified,Maybe tomorrow it will be cold,1041_MTI_HAP_XX.wav
+1041_MTI_NEU_XX.wav,CREMA-D-WAV/1041_MTI_NEU_XX.wav,1041,4,NEU,Unspecified,Maybe tomorrow it will be cold,1041_MTI_NEU_XX.wav
+1041_MTI_SAD_XX.wav,CREMA-D-WAV/1041_MTI_SAD_XX.wav,1041,5,SAD,Unspecified,Maybe tomorrow it will be cold,1041_MTI_SAD_XX.wav
+1041_TAI_ANG_XX.wav,CREMA-D-WAV/1041_TAI_ANG_XX.wav,1041,0,ANG,Unspecified,The airplane is almost full,1041_TAI_ANG_XX.wav
+1041_TAI_DIS_XX.wav,CREMA-D-WAV/1041_TAI_DIS_XX.wav,1041,1,DIS,Unspecified,The airplane is almost full,1041_TAI_DIS_XX.wav
+1041_TAI_FEA_XX.wav,CREMA-D-WAV/1041_TAI_FEA_XX.wav,1041,2,FEA,Unspecified,The airplane is almost full,1041_TAI_FEA_XX.wav
+1041_TAI_HAP_XX.wav,CREMA-D-WAV/1041_TAI_HAP_XX.wav,1041,3,HAP,Unspecified,The airplane is almost full,1041_TAI_HAP_XX.wav
+1041_TAI_NEU_XX.wav,CREMA-D-WAV/1041_TAI_NEU_XX.wav,1041,4,NEU,Unspecified,The airplane is almost full,1041_TAI_NEU_XX.wav
+1041_TAI_SAD_XX.wav,CREMA-D-WAV/1041_TAI_SAD_XX.wav,1041,5,SAD,Unspecified,The airplane is almost full,1041_TAI_SAD_XX.wav
+1041_TIE_ANG_XX.wav,CREMA-D-WAV/1041_TIE_ANG_XX.wav,1041,0,ANG,Unspecified,That is exactly what happened,1041_TIE_ANG_XX.wav
+1041_TIE_DIS_XX.wav,CREMA-D-WAV/1041_TIE_DIS_XX.wav,1041,1,DIS,Unspecified,That is exactly what happened,1041_TIE_DIS_XX.wav
+1041_TIE_FEA_XX.wav,CREMA-D-WAV/1041_TIE_FEA_XX.wav,1041,2,FEA,Unspecified,That is exactly what happened,1041_TIE_FEA_XX.wav
+1041_TIE_HAP_XX.wav,CREMA-D-WAV/1041_TIE_HAP_XX.wav,1041,3,HAP,Unspecified,That is exactly what happened,1041_TIE_HAP_XX.wav
+1041_TIE_NEU_XX.wav,CREMA-D-WAV/1041_TIE_NEU_XX.wav,1041,4,NEU,Unspecified,That is exactly what happened,1041_TIE_NEU_XX.wav
+1041_TIE_SAD_XX.wav,CREMA-D-WAV/1041_TIE_SAD_XX.wav,1041,5,SAD,Unspecified,That is exactly what happened,1041_TIE_SAD_XX.wav
+1041_TSI_ANG_XX.wav,CREMA-D-WAV/1041_TSI_ANG_XX.wav,1041,0,ANG,Unspecified,The surface is slick,1041_TSI_ANG_XX.wav
+1041_TSI_DIS_XX.wav,CREMA-D-WAV/1041_TSI_DIS_XX.wav,1041,1,DIS,Unspecified,The surface is slick,1041_TSI_DIS_XX.wav
+1041_TSI_FEA_XX.wav,CREMA-D-WAV/1041_TSI_FEA_XX.wav,1041,2,FEA,Unspecified,The surface is slick,1041_TSI_FEA_XX.wav
+1041_TSI_HAP_XX.wav,CREMA-D-WAV/1041_TSI_HAP_XX.wav,1041,3,HAP,Unspecified,The surface is slick,1041_TSI_HAP_XX.wav
+1041_TSI_NEU_XX.wav,CREMA-D-WAV/1041_TSI_NEU_XX.wav,1041,4,NEU,Unspecified,The surface is slick,1041_TSI_NEU_XX.wav
+1041_TSI_SAD_XX.wav,CREMA-D-WAV/1041_TSI_SAD_XX.wav,1041,5,SAD,Unspecified,The surface is slick,1041_TSI_SAD_XX.wav
+1041_WSI_ANG_XX.wav,CREMA-D-WAV/1041_WSI_ANG_XX.wav,1041,0,ANG,Unspecified,We'll stop in a couple of minutes,1041_WSI_ANG_XX.wav
+1041_WSI_DIS_XX.wav,CREMA-D-WAV/1041_WSI_DIS_XX.wav,1041,1,DIS,Unspecified,We'll stop in a couple of minutes,1041_WSI_DIS_XX.wav
+1041_WSI_FEA_XX.wav,CREMA-D-WAV/1041_WSI_FEA_XX.wav,1041,2,FEA,Unspecified,We'll stop in a couple of minutes,1041_WSI_FEA_XX.wav
+1041_WSI_HAP_XX.wav,CREMA-D-WAV/1041_WSI_HAP_XX.wav,1041,3,HAP,Unspecified,We'll stop in a couple of minutes,1041_WSI_HAP_XX.wav
+1041_WSI_NEU_XX.wav,CREMA-D-WAV/1041_WSI_NEU_XX.wav,1041,4,NEU,Unspecified,We'll stop in a couple of minutes,1041_WSI_NEU_XX.wav
+1041_WSI_SAD_XX.wav,CREMA-D-WAV/1041_WSI_SAD_XX.wav,1041,5,SAD,Unspecified,We'll stop in a couple of minutes,1041_WSI_SAD_XX.wav
+1045_DFA_ANG_XX.wav,CREMA-D-WAV/1045_DFA_ANG_XX.wav,1045,0,ANG,Unspecified,Don't forget a jacket,1045_DFA_ANG_XX.wav
+1045_DFA_DIS_XX.wav,CREMA-D-WAV/1045_DFA_DIS_XX.wav,1045,1,DIS,Unspecified,Don't forget a jacket,1045_DFA_DIS_XX.wav
+1045_DFA_FEA_XX.wav,CREMA-D-WAV/1045_DFA_FEA_XX.wav,1045,2,FEA,Unspecified,Don't forget a jacket,1045_DFA_FEA_XX.wav
+1045_DFA_HAP_XX.wav,CREMA-D-WAV/1045_DFA_HAP_XX.wav,1045,3,HAP,Unspecified,Don't forget a jacket,1045_DFA_HAP_XX.wav
+1045_DFA_NEU_XX.wav,CREMA-D-WAV/1045_DFA_NEU_XX.wav,1045,4,NEU,Unspecified,Don't forget a jacket,1045_DFA_NEU_XX.wav
+1045_DFA_SAD_XX.wav,CREMA-D-WAV/1045_DFA_SAD_XX.wav,1045,5,SAD,Unspecified,Don't forget a jacket,1045_DFA_SAD_XX.wav
+1045_IEO_ANG_HI.wav,CREMA-D-WAV/1045_IEO_ANG_HI.wav,1045,0,ANG,High,It's eleven o'clock,1045_IEO_ANG_HI.wav
+1045_IEO_ANG_LO.wav,CREMA-D-WAV/1045_IEO_ANG_LO.wav,1045,0,ANG,Low,It's eleven o'clock,1045_IEO_ANG_LO.wav
+1045_IEO_ANG_MD.wav,CREMA-D-WAV/1045_IEO_ANG_MD.wav,1045,0,ANG,Medium,It's eleven o'clock,1045_IEO_ANG_MD.wav
+1045_IEO_DIS_HI.wav,CREMA-D-WAV/1045_IEO_DIS_HI.wav,1045,1,DIS,High,It's eleven o'clock,1045_IEO_DIS_HI.wav
+1045_IEO_DIS_LO.wav,CREMA-D-WAV/1045_IEO_DIS_LO.wav,1045,1,DIS,Low,It's eleven o'clock,1045_IEO_DIS_LO.wav
+1045_IEO_DIS_MD.wav,CREMA-D-WAV/1045_IEO_DIS_MD.wav,1045,1,DIS,Medium,It's eleven o'clock,1045_IEO_DIS_MD.wav
+1045_IEO_FEA_HI.wav,CREMA-D-WAV/1045_IEO_FEA_HI.wav,1045,2,FEA,High,It's eleven o'clock,1045_IEO_FEA_HI.wav
+1045_IEO_FEA_LO.wav,CREMA-D-WAV/1045_IEO_FEA_LO.wav,1045,2,FEA,Low,It's eleven o'clock,1045_IEO_FEA_LO.wav
+1045_IEO_FEA_MD.wav,CREMA-D-WAV/1045_IEO_FEA_MD.wav,1045,2,FEA,Medium,It's eleven o'clock,1045_IEO_FEA_MD.wav
+1045_IEO_HAP_HI.wav,CREMA-D-WAV/1045_IEO_HAP_HI.wav,1045,3,HAP,High,It's eleven o'clock,1045_IEO_HAP_HI.wav
+1045_IEO_HAP_LO.wav,CREMA-D-WAV/1045_IEO_HAP_LO.wav,1045,3,HAP,Low,It's eleven o'clock,1045_IEO_HAP_LO.wav
+1045_IEO_HAP_MD.wav,CREMA-D-WAV/1045_IEO_HAP_MD.wav,1045,3,HAP,Medium,It's eleven o'clock,1045_IEO_HAP_MD.wav
+1045_IEO_NEU_XX.wav,CREMA-D-WAV/1045_IEO_NEU_XX.wav,1045,4,NEU,Unspecified,It's eleven o'clock,1045_IEO_NEU_XX.wav
+1045_IEO_SAD_HI.wav,CREMA-D-WAV/1045_IEO_SAD_HI.wav,1045,5,SAD,High,It's eleven o'clock,1045_IEO_SAD_HI.wav
+1045_IEO_SAD_LO.wav,CREMA-D-WAV/1045_IEO_SAD_LO.wav,1045,5,SAD,Low,It's eleven o'clock,1045_IEO_SAD_LO.wav
+1045_IEO_SAD_MD.wav,CREMA-D-WAV/1045_IEO_SAD_MD.wav,1045,5,SAD,Medium,It's eleven o'clock,1045_IEO_SAD_MD.wav
+1045_IOM_ANG_XX.wav,CREMA-D-WAV/1045_IOM_ANG_XX.wav,1045,0,ANG,Unspecified,I'm on my way to the meeting,1045_IOM_ANG_XX.wav
+1045_IOM_DIS_XX.wav,CREMA-D-WAV/1045_IOM_DIS_XX.wav,1045,1,DIS,Unspecified,I'm on my way to the meeting,1045_IOM_DIS_XX.wav
+1045_IOM_FEA_XX.wav,CREMA-D-WAV/1045_IOM_FEA_XX.wav,1045,2,FEA,Unspecified,I'm on my way to the meeting,1045_IOM_FEA_XX.wav
+1045_IOM_HAP_XX.wav,CREMA-D-WAV/1045_IOM_HAP_XX.wav,1045,3,HAP,Unspecified,I'm on my way to the meeting,1045_IOM_HAP_XX.wav
+1045_IOM_NEU_XX.wav,CREMA-D-WAV/1045_IOM_NEU_XX.wav,1045,4,NEU,Unspecified,I'm on my way to the meeting,1045_IOM_NEU_XX.wav
+1045_IOM_SAD_XX.wav,CREMA-D-WAV/1045_IOM_SAD_XX.wav,1045,5,SAD,Unspecified,I'm on my way to the meeting,1045_IOM_SAD_XX.wav
+1045_ITH_ANG_XX.wav,CREMA-D-WAV/1045_ITH_ANG_XX.wav,1045,0,ANG,Unspecified,I think I have a doctor's appointment,1045_ITH_ANG_XX.wav
+1045_ITH_DIS_XX.wav,CREMA-D-WAV/1045_ITH_DIS_XX.wav,1045,1,DIS,Unspecified,I think I have a doctor's appointment,1045_ITH_DIS_XX.wav
+1045_ITH_FEA_XX.wav,CREMA-D-WAV/1045_ITH_FEA_XX.wav,1045,2,FEA,Unspecified,I think I have a doctor's appointment,1045_ITH_FEA_XX.wav
+1045_ITH_HAP_XX.wav,CREMA-D-WAV/1045_ITH_HAP_XX.wav,1045,3,HAP,Unspecified,I think I have a doctor's appointment,1045_ITH_HAP_XX.wav
+1045_ITH_NEU_XX.wav,CREMA-D-WAV/1045_ITH_NEU_XX.wav,1045,4,NEU,Unspecified,I think I have a doctor's appointment,1045_ITH_NEU_XX.wav
+1045_ITH_SAD_XX.wav,CREMA-D-WAV/1045_ITH_SAD_XX.wav,1045,5,SAD,Unspecified,I think I have a doctor's appointment,1045_ITH_SAD_XX.wav
+1045_ITS_ANG_XX.wav,CREMA-D-WAV/1045_ITS_ANG_XX.wav,1045,0,ANG,Unspecified,I think I've seen this before,1045_ITS_ANG_XX.wav
+1045_ITS_DIS_XX.wav,CREMA-D-WAV/1045_ITS_DIS_XX.wav,1045,1,DIS,Unspecified,I think I've seen this before,1045_ITS_DIS_XX.wav
+1045_ITS_FEA_XX.wav,CREMA-D-WAV/1045_ITS_FEA_XX.wav,1045,2,FEA,Unspecified,I think I've seen this before,1045_ITS_FEA_XX.wav
+1045_ITS_HAP_XX.wav,CREMA-D-WAV/1045_ITS_HAP_XX.wav,1045,3,HAP,Unspecified,I think I've seen this before,1045_ITS_HAP_XX.wav
+1045_ITS_NEU_XX.wav,CREMA-D-WAV/1045_ITS_NEU_XX.wav,1045,4,NEU,Unspecified,I think I've seen this before,1045_ITS_NEU_XX.wav
+1045_ITS_SAD_XX.wav,CREMA-D-WAV/1045_ITS_SAD_XX.wav,1045,5,SAD,Unspecified,I think I've seen this before,1045_ITS_SAD_XX.wav
+1045_IWL_ANG_XX.wav,CREMA-D-WAV/1045_IWL_ANG_XX.wav,1045,0,ANG,Unspecified,I would like a new alarm clock,1045_IWL_ANG_XX.wav
+1045_IWL_DIS_XX.wav,CREMA-D-WAV/1045_IWL_DIS_XX.wav,1045,1,DIS,Unspecified,I would like a new alarm clock,1045_IWL_DIS_XX.wav
+1045_IWL_FEA_XX.wav,CREMA-D-WAV/1045_IWL_FEA_XX.wav,1045,2,FEA,Unspecified,I would like a new alarm clock,1045_IWL_FEA_XX.wav
+1045_IWL_HAP_XX.wav,CREMA-D-WAV/1045_IWL_HAP_XX.wav,1045,3,HAP,Unspecified,I would like a new alarm clock,1045_IWL_HAP_XX.wav
+1045_IWL_NEU_XX.wav,CREMA-D-WAV/1045_IWL_NEU_XX.wav,1045,4,NEU,Unspecified,I would like a new alarm clock,1045_IWL_NEU_XX.wav
+1045_IWL_SAD_XX.wav,CREMA-D-WAV/1045_IWL_SAD_XX.wav,1045,5,SAD,Unspecified,I would like a new alarm clock,1045_IWL_SAD_XX.wav
+1045_IWW_ANG_XX.wav,CREMA-D-WAV/1045_IWW_ANG_XX.wav,1045,0,ANG,Unspecified,I wonder what this is about,1045_IWW_ANG_XX.wav
+1045_IWW_DIS_XX.wav,CREMA-D-WAV/1045_IWW_DIS_XX.wav,1045,1,DIS,Unspecified,I wonder what this is about,1045_IWW_DIS_XX.wav
+1045_IWW_FEA_XX.wav,CREMA-D-WAV/1045_IWW_FEA_XX.wav,1045,2,FEA,Unspecified,I wonder what this is about,1045_IWW_FEA_XX.wav
+1045_IWW_HAP_XX.wav,CREMA-D-WAV/1045_IWW_HAP_XX.wav,1045,3,HAP,Unspecified,I wonder what this is about,1045_IWW_HAP_XX.wav
+1045_IWW_NEU_XX.wav,CREMA-D-WAV/1045_IWW_NEU_XX.wav,1045,4,NEU,Unspecified,I wonder what this is about,1045_IWW_NEU_XX.wav
+1045_IWW_SAD_XX.wav,CREMA-D-WAV/1045_IWW_SAD_XX.wav,1045,5,SAD,Unspecified,I wonder what this is about,1045_IWW_SAD_XX.wav
+1045_MTI_ANG_XX.wav,CREMA-D-WAV/1045_MTI_ANG_XX.wav,1045,0,ANG,Unspecified,Maybe tomorrow it will be cold,1045_MTI_ANG_XX.wav
+1045_MTI_DIS_XX.wav,CREMA-D-WAV/1045_MTI_DIS_XX.wav,1045,1,DIS,Unspecified,Maybe tomorrow it will be cold,1045_MTI_DIS_XX.wav
+1045_MTI_FEA_XX.wav,CREMA-D-WAV/1045_MTI_FEA_XX.wav,1045,2,FEA,Unspecified,Maybe tomorrow it will be cold,1045_MTI_FEA_XX.wav
+1045_MTI_HAP_XX.wav,CREMA-D-WAV/1045_MTI_HAP_XX.wav,1045,3,HAP,Unspecified,Maybe tomorrow it will be cold,1045_MTI_HAP_XX.wav
+1045_MTI_NEU_XX.wav,CREMA-D-WAV/1045_MTI_NEU_XX.wav,1045,4,NEU,Unspecified,Maybe tomorrow it will be cold,1045_MTI_NEU_XX.wav
+1045_MTI_SAD_XX.wav,CREMA-D-WAV/1045_MTI_SAD_XX.wav,1045,5,SAD,Unspecified,Maybe tomorrow it will be cold,1045_MTI_SAD_XX.wav
+1045_TAI_ANG_XX.wav,CREMA-D-WAV/1045_TAI_ANG_XX.wav,1045,0,ANG,Unspecified,The airplane is almost full,1045_TAI_ANG_XX.wav
+1045_TAI_DIS_XX.wav,CREMA-D-WAV/1045_TAI_DIS_XX.wav,1045,1,DIS,Unspecified,The airplane is almost full,1045_TAI_DIS_XX.wav
+1045_TAI_FEA_XX.wav,CREMA-D-WAV/1045_TAI_FEA_XX.wav,1045,2,FEA,Unspecified,The airplane is almost full,1045_TAI_FEA_XX.wav
+1045_TAI_HAP_XX.wav,CREMA-D-WAV/1045_TAI_HAP_XX.wav,1045,3,HAP,Unspecified,The airplane is almost full,1045_TAI_HAP_XX.wav
+1045_TAI_NEU_XX.wav,CREMA-D-WAV/1045_TAI_NEU_XX.wav,1045,4,NEU,Unspecified,The airplane is almost full,1045_TAI_NEU_XX.wav
+1045_TAI_SAD_XX.wav,CREMA-D-WAV/1045_TAI_SAD_XX.wav,1045,5,SAD,Unspecified,The airplane is almost full,1045_TAI_SAD_XX.wav
+1045_TIE_ANG_XX.wav,CREMA-D-WAV/1045_TIE_ANG_XX.wav,1045,0,ANG,Unspecified,That is exactly what happened,1045_TIE_ANG_XX.wav
+1045_TIE_DIS_XX.wav,CREMA-D-WAV/1045_TIE_DIS_XX.wav,1045,1,DIS,Unspecified,That is exactly what happened,1045_TIE_DIS_XX.wav
+1045_TIE_FEA_XX.wav,CREMA-D-WAV/1045_TIE_FEA_XX.wav,1045,2,FEA,Unspecified,That is exactly what happened,1045_TIE_FEA_XX.wav
+1045_TIE_HAP_XX.wav,CREMA-D-WAV/1045_TIE_HAP_XX.wav,1045,3,HAP,Unspecified,That is exactly what happened,1045_TIE_HAP_XX.wav
+1045_TIE_NEU_XX.wav,CREMA-D-WAV/1045_TIE_NEU_XX.wav,1045,4,NEU,Unspecified,That is exactly what happened,1045_TIE_NEU_XX.wav
+1045_TIE_SAD_XX.wav,CREMA-D-WAV/1045_TIE_SAD_XX.wav,1045,5,SAD,Unspecified,That is exactly what happened,1045_TIE_SAD_XX.wav
+1045_TSI_ANG_XX.wav,CREMA-D-WAV/1045_TSI_ANG_XX.wav,1045,0,ANG,Unspecified,The surface is slick,1045_TSI_ANG_XX.wav
+1045_TSI_DIS_XX.wav,CREMA-D-WAV/1045_TSI_DIS_XX.wav,1045,1,DIS,Unspecified,The surface is slick,1045_TSI_DIS_XX.wav
+1045_TSI_FEA_XX.wav,CREMA-D-WAV/1045_TSI_FEA_XX.wav,1045,2,FEA,Unspecified,The surface is slick,1045_TSI_FEA_XX.wav
+1045_TSI_HAP_XX.wav,CREMA-D-WAV/1045_TSI_HAP_XX.wav,1045,3,HAP,Unspecified,The surface is slick,1045_TSI_HAP_XX.wav
+1045_TSI_NEU_XX.wav,CREMA-D-WAV/1045_TSI_NEU_XX.wav,1045,4,NEU,Unspecified,The surface is slick,1045_TSI_NEU_XX.wav
+1045_TSI_SAD_XX.wav,CREMA-D-WAV/1045_TSI_SAD_XX.wav,1045,5,SAD,Unspecified,The surface is slick,1045_TSI_SAD_XX.wav
+1045_WSI_ANG_XX.wav,CREMA-D-WAV/1045_WSI_ANG_XX.wav,1045,0,ANG,Unspecified,We'll stop in a couple of minutes,1045_WSI_ANG_XX.wav
+1045_WSI_DIS_XX.wav,CREMA-D-WAV/1045_WSI_DIS_XX.wav,1045,1,DIS,Unspecified,We'll stop in a couple of minutes,1045_WSI_DIS_XX.wav
+1045_WSI_FEA_XX.wav,CREMA-D-WAV/1045_WSI_FEA_XX.wav,1045,2,FEA,Unspecified,We'll stop in a couple of minutes,1045_WSI_FEA_XX.wav
+1045_WSI_HAP_XX.wav,CREMA-D-WAV/1045_WSI_HAP_XX.wav,1045,3,HAP,Unspecified,We'll stop in a couple of minutes,1045_WSI_HAP_XX.wav
+1045_WSI_NEU_XX.wav,CREMA-D-WAV/1045_WSI_NEU_XX.wav,1045,4,NEU,Unspecified,We'll stop in a couple of minutes,1045_WSI_NEU_XX.wav
+1045_WSI_SAD_XX.wav,CREMA-D-WAV/1045_WSI_SAD_XX.wav,1045,5,SAD,Unspecified,We'll stop in a couple of minutes,1045_WSI_SAD_XX.wav
+1056_DFA_ANG_XX.wav,CREMA-D-WAV/1056_DFA_ANG_XX.wav,1056,0,ANG,Unspecified,Don't forget a jacket,1056_DFA_ANG_XX.wav
+1056_DFA_DIS_XX.wav,CREMA-D-WAV/1056_DFA_DIS_XX.wav,1056,1,DIS,Unspecified,Don't forget a jacket,1056_DFA_DIS_XX.wav
+1056_DFA_FEA_XX.wav,CREMA-D-WAV/1056_DFA_FEA_XX.wav,1056,2,FEA,Unspecified,Don't forget a jacket,1056_DFA_FEA_XX.wav
+1056_DFA_HAP_XX.wav,CREMA-D-WAV/1056_DFA_HAP_XX.wav,1056,3,HAP,Unspecified,Don't forget a jacket,1056_DFA_HAP_XX.wav
+1056_DFA_NEU_XX.wav,CREMA-D-WAV/1056_DFA_NEU_XX.wav,1056,4,NEU,Unspecified,Don't forget a jacket,1056_DFA_NEU_XX.wav
+1056_DFA_SAD_XX.wav,CREMA-D-WAV/1056_DFA_SAD_XX.wav,1056,5,SAD,Unspecified,Don't forget a jacket,1056_DFA_SAD_XX.wav
+1056_IEO_ANG_HI.wav,CREMA-D-WAV/1056_IEO_ANG_HI.wav,1056,0,ANG,High,It's eleven o'clock,1056_IEO_ANG_HI.wav
+1056_IEO_ANG_LO.wav,CREMA-D-WAV/1056_IEO_ANG_LO.wav,1056,0,ANG,Low,It's eleven o'clock,1056_IEO_ANG_LO.wav
+1056_IEO_ANG_MD.wav,CREMA-D-WAV/1056_IEO_ANG_MD.wav,1056,0,ANG,Medium,It's eleven o'clock,1056_IEO_ANG_MD.wav
+1056_IEO_DIS_HI.wav,CREMA-D-WAV/1056_IEO_DIS_HI.wav,1056,1,DIS,High,It's eleven o'clock,1056_IEO_DIS_HI.wav
+1056_IEO_DIS_LO.wav,CREMA-D-WAV/1056_IEO_DIS_LO.wav,1056,1,DIS,Low,It's eleven o'clock,1056_IEO_DIS_LO.wav
+1056_IEO_DIS_MD.wav,CREMA-D-WAV/1056_IEO_DIS_MD.wav,1056,1,DIS,Medium,It's eleven o'clock,1056_IEO_DIS_MD.wav
+1056_IEO_FEA_HI.wav,CREMA-D-WAV/1056_IEO_FEA_HI.wav,1056,2,FEA,High,It's eleven o'clock,1056_IEO_FEA_HI.wav
+1056_IEO_FEA_LO.wav,CREMA-D-WAV/1056_IEO_FEA_LO.wav,1056,2,FEA,Low,It's eleven o'clock,1056_IEO_FEA_LO.wav
+1056_IEO_FEA_MD.wav,CREMA-D-WAV/1056_IEO_FEA_MD.wav,1056,2,FEA,Medium,It's eleven o'clock,1056_IEO_FEA_MD.wav
+1056_IEO_HAP_HI.wav,CREMA-D-WAV/1056_IEO_HAP_HI.wav,1056,3,HAP,High,It's eleven o'clock,1056_IEO_HAP_HI.wav
+1056_IEO_HAP_LO.wav,CREMA-D-WAV/1056_IEO_HAP_LO.wav,1056,3,HAP,Low,It's eleven o'clock,1056_IEO_HAP_LO.wav
+1056_IEO_HAP_MD.wav,CREMA-D-WAV/1056_IEO_HAP_MD.wav,1056,3,HAP,Medium,It's eleven o'clock,1056_IEO_HAP_MD.wav
+1056_IEO_NEU_XX.wav,CREMA-D-WAV/1056_IEO_NEU_XX.wav,1056,4,NEU,Unspecified,It's eleven o'clock,1056_IEO_NEU_XX.wav
+1056_IEO_SAD_HI.wav,CREMA-D-WAV/1056_IEO_SAD_HI.wav,1056,5,SAD,High,It's eleven o'clock,1056_IEO_SAD_HI.wav
+1056_IEO_SAD_LO.wav,CREMA-D-WAV/1056_IEO_SAD_LO.wav,1056,5,SAD,Low,It's eleven o'clock,1056_IEO_SAD_LO.wav
+1056_IEO_SAD_MD.wav,CREMA-D-WAV/1056_IEO_SAD_MD.wav,1056,5,SAD,Medium,It's eleven o'clock,1056_IEO_SAD_MD.wav
+1056_IOM_ANG_XX.wav,CREMA-D-WAV/1056_IOM_ANG_XX.wav,1056,0,ANG,Unspecified,I'm on my way to the meeting,1056_IOM_ANG_XX.wav
+1056_IOM_DIS_XX.wav,CREMA-D-WAV/1056_IOM_DIS_XX.wav,1056,1,DIS,Unspecified,I'm on my way to the meeting,1056_IOM_DIS_XX.wav
+1056_IOM_FEA_XX.wav,CREMA-D-WAV/1056_IOM_FEA_XX.wav,1056,2,FEA,Unspecified,I'm on my way to the meeting,1056_IOM_FEA_XX.wav
+1056_IOM_HAP_XX.wav,CREMA-D-WAV/1056_IOM_HAP_XX.wav,1056,3,HAP,Unspecified,I'm on my way to the meeting,1056_IOM_HAP_XX.wav
+1056_IOM_NEU_XX.wav,CREMA-D-WAV/1056_IOM_NEU_XX.wav,1056,4,NEU,Unspecified,I'm on my way to the meeting,1056_IOM_NEU_XX.wav
+1056_IOM_SAD_XX.wav,CREMA-D-WAV/1056_IOM_SAD_XX.wav,1056,5,SAD,Unspecified,I'm on my way to the meeting,1056_IOM_SAD_XX.wav
+1056_ITH_ANG_XX.wav,CREMA-D-WAV/1056_ITH_ANG_XX.wav,1056,0,ANG,Unspecified,I think I have a doctor's appointment,1056_ITH_ANG_XX.wav
+1056_ITH_DIS_XX.wav,CREMA-D-WAV/1056_ITH_DIS_XX.wav,1056,1,DIS,Unspecified,I think I have a doctor's appointment,1056_ITH_DIS_XX.wav
+1056_ITH_FEA_XX.wav,CREMA-D-WAV/1056_ITH_FEA_XX.wav,1056,2,FEA,Unspecified,I think I have a doctor's appointment,1056_ITH_FEA_XX.wav
+1056_ITH_HAP_XX.wav,CREMA-D-WAV/1056_ITH_HAP_XX.wav,1056,3,HAP,Unspecified,I think I have a doctor's appointment,1056_ITH_HAP_XX.wav
+1056_ITH_NEU_XX.wav,CREMA-D-WAV/1056_ITH_NEU_XX.wav,1056,4,NEU,Unspecified,I think I have a doctor's appointment,1056_ITH_NEU_XX.wav
+1056_ITH_SAD_XX.wav,CREMA-D-WAV/1056_ITH_SAD_XX.wav,1056,5,SAD,Unspecified,I think I have a doctor's appointment,1056_ITH_SAD_XX.wav
+1056_ITS_ANG_XX.wav,CREMA-D-WAV/1056_ITS_ANG_XX.wav,1056,0,ANG,Unspecified,I think I've seen this before,1056_ITS_ANG_XX.wav
+1056_ITS_DIS_XX.wav,CREMA-D-WAV/1056_ITS_DIS_XX.wav,1056,1,DIS,Unspecified,I think I've seen this before,1056_ITS_DIS_XX.wav
+1056_ITS_FEA_XX.wav,CREMA-D-WAV/1056_ITS_FEA_XX.wav,1056,2,FEA,Unspecified,I think I've seen this before,1056_ITS_FEA_XX.wav
+1056_ITS_HAP_XX.wav,CREMA-D-WAV/1056_ITS_HAP_XX.wav,1056,3,HAP,Unspecified,I think I've seen this before,1056_ITS_HAP_XX.wav
+1056_ITS_NEU_XX.wav,CREMA-D-WAV/1056_ITS_NEU_XX.wav,1056,4,NEU,Unspecified,I think I've seen this before,1056_ITS_NEU_XX.wav
+1056_ITS_SAD_XX.wav,CREMA-D-WAV/1056_ITS_SAD_XX.wav,1056,5,SAD,Unspecified,I think I've seen this before,1056_ITS_SAD_XX.wav
+1056_IWL_ANG_XX.wav,CREMA-D-WAV/1056_IWL_ANG_XX.wav,1056,0,ANG,Unspecified,I would like a new alarm clock,1056_IWL_ANG_XX.wav
+1056_IWL_DIS_XX.wav,CREMA-D-WAV/1056_IWL_DIS_XX.wav,1056,1,DIS,Unspecified,I would like a new alarm clock,1056_IWL_DIS_XX.wav
+1056_IWL_FEA_XX.wav,CREMA-D-WAV/1056_IWL_FEA_XX.wav,1056,2,FEA,Unspecified,I would like a new alarm clock,1056_IWL_FEA_XX.wav
+1056_IWL_HAP_XX.wav,CREMA-D-WAV/1056_IWL_HAP_XX.wav,1056,3,HAP,Unspecified,I would like a new alarm clock,1056_IWL_HAP_XX.wav
+1056_IWL_NEU_XX.wav,CREMA-D-WAV/1056_IWL_NEU_XX.wav,1056,4,NEU,Unspecified,I would like a new alarm clock,1056_IWL_NEU_XX.wav
+1056_IWL_SAD_XX.wav,CREMA-D-WAV/1056_IWL_SAD_XX.wav,1056,5,SAD,Unspecified,I would like a new alarm clock,1056_IWL_SAD_XX.wav
+1056_IWW_ANG_XX.wav,CREMA-D-WAV/1056_IWW_ANG_XX.wav,1056,0,ANG,Unspecified,I wonder what this is about,1056_IWW_ANG_XX.wav
+1056_IWW_DIS_XX.wav,CREMA-D-WAV/1056_IWW_DIS_XX.wav,1056,1,DIS,Unspecified,I wonder what this is about,1056_IWW_DIS_XX.wav
+1056_IWW_FEA_XX.wav,CREMA-D-WAV/1056_IWW_FEA_XX.wav,1056,2,FEA,Unspecified,I wonder what this is about,1056_IWW_FEA_XX.wav
+1056_IWW_HAP_XX.wav,CREMA-D-WAV/1056_IWW_HAP_XX.wav,1056,3,HAP,Unspecified,I wonder what this is about,1056_IWW_HAP_XX.wav
+1056_IWW_NEU_XX.wav,CREMA-D-WAV/1056_IWW_NEU_XX.wav,1056,4,NEU,Unspecified,I wonder what this is about,1056_IWW_NEU_XX.wav
+1056_IWW_SAD_XX.wav,CREMA-D-WAV/1056_IWW_SAD_XX.wav,1056,5,SAD,Unspecified,I wonder what this is about,1056_IWW_SAD_XX.wav
+1056_MTI_ANG_XX.wav,CREMA-D-WAV/1056_MTI_ANG_XX.wav,1056,0,ANG,Unspecified,Maybe tomorrow it will be cold,1056_MTI_ANG_XX.wav
+1056_MTI_DIS_XX.wav,CREMA-D-WAV/1056_MTI_DIS_XX.wav,1056,1,DIS,Unspecified,Maybe tomorrow it will be cold,1056_MTI_DIS_XX.wav
+1056_MTI_FEA_XX.wav,CREMA-D-WAV/1056_MTI_FEA_XX.wav,1056,2,FEA,Unspecified,Maybe tomorrow it will be cold,1056_MTI_FEA_XX.wav
+1056_MTI_HAP_XX.wav,CREMA-D-WAV/1056_MTI_HAP_XX.wav,1056,3,HAP,Unspecified,Maybe tomorrow it will be cold,1056_MTI_HAP_XX.wav
+1056_MTI_NEU_XX.wav,CREMA-D-WAV/1056_MTI_NEU_XX.wav,1056,4,NEU,Unspecified,Maybe tomorrow it will be cold,1056_MTI_NEU_XX.wav
+1056_MTI_SAD_XX.wav,CREMA-D-WAV/1056_MTI_SAD_XX.wav,1056,5,SAD,Unspecified,Maybe tomorrow it will be cold,1056_MTI_SAD_XX.wav
+1056_TAI_ANG_XX.wav,CREMA-D-WAV/1056_TAI_ANG_XX.wav,1056,0,ANG,Unspecified,The airplane is almost full,1056_TAI_ANG_XX.wav
+1056_TAI_DIS_XX.wav,CREMA-D-WAV/1056_TAI_DIS_XX.wav,1056,1,DIS,Unspecified,The airplane is almost full,1056_TAI_DIS_XX.wav
+1056_TAI_FEA_XX.wav,CREMA-D-WAV/1056_TAI_FEA_XX.wav,1056,2,FEA,Unspecified,The airplane is almost full,1056_TAI_FEA_XX.wav
+1056_TAI_HAP_XX.wav,CREMA-D-WAV/1056_TAI_HAP_XX.wav,1056,3,HAP,Unspecified,The airplane is almost full,1056_TAI_HAP_XX.wav
+1056_TAI_NEU_XX.wav,CREMA-D-WAV/1056_TAI_NEU_XX.wav,1056,4,NEU,Unspecified,The airplane is almost full,1056_TAI_NEU_XX.wav
+1056_TAI_SAD_XX.wav,CREMA-D-WAV/1056_TAI_SAD_XX.wav,1056,5,SAD,Unspecified,The airplane is almost full,1056_TAI_SAD_XX.wav
+1056_TIE_ANG_XX.wav,CREMA-D-WAV/1056_TIE_ANG_XX.wav,1056,0,ANG,Unspecified,That is exactly what happened,1056_TIE_ANG_XX.wav
+1056_TIE_DIS_XX.wav,CREMA-D-WAV/1056_TIE_DIS_XX.wav,1056,1,DIS,Unspecified,That is exactly what happened,1056_TIE_DIS_XX.wav
+1056_TIE_FEA_XX.wav,CREMA-D-WAV/1056_TIE_FEA_XX.wav,1056,2,FEA,Unspecified,That is exactly what happened,1056_TIE_FEA_XX.wav
+1056_TIE_HAP_XX.wav,CREMA-D-WAV/1056_TIE_HAP_XX.wav,1056,3,HAP,Unspecified,That is exactly what happened,1056_TIE_HAP_XX.wav
+1056_TIE_NEU_XX.wav,CREMA-D-WAV/1056_TIE_NEU_XX.wav,1056,4,NEU,Unspecified,That is exactly what happened,1056_TIE_NEU_XX.wav
+1056_TIE_SAD_XX.wav,CREMA-D-WAV/1056_TIE_SAD_XX.wav,1056,5,SAD,Unspecified,That is exactly what happened,1056_TIE_SAD_XX.wav
+1056_TSI_ANG_XX.wav,CREMA-D-WAV/1056_TSI_ANG_XX.wav,1056,0,ANG,Unspecified,The surface is slick,1056_TSI_ANG_XX.wav
+1056_TSI_DIS_XX.wav,CREMA-D-WAV/1056_TSI_DIS_XX.wav,1056,1,DIS,Unspecified,The surface is slick,1056_TSI_DIS_XX.wav
+1056_TSI_FEA_XX.wav,CREMA-D-WAV/1056_TSI_FEA_XX.wav,1056,2,FEA,Unspecified,The surface is slick,1056_TSI_FEA_XX.wav
+1056_TSI_HAP_XX.wav,CREMA-D-WAV/1056_TSI_HAP_XX.wav,1056,3,HAP,Unspecified,The surface is slick,1056_TSI_HAP_XX.wav
+1056_TSI_NEU_XX.wav,CREMA-D-WAV/1056_TSI_NEU_XX.wav,1056,4,NEU,Unspecified,The surface is slick,1056_TSI_NEU_XX.wav
+1056_TSI_SAD_XX.wav,CREMA-D-WAV/1056_TSI_SAD_XX.wav,1056,5,SAD,Unspecified,The surface is slick,1056_TSI_SAD_XX.wav
+1056_WSI_ANG_XX.wav,CREMA-D-WAV/1056_WSI_ANG_XX.wav,1056,0,ANG,Unspecified,We'll stop in a couple of minutes,1056_WSI_ANG_XX.wav
+1056_WSI_DIS_XX.wav,CREMA-D-WAV/1056_WSI_DIS_XX.wav,1056,1,DIS,Unspecified,We'll stop in a couple of minutes,1056_WSI_DIS_XX.wav
+1056_WSI_FEA_XX.wav,CREMA-D-WAV/1056_WSI_FEA_XX.wav,1056,2,FEA,Unspecified,We'll stop in a couple of minutes,1056_WSI_FEA_XX.wav
+1056_WSI_HAP_XX.wav,CREMA-D-WAV/1056_WSI_HAP_XX.wav,1056,3,HAP,Unspecified,We'll stop in a couple of minutes,1056_WSI_HAP_XX.wav
+1056_WSI_NEU_XX.wav,CREMA-D-WAV/1056_WSI_NEU_XX.wav,1056,4,NEU,Unspecified,We'll stop in a couple of minutes,1056_WSI_NEU_XX.wav
+1056_WSI_SAD_XX.wav,CREMA-D-WAV/1056_WSI_SAD_XX.wav,1056,5,SAD,Unspecified,We'll stop in a couple of minutes,1056_WSI_SAD_XX.wav
+1063_DFA_ANG_XX.wav,CREMA-D-WAV/1063_DFA_ANG_XX.wav,1063,0,ANG,Unspecified,Don't forget a jacket,1063_DFA_ANG_XX.wav
+1063_DFA_DIS_XX.wav,CREMA-D-WAV/1063_DFA_DIS_XX.wav,1063,1,DIS,Unspecified,Don't forget a jacket,1063_DFA_DIS_XX.wav
+1063_DFA_FEA_XX.wav,CREMA-D-WAV/1063_DFA_FEA_XX.wav,1063,2,FEA,Unspecified,Don't forget a jacket,1063_DFA_FEA_XX.wav
+1063_DFA_HAP_XX.wav,CREMA-D-WAV/1063_DFA_HAP_XX.wav,1063,3,HAP,Unspecified,Don't forget a jacket,1063_DFA_HAP_XX.wav
+1063_DFA_NEU_XX.wav,CREMA-D-WAV/1063_DFA_NEU_XX.wav,1063,4,NEU,Unspecified,Don't forget a jacket,1063_DFA_NEU_XX.wav
+1063_DFA_SAD_XX.wav,CREMA-D-WAV/1063_DFA_SAD_XX.wav,1063,5,SAD,Unspecified,Don't forget a jacket,1063_DFA_SAD_XX.wav
+1063_IEO_ANG_HI.wav,CREMA-D-WAV/1063_IEO_ANG_HI.wav,1063,0,ANG,High,It's eleven o'clock,1063_IEO_ANG_HI.wav
+1063_IEO_ANG_LO.wav,CREMA-D-WAV/1063_IEO_ANG_LO.wav,1063,0,ANG,Low,It's eleven o'clock,1063_IEO_ANG_LO.wav
+1063_IEO_ANG_MD.wav,CREMA-D-WAV/1063_IEO_ANG_MD.wav,1063,0,ANG,Medium,It's eleven o'clock,1063_IEO_ANG_MD.wav
+1063_IEO_DIS_HI.wav,CREMA-D-WAV/1063_IEO_DIS_HI.wav,1063,1,DIS,High,It's eleven o'clock,1063_IEO_DIS_HI.wav
+1063_IEO_DIS_LO.wav,CREMA-D-WAV/1063_IEO_DIS_LO.wav,1063,1,DIS,Low,It's eleven o'clock,1063_IEO_DIS_LO.wav
+1063_IEO_DIS_MD.wav,CREMA-D-WAV/1063_IEO_DIS_MD.wav,1063,1,DIS,Medium,It's eleven o'clock,1063_IEO_DIS_MD.wav
+1063_IEO_FEA_HI.wav,CREMA-D-WAV/1063_IEO_FEA_HI.wav,1063,2,FEA,High,It's eleven o'clock,1063_IEO_FEA_HI.wav
+1063_IEO_FEA_LO.wav,CREMA-D-WAV/1063_IEO_FEA_LO.wav,1063,2,FEA,Low,It's eleven o'clock,1063_IEO_FEA_LO.wav
+1063_IEO_FEA_MD.wav,CREMA-D-WAV/1063_IEO_FEA_MD.wav,1063,2,FEA,Medium,It's eleven o'clock,1063_IEO_FEA_MD.wav
+1063_IEO_HAP_HI.wav,CREMA-D-WAV/1063_IEO_HAP_HI.wav,1063,3,HAP,High,It's eleven o'clock,1063_IEO_HAP_HI.wav
+1063_IEO_HAP_LO.wav,CREMA-D-WAV/1063_IEO_HAP_LO.wav,1063,3,HAP,Low,It's eleven o'clock,1063_IEO_HAP_LO.wav
+1063_IEO_HAP_MD.wav,CREMA-D-WAV/1063_IEO_HAP_MD.wav,1063,3,HAP,Medium,It's eleven o'clock,1063_IEO_HAP_MD.wav
+1063_IEO_NEU_XX.wav,CREMA-D-WAV/1063_IEO_NEU_XX.wav,1063,4,NEU,Unspecified,It's eleven o'clock,1063_IEO_NEU_XX.wav
+1063_IEO_SAD_HI.wav,CREMA-D-WAV/1063_IEO_SAD_HI.wav,1063,5,SAD,High,It's eleven o'clock,1063_IEO_SAD_HI.wav
+1063_IEO_SAD_LO.wav,CREMA-D-WAV/1063_IEO_SAD_LO.wav,1063,5,SAD,Low,It's eleven o'clock,1063_IEO_SAD_LO.wav
+1063_IEO_SAD_MD.wav,CREMA-D-WAV/1063_IEO_SAD_MD.wav,1063,5,SAD,Medium,It's eleven o'clock,1063_IEO_SAD_MD.wav
+1063_IOM_ANG_XX.wav,CREMA-D-WAV/1063_IOM_ANG_XX.wav,1063,0,ANG,Unspecified,I'm on my way to the meeting,1063_IOM_ANG_XX.wav
+1063_IOM_DIS_XX.wav,CREMA-D-WAV/1063_IOM_DIS_XX.wav,1063,1,DIS,Unspecified,I'm on my way to the meeting,1063_IOM_DIS_XX.wav
+1063_IOM_FEA_XX.wav,CREMA-D-WAV/1063_IOM_FEA_XX.wav,1063,2,FEA,Unspecified,I'm on my way to the meeting,1063_IOM_FEA_XX.wav
+1063_IOM_HAP_XX.wav,CREMA-D-WAV/1063_IOM_HAP_XX.wav,1063,3,HAP,Unspecified,I'm on my way to the meeting,1063_IOM_HAP_XX.wav
+1063_IOM_NEU_XX.wav,CREMA-D-WAV/1063_IOM_NEU_XX.wav,1063,4,NEU,Unspecified,I'm on my way to the meeting,1063_IOM_NEU_XX.wav
+1063_IOM_SAD_XX.wav,CREMA-D-WAV/1063_IOM_SAD_XX.wav,1063,5,SAD,Unspecified,I'm on my way to the meeting,1063_IOM_SAD_XX.wav
+1063_ITH_ANG_XX.wav,CREMA-D-WAV/1063_ITH_ANG_XX.wav,1063,0,ANG,Unspecified,I think I have a doctor's appointment,1063_ITH_ANG_XX.wav
+1063_ITH_DIS_XX.wav,CREMA-D-WAV/1063_ITH_DIS_XX.wav,1063,1,DIS,Unspecified,I think I have a doctor's appointment,1063_ITH_DIS_XX.wav
+1063_ITH_FEA_XX.wav,CREMA-D-WAV/1063_ITH_FEA_XX.wav,1063,2,FEA,Unspecified,I think I have a doctor's appointment,1063_ITH_FEA_XX.wav
+1063_ITH_HAP_XX.wav,CREMA-D-WAV/1063_ITH_HAP_XX.wav,1063,3,HAP,Unspecified,I think I have a doctor's appointment,1063_ITH_HAP_XX.wav
+1063_ITH_NEU_XX.wav,CREMA-D-WAV/1063_ITH_NEU_XX.wav,1063,4,NEU,Unspecified,I think I have a doctor's appointment,1063_ITH_NEU_XX.wav
+1063_ITH_SAD_XX.wav,CREMA-D-WAV/1063_ITH_SAD_XX.wav,1063,5,SAD,Unspecified,I think I have a doctor's appointment,1063_ITH_SAD_XX.wav
+1063_ITS_ANG_XX.wav,CREMA-D-WAV/1063_ITS_ANG_XX.wav,1063,0,ANG,Unspecified,I think I've seen this before,1063_ITS_ANG_XX.wav
+1063_ITS_DIS_XX.wav,CREMA-D-WAV/1063_ITS_DIS_XX.wav,1063,1,DIS,Unspecified,I think I've seen this before,1063_ITS_DIS_XX.wav
+1063_ITS_FEA_XX.wav,CREMA-D-WAV/1063_ITS_FEA_XX.wav,1063,2,FEA,Unspecified,I think I've seen this before,1063_ITS_FEA_XX.wav
+1063_ITS_HAP_XX.wav,CREMA-D-WAV/1063_ITS_HAP_XX.wav,1063,3,HAP,Unspecified,I think I've seen this before,1063_ITS_HAP_XX.wav
+1063_ITS_NEU_XX.wav,CREMA-D-WAV/1063_ITS_NEU_XX.wav,1063,4,NEU,Unspecified,I think I've seen this before,1063_ITS_NEU_XX.wav
+1063_ITS_SAD_XX.wav,CREMA-D-WAV/1063_ITS_SAD_XX.wav,1063,5,SAD,Unspecified,I think I've seen this before,1063_ITS_SAD_XX.wav
+1063_IWL_ANG_XX.wav,CREMA-D-WAV/1063_IWL_ANG_XX.wav,1063,0,ANG,Unspecified,I would like a new alarm clock,1063_IWL_ANG_XX.wav
+1063_IWL_DIS_XX.wav,CREMA-D-WAV/1063_IWL_DIS_XX.wav,1063,1,DIS,Unspecified,I would like a new alarm clock,1063_IWL_DIS_XX.wav
+1063_IWL_FEA_XX.wav,CREMA-D-WAV/1063_IWL_FEA_XX.wav,1063,2,FEA,Unspecified,I would like a new alarm clock,1063_IWL_FEA_XX.wav
+1063_IWL_HAP_XX.wav,CREMA-D-WAV/1063_IWL_HAP_XX.wav,1063,3,HAP,Unspecified,I would like a new alarm clock,1063_IWL_HAP_XX.wav
+1063_IWL_NEU_XX.wav,CREMA-D-WAV/1063_IWL_NEU_XX.wav,1063,4,NEU,Unspecified,I would like a new alarm clock,1063_IWL_NEU_XX.wav
+1063_IWL_SAD_XX.wav,CREMA-D-WAV/1063_IWL_SAD_XX.wav,1063,5,SAD,Unspecified,I would like a new alarm clock,1063_IWL_SAD_XX.wav
+1063_IWW_ANG_XX.wav,CREMA-D-WAV/1063_IWW_ANG_XX.wav,1063,0,ANG,Unspecified,I wonder what this is about,1063_IWW_ANG_XX.wav
+1063_IWW_DIS_XX.wav,CREMA-D-WAV/1063_IWW_DIS_XX.wav,1063,1,DIS,Unspecified,I wonder what this is about,1063_IWW_DIS_XX.wav
+1063_IWW_FEA_XX.wav,CREMA-D-WAV/1063_IWW_FEA_XX.wav,1063,2,FEA,Unspecified,I wonder what this is about,1063_IWW_FEA_XX.wav
+1063_IWW_HAP_XX.wav,CREMA-D-WAV/1063_IWW_HAP_XX.wav,1063,3,HAP,Unspecified,I wonder what this is about,1063_IWW_HAP_XX.wav
+1063_IWW_NEU_XX.wav,CREMA-D-WAV/1063_IWW_NEU_XX.wav,1063,4,NEU,Unspecified,I wonder what this is about,1063_IWW_NEU_XX.wav
+1063_IWW_SAD_XX.wav,CREMA-D-WAV/1063_IWW_SAD_XX.wav,1063,5,SAD,Unspecified,I wonder what this is about,1063_IWW_SAD_XX.wav
+1063_MTI_ANG_XX.wav,CREMA-D-WAV/1063_MTI_ANG_XX.wav,1063,0,ANG,Unspecified,Maybe tomorrow it will be cold,1063_MTI_ANG_XX.wav
+1063_MTI_DIS_XX.wav,CREMA-D-WAV/1063_MTI_DIS_XX.wav,1063,1,DIS,Unspecified,Maybe tomorrow it will be cold,1063_MTI_DIS_XX.wav
+1063_MTI_FEA_XX.wav,CREMA-D-WAV/1063_MTI_FEA_XX.wav,1063,2,FEA,Unspecified,Maybe tomorrow it will be cold,1063_MTI_FEA_XX.wav
+1063_MTI_HAP_XX.wav,CREMA-D-WAV/1063_MTI_HAP_XX.wav,1063,3,HAP,Unspecified,Maybe tomorrow it will be cold,1063_MTI_HAP_XX.wav
+1063_MTI_NEU_XX.wav,CREMA-D-WAV/1063_MTI_NEU_XX.wav,1063,4,NEU,Unspecified,Maybe tomorrow it will be cold,1063_MTI_NEU_XX.wav
+1063_MTI_SAD_XX.wav,CREMA-D-WAV/1063_MTI_SAD_XX.wav,1063,5,SAD,Unspecified,Maybe tomorrow it will be cold,1063_MTI_SAD_XX.wav
+1063_TAI_ANG_XX.wav,CREMA-D-WAV/1063_TAI_ANG_XX.wav,1063,0,ANG,Unspecified,The airplane is almost full,1063_TAI_ANG_XX.wav
+1063_TAI_DIS_XX.wav,CREMA-D-WAV/1063_TAI_DIS_XX.wav,1063,1,DIS,Unspecified,The airplane is almost full,1063_TAI_DIS_XX.wav
+1063_TAI_FEA_XX.wav,CREMA-D-WAV/1063_TAI_FEA_XX.wav,1063,2,FEA,Unspecified,The airplane is almost full,1063_TAI_FEA_XX.wav
+1063_TAI_HAP_XX.wav,CREMA-D-WAV/1063_TAI_HAP_XX.wav,1063,3,HAP,Unspecified,The airplane is almost full,1063_TAI_HAP_XX.wav
+1063_TAI_NEU_XX.wav,CREMA-D-WAV/1063_TAI_NEU_XX.wav,1063,4,NEU,Unspecified,The airplane is almost full,1063_TAI_NEU_XX.wav
+1063_TAI_SAD_XX.wav,CREMA-D-WAV/1063_TAI_SAD_XX.wav,1063,5,SAD,Unspecified,The airplane is almost full,1063_TAI_SAD_XX.wav
+1063_TIE_ANG_XX.wav,CREMA-D-WAV/1063_TIE_ANG_XX.wav,1063,0,ANG,Unspecified,That is exactly what happened,1063_TIE_ANG_XX.wav
+1063_TIE_DIS_XX.wav,CREMA-D-WAV/1063_TIE_DIS_XX.wav,1063,1,DIS,Unspecified,That is exactly what happened,1063_TIE_DIS_XX.wav
+1063_TIE_FEA_XX.wav,CREMA-D-WAV/1063_TIE_FEA_XX.wav,1063,2,FEA,Unspecified,That is exactly what happened,1063_TIE_FEA_XX.wav
+1063_TIE_HAP_XX.wav,CREMA-D-WAV/1063_TIE_HAP_XX.wav,1063,3,HAP,Unspecified,That is exactly what happened,1063_TIE_HAP_XX.wav
+1063_TIE_NEU_XX.wav,CREMA-D-WAV/1063_TIE_NEU_XX.wav,1063,4,NEU,Unspecified,That is exactly what happened,1063_TIE_NEU_XX.wav
+1063_TIE_SAD_XX.wav,CREMA-D-WAV/1063_TIE_SAD_XX.wav,1063,5,SAD,Unspecified,That is exactly what happened,1063_TIE_SAD_XX.wav
+1063_TSI_ANG_XX.wav,CREMA-D-WAV/1063_TSI_ANG_XX.wav,1063,0,ANG,Unspecified,The surface is slick,1063_TSI_ANG_XX.wav
+1063_TSI_DIS_XX.wav,CREMA-D-WAV/1063_TSI_DIS_XX.wav,1063,1,DIS,Unspecified,The surface is slick,1063_TSI_DIS_XX.wav
+1063_TSI_FEA_XX.wav,CREMA-D-WAV/1063_TSI_FEA_XX.wav,1063,2,FEA,Unspecified,The surface is slick,1063_TSI_FEA_XX.wav
+1063_TSI_HAP_XX.wav,CREMA-D-WAV/1063_TSI_HAP_XX.wav,1063,3,HAP,Unspecified,The surface is slick,1063_TSI_HAP_XX.wav
+1063_TSI_NEU_XX.wav,CREMA-D-WAV/1063_TSI_NEU_XX.wav,1063,4,NEU,Unspecified,The surface is slick,1063_TSI_NEU_XX.wav
+1063_TSI_SAD_XX.wav,CREMA-D-WAV/1063_TSI_SAD_XX.wav,1063,5,SAD,Unspecified,The surface is slick,1063_TSI_SAD_XX.wav
+1063_WSI_ANG_XX.wav,CREMA-D-WAV/1063_WSI_ANG_XX.wav,1063,0,ANG,Unspecified,We'll stop in a couple of minutes,1063_WSI_ANG_XX.wav
+1063_WSI_DIS_XX.wav,CREMA-D-WAV/1063_WSI_DIS_XX.wav,1063,1,DIS,Unspecified,We'll stop in a couple of minutes,1063_WSI_DIS_XX.wav
+1063_WSI_FEA_XX.wav,CREMA-D-WAV/1063_WSI_FEA_XX.wav,1063,2,FEA,Unspecified,We'll stop in a couple of minutes,1063_WSI_FEA_XX.wav
+1063_WSI_HAP_XX.wav,CREMA-D-WAV/1063_WSI_HAP_XX.wav,1063,3,HAP,Unspecified,We'll stop in a couple of minutes,1063_WSI_HAP_XX.wav
+1063_WSI_NEU_XX.wav,CREMA-D-WAV/1063_WSI_NEU_XX.wav,1063,4,NEU,Unspecified,We'll stop in a couple of minutes,1063_WSI_NEU_XX.wav
+1063_WSI_SAD_XX.wav,CREMA-D-WAV/1063_WSI_SAD_XX.wav,1063,5,SAD,Unspecified,We'll stop in a couple of minutes,1063_WSI_SAD_XX.wav
+1067_DFA_ANG_XX.wav,CREMA-D-WAV/1067_DFA_ANG_XX.wav,1067,0,ANG,Unspecified,Don't forget a jacket,1067_DFA_ANG_XX.wav
+1067_DFA_DIS_XX.wav,CREMA-D-WAV/1067_DFA_DIS_XX.wav,1067,1,DIS,Unspecified,Don't forget a jacket,1067_DFA_DIS_XX.wav
+1067_DFA_FEA_XX.wav,CREMA-D-WAV/1067_DFA_FEA_XX.wav,1067,2,FEA,Unspecified,Don't forget a jacket,1067_DFA_FEA_XX.wav
+1067_DFA_HAP_XX.wav,CREMA-D-WAV/1067_DFA_HAP_XX.wav,1067,3,HAP,Unspecified,Don't forget a jacket,1067_DFA_HAP_XX.wav
+1067_DFA_NEU_XX.wav,CREMA-D-WAV/1067_DFA_NEU_XX.wav,1067,4,NEU,Unspecified,Don't forget a jacket,1067_DFA_NEU_XX.wav
+1067_DFA_SAD_XX.wav,CREMA-D-WAV/1067_DFA_SAD_XX.wav,1067,5,SAD,Unspecified,Don't forget a jacket,1067_DFA_SAD_XX.wav
+1067_IEO_ANG_HI.wav,CREMA-D-WAV/1067_IEO_ANG_HI.wav,1067,0,ANG,High,It's eleven o'clock,1067_IEO_ANG_HI.wav
+1067_IEO_ANG_LO.wav,CREMA-D-WAV/1067_IEO_ANG_LO.wav,1067,0,ANG,Low,It's eleven o'clock,1067_IEO_ANG_LO.wav
+1067_IEO_ANG_MD.wav,CREMA-D-WAV/1067_IEO_ANG_MD.wav,1067,0,ANG,Medium,It's eleven o'clock,1067_IEO_ANG_MD.wav
+1067_IEO_DIS_HI.wav,CREMA-D-WAV/1067_IEO_DIS_HI.wav,1067,1,DIS,High,It's eleven o'clock,1067_IEO_DIS_HI.wav
+1067_IEO_DIS_LO.wav,CREMA-D-WAV/1067_IEO_DIS_LO.wav,1067,1,DIS,Low,It's eleven o'clock,1067_IEO_DIS_LO.wav
+1067_IEO_DIS_MD.wav,CREMA-D-WAV/1067_IEO_DIS_MD.wav,1067,1,DIS,Medium,It's eleven o'clock,1067_IEO_DIS_MD.wav
+1067_IEO_FEA_HI.wav,CREMA-D-WAV/1067_IEO_FEA_HI.wav,1067,2,FEA,High,It's eleven o'clock,1067_IEO_FEA_HI.wav
+1067_IEO_FEA_LO.wav,CREMA-D-WAV/1067_IEO_FEA_LO.wav,1067,2,FEA,Low,It's eleven o'clock,1067_IEO_FEA_LO.wav
+1067_IEO_FEA_MD.wav,CREMA-D-WAV/1067_IEO_FEA_MD.wav,1067,2,FEA,Medium,It's eleven o'clock,1067_IEO_FEA_MD.wav
+1067_IEO_HAP_HI.wav,CREMA-D-WAV/1067_IEO_HAP_HI.wav,1067,3,HAP,High,It's eleven o'clock,1067_IEO_HAP_HI.wav
+1067_IEO_HAP_LO.wav,CREMA-D-WAV/1067_IEO_HAP_LO.wav,1067,3,HAP,Low,It's eleven o'clock,1067_IEO_HAP_LO.wav
+1067_IEO_HAP_MD.wav,CREMA-D-WAV/1067_IEO_HAP_MD.wav,1067,3,HAP,Medium,It's eleven o'clock,1067_IEO_HAP_MD.wav
+1067_IEO_NEU_XX.wav,CREMA-D-WAV/1067_IEO_NEU_XX.wav,1067,4,NEU,Unspecified,It's eleven o'clock,1067_IEO_NEU_XX.wav
+1067_IEO_SAD_HI.wav,CREMA-D-WAV/1067_IEO_SAD_HI.wav,1067,5,SAD,High,It's eleven o'clock,1067_IEO_SAD_HI.wav
+1067_IEO_SAD_LO.wav,CREMA-D-WAV/1067_IEO_SAD_LO.wav,1067,5,SAD,Low,It's eleven o'clock,1067_IEO_SAD_LO.wav
+1067_IEO_SAD_MD.wav,CREMA-D-WAV/1067_IEO_SAD_MD.wav,1067,5,SAD,Medium,It's eleven o'clock,1067_IEO_SAD_MD.wav
+1067_IOM_ANG_XX.wav,CREMA-D-WAV/1067_IOM_ANG_XX.wav,1067,0,ANG,Unspecified,I'm on my way to the meeting,1067_IOM_ANG_XX.wav
+1067_IOM_DIS_XX.wav,CREMA-D-WAV/1067_IOM_DIS_XX.wav,1067,1,DIS,Unspecified,I'm on my way to the meeting,1067_IOM_DIS_XX.wav
+1067_IOM_FEA_XX.wav,CREMA-D-WAV/1067_IOM_FEA_XX.wav,1067,2,FEA,Unspecified,I'm on my way to the meeting,1067_IOM_FEA_XX.wav
+1067_IOM_HAP_XX.wav,CREMA-D-WAV/1067_IOM_HAP_XX.wav,1067,3,HAP,Unspecified,I'm on my way to the meeting,1067_IOM_HAP_XX.wav
+1067_IOM_NEU_XX.wav,CREMA-D-WAV/1067_IOM_NEU_XX.wav,1067,4,NEU,Unspecified,I'm on my way to the meeting,1067_IOM_NEU_XX.wav
+1067_IOM_SAD_XX.wav,CREMA-D-WAV/1067_IOM_SAD_XX.wav,1067,5,SAD,Unspecified,I'm on my way to the meeting,1067_IOM_SAD_XX.wav
+1067_ITH_ANG_XX.wav,CREMA-D-WAV/1067_ITH_ANG_XX.wav,1067,0,ANG,Unspecified,I think I have a doctor's appointment,1067_ITH_ANG_XX.wav
+1067_ITH_DIS_XX.wav,CREMA-D-WAV/1067_ITH_DIS_XX.wav,1067,1,DIS,Unspecified,I think I have a doctor's appointment,1067_ITH_DIS_XX.wav
+1067_ITH_FEA_XX.wav,CREMA-D-WAV/1067_ITH_FEA_XX.wav,1067,2,FEA,Unspecified,I think I have a doctor's appointment,1067_ITH_FEA_XX.wav
+1067_ITH_HAP_XX.wav,CREMA-D-WAV/1067_ITH_HAP_XX.wav,1067,3,HAP,Unspecified,I think I have a doctor's appointment,1067_ITH_HAP_XX.wav
+1067_ITH_NEU_XX.wav,CREMA-D-WAV/1067_ITH_NEU_XX.wav,1067,4,NEU,Unspecified,I think I have a doctor's appointment,1067_ITH_NEU_XX.wav
+1067_ITH_SAD_XX.wav,CREMA-D-WAV/1067_ITH_SAD_XX.wav,1067,5,SAD,Unspecified,I think I have a doctor's appointment,1067_ITH_SAD_XX.wav
+1067_ITS_ANG_XX.wav,CREMA-D-WAV/1067_ITS_ANG_XX.wav,1067,0,ANG,Unspecified,I think I've seen this before,1067_ITS_ANG_XX.wav
+1067_ITS_DIS_XX.wav,CREMA-D-WAV/1067_ITS_DIS_XX.wav,1067,1,DIS,Unspecified,I think I've seen this before,1067_ITS_DIS_XX.wav
+1067_ITS_FEA_XX.wav,CREMA-D-WAV/1067_ITS_FEA_XX.wav,1067,2,FEA,Unspecified,I think I've seen this before,1067_ITS_FEA_XX.wav
+1067_ITS_HAP_XX.wav,CREMA-D-WAV/1067_ITS_HAP_XX.wav,1067,3,HAP,Unspecified,I think I've seen this before,1067_ITS_HAP_XX.wav
+1067_ITS_NEU_XX.wav,CREMA-D-WAV/1067_ITS_NEU_XX.wav,1067,4,NEU,Unspecified,I think I've seen this before,1067_ITS_NEU_XX.wav
+1067_ITS_SAD_XX.wav,CREMA-D-WAV/1067_ITS_SAD_XX.wav,1067,5,SAD,Unspecified,I think I've seen this before,1067_ITS_SAD_XX.wav
+1067_IWL_ANG_XX.wav,CREMA-D-WAV/1067_IWL_ANG_XX.wav,1067,0,ANG,Unspecified,I would like a new alarm clock,1067_IWL_ANG_XX.wav
+1067_IWL_DIS_XX.wav,CREMA-D-WAV/1067_IWL_DIS_XX.wav,1067,1,DIS,Unspecified,I would like a new alarm clock,1067_IWL_DIS_XX.wav
+1067_IWL_FEA_XX.wav,CREMA-D-WAV/1067_IWL_FEA_XX.wav,1067,2,FEA,Unspecified,I would like a new alarm clock,1067_IWL_FEA_XX.wav
+1067_IWL_HAP_XX.wav,CREMA-D-WAV/1067_IWL_HAP_XX.wav,1067,3,HAP,Unspecified,I would like a new alarm clock,1067_IWL_HAP_XX.wav
+1067_IWL_NEU_XX.wav,CREMA-D-WAV/1067_IWL_NEU_XX.wav,1067,4,NEU,Unspecified,I would like a new alarm clock,1067_IWL_NEU_XX.wav
+1067_IWL_SAD_XX.wav,CREMA-D-WAV/1067_IWL_SAD_XX.wav,1067,5,SAD,Unspecified,I would like a new alarm clock,1067_IWL_SAD_XX.wav
+1067_IWW_ANG_XX.wav,CREMA-D-WAV/1067_IWW_ANG_XX.wav,1067,0,ANG,Unspecified,I wonder what this is about,1067_IWW_ANG_XX.wav
+1067_IWW_DIS_XX.wav,CREMA-D-WAV/1067_IWW_DIS_XX.wav,1067,1,DIS,Unspecified,I wonder what this is about,1067_IWW_DIS_XX.wav
+1067_IWW_FEA_XX.wav,CREMA-D-WAV/1067_IWW_FEA_XX.wav,1067,2,FEA,Unspecified,I wonder what this is about,1067_IWW_FEA_XX.wav
+1067_IWW_HAP_XX.wav,CREMA-D-WAV/1067_IWW_HAP_XX.wav,1067,3,HAP,Unspecified,I wonder what this is about,1067_IWW_HAP_XX.wav
+1067_IWW_NEU_XX.wav,CREMA-D-WAV/1067_IWW_NEU_XX.wav,1067,4,NEU,Unspecified,I wonder what this is about,1067_IWW_NEU_XX.wav
+1067_IWW_SAD_XX.wav,CREMA-D-WAV/1067_IWW_SAD_XX.wav,1067,5,SAD,Unspecified,I wonder what this is about,1067_IWW_SAD_XX.wav
+1067_MTI_ANG_XX.wav,CREMA-D-WAV/1067_MTI_ANG_XX.wav,1067,0,ANG,Unspecified,Maybe tomorrow it will be cold,1067_MTI_ANG_XX.wav
+1067_MTI_DIS_XX.wav,CREMA-D-WAV/1067_MTI_DIS_XX.wav,1067,1,DIS,Unspecified,Maybe tomorrow it will be cold,1067_MTI_DIS_XX.wav
+1067_MTI_FEA_XX.wav,CREMA-D-WAV/1067_MTI_FEA_XX.wav,1067,2,FEA,Unspecified,Maybe tomorrow it will be cold,1067_MTI_FEA_XX.wav
+1067_MTI_HAP_XX.wav,CREMA-D-WAV/1067_MTI_HAP_XX.wav,1067,3,HAP,Unspecified,Maybe tomorrow it will be cold,1067_MTI_HAP_XX.wav
+1067_MTI_NEU_XX.wav,CREMA-D-WAV/1067_MTI_NEU_XX.wav,1067,4,NEU,Unspecified,Maybe tomorrow it will be cold,1067_MTI_NEU_XX.wav
+1067_MTI_SAD_XX.wav,CREMA-D-WAV/1067_MTI_SAD_XX.wav,1067,5,SAD,Unspecified,Maybe tomorrow it will be cold,1067_MTI_SAD_XX.wav
+1067_TAI_ANG_XX.wav,CREMA-D-WAV/1067_TAI_ANG_XX.wav,1067,0,ANG,Unspecified,The airplane is almost full,1067_TAI_ANG_XX.wav
+1067_TAI_DIS_XX.wav,CREMA-D-WAV/1067_TAI_DIS_XX.wav,1067,1,DIS,Unspecified,The airplane is almost full,1067_TAI_DIS_XX.wav
+1067_TAI_FEA_XX.wav,CREMA-D-WAV/1067_TAI_FEA_XX.wav,1067,2,FEA,Unspecified,The airplane is almost full,1067_TAI_FEA_XX.wav
+1067_TAI_HAP_XX.wav,CREMA-D-WAV/1067_TAI_HAP_XX.wav,1067,3,HAP,Unspecified,The airplane is almost full,1067_TAI_HAP_XX.wav
+1067_TAI_NEU_XX.wav,CREMA-D-WAV/1067_TAI_NEU_XX.wav,1067,4,NEU,Unspecified,The airplane is almost full,1067_TAI_NEU_XX.wav
+1067_TAI_SAD_XX.wav,CREMA-D-WAV/1067_TAI_SAD_XX.wav,1067,5,SAD,Unspecified,The airplane is almost full,1067_TAI_SAD_XX.wav
+1067_TIE_ANG_XX.wav,CREMA-D-WAV/1067_TIE_ANG_XX.wav,1067,0,ANG,Unspecified,That is exactly what happened,1067_TIE_ANG_XX.wav
+1067_TIE_DIS_XX.wav,CREMA-D-WAV/1067_TIE_DIS_XX.wav,1067,1,DIS,Unspecified,That is exactly what happened,1067_TIE_DIS_XX.wav
+1067_TIE_FEA_XX.wav,CREMA-D-WAV/1067_TIE_FEA_XX.wav,1067,2,FEA,Unspecified,That is exactly what happened,1067_TIE_FEA_XX.wav
+1067_TIE_HAP_XX.wav,CREMA-D-WAV/1067_TIE_HAP_XX.wav,1067,3,HAP,Unspecified,That is exactly what happened,1067_TIE_HAP_XX.wav
+1067_TIE_NEU_XX.wav,CREMA-D-WAV/1067_TIE_NEU_XX.wav,1067,4,NEU,Unspecified,That is exactly what happened,1067_TIE_NEU_XX.wav
+1067_TIE_SAD_XX.wav,CREMA-D-WAV/1067_TIE_SAD_XX.wav,1067,5,SAD,Unspecified,That is exactly what happened,1067_TIE_SAD_XX.wav
+1067_TSI_ANG_XX.wav,CREMA-D-WAV/1067_TSI_ANG_XX.wav,1067,0,ANG,Unspecified,The surface is slick,1067_TSI_ANG_XX.wav
+1067_TSI_DIS_XX.wav,CREMA-D-WAV/1067_TSI_DIS_XX.wav,1067,1,DIS,Unspecified,The surface is slick,1067_TSI_DIS_XX.wav
+1067_TSI_FEA_XX.wav,CREMA-D-WAV/1067_TSI_FEA_XX.wav,1067,2,FEA,Unspecified,The surface is slick,1067_TSI_FEA_XX.wav
+1067_TSI_HAP_XX.wav,CREMA-D-WAV/1067_TSI_HAP_XX.wav,1067,3,HAP,Unspecified,The surface is slick,1067_TSI_HAP_XX.wav
+1067_TSI_NEU_XX.wav,CREMA-D-WAV/1067_TSI_NEU_XX.wav,1067,4,NEU,Unspecified,The surface is slick,1067_TSI_NEU_XX.wav
+1067_TSI_SAD_XX.wav,CREMA-D-WAV/1067_TSI_SAD_XX.wav,1067,5,SAD,Unspecified,The surface is slick,1067_TSI_SAD_XX.wav
+1067_WSI_ANG_XX.wav,CREMA-D-WAV/1067_WSI_ANG_XX.wav,1067,0,ANG,Unspecified,We'll stop in a couple of minutes,1067_WSI_ANG_XX.wav
+1067_WSI_DIS_XX.wav,CREMA-D-WAV/1067_WSI_DIS_XX.wav,1067,1,DIS,Unspecified,We'll stop in a couple of minutes,1067_WSI_DIS_XX.wav
+1067_WSI_FEA_XX.wav,CREMA-D-WAV/1067_WSI_FEA_XX.wav,1067,2,FEA,Unspecified,We'll stop in a couple of minutes,1067_WSI_FEA_XX.wav
+1067_WSI_HAP_XX.wav,CREMA-D-WAV/1067_WSI_HAP_XX.wav,1067,3,HAP,Unspecified,We'll stop in a couple of minutes,1067_WSI_HAP_XX.wav
+1067_WSI_NEU_XX.wav,CREMA-D-WAV/1067_WSI_NEU_XX.wav,1067,4,NEU,Unspecified,We'll stop in a couple of minutes,1067_WSI_NEU_XX.wav
+1067_WSI_SAD_XX.wav,CREMA-D-WAV/1067_WSI_SAD_XX.wav,1067,5,SAD,Unspecified,We'll stop in a couple of minutes,1067_WSI_SAD_XX.wav
+1071_DFA_ANG_XX.wav,CREMA-D-WAV/1071_DFA_ANG_XX.wav,1071,0,ANG,Unspecified,Don't forget a jacket,1071_DFA_ANG_XX.wav
+1071_DFA_DIS_XX.wav,CREMA-D-WAV/1071_DFA_DIS_XX.wav,1071,1,DIS,Unspecified,Don't forget a jacket,1071_DFA_DIS_XX.wav
+1071_DFA_FEA_XX.wav,CREMA-D-WAV/1071_DFA_FEA_XX.wav,1071,2,FEA,Unspecified,Don't forget a jacket,1071_DFA_FEA_XX.wav
+1071_DFA_HAP_XX.wav,CREMA-D-WAV/1071_DFA_HAP_XX.wav,1071,3,HAP,Unspecified,Don't forget a jacket,1071_DFA_HAP_XX.wav
+1071_DFA_NEU_XX.wav,CREMA-D-WAV/1071_DFA_NEU_XX.wav,1071,4,NEU,Unspecified,Don't forget a jacket,1071_DFA_NEU_XX.wav
+1071_DFA_SAD_XX.wav,CREMA-D-WAV/1071_DFA_SAD_XX.wav,1071,5,SAD,Unspecified,Don't forget a jacket,1071_DFA_SAD_XX.wav
+1071_IEO_ANG_HI.wav,CREMA-D-WAV/1071_IEO_ANG_HI.wav,1071,0,ANG,High,It's eleven o'clock,1071_IEO_ANG_HI.wav
+1071_IEO_ANG_LO.wav,CREMA-D-WAV/1071_IEO_ANG_LO.wav,1071,0,ANG,Low,It's eleven o'clock,1071_IEO_ANG_LO.wav
+1071_IEO_ANG_MD.wav,CREMA-D-WAV/1071_IEO_ANG_MD.wav,1071,0,ANG,Medium,It's eleven o'clock,1071_IEO_ANG_MD.wav
+1071_IEO_DIS_HI.wav,CREMA-D-WAV/1071_IEO_DIS_HI.wav,1071,1,DIS,High,It's eleven o'clock,1071_IEO_DIS_HI.wav
+1071_IEO_DIS_LO.wav,CREMA-D-WAV/1071_IEO_DIS_LO.wav,1071,1,DIS,Low,It's eleven o'clock,1071_IEO_DIS_LO.wav
+1071_IEO_DIS_MD.wav,CREMA-D-WAV/1071_IEO_DIS_MD.wav,1071,1,DIS,Medium,It's eleven o'clock,1071_IEO_DIS_MD.wav
+1071_IEO_FEA_HI.wav,CREMA-D-WAV/1071_IEO_FEA_HI.wav,1071,2,FEA,High,It's eleven o'clock,1071_IEO_FEA_HI.wav
+1071_IEO_FEA_LO.wav,CREMA-D-WAV/1071_IEO_FEA_LO.wav,1071,2,FEA,Low,It's eleven o'clock,1071_IEO_FEA_LO.wav
+1071_IEO_FEA_MD.wav,CREMA-D-WAV/1071_IEO_FEA_MD.wav,1071,2,FEA,Medium,It's eleven o'clock,1071_IEO_FEA_MD.wav
+1071_IEO_HAP_HI.wav,CREMA-D-WAV/1071_IEO_HAP_HI.wav,1071,3,HAP,High,It's eleven o'clock,1071_IEO_HAP_HI.wav
+1071_IEO_HAP_LO.wav,CREMA-D-WAV/1071_IEO_HAP_LO.wav,1071,3,HAP,Low,It's eleven o'clock,1071_IEO_HAP_LO.wav
+1071_IEO_HAP_MD.wav,CREMA-D-WAV/1071_IEO_HAP_MD.wav,1071,3,HAP,Medium,It's eleven o'clock,1071_IEO_HAP_MD.wav
+1071_IEO_NEU_XX.wav,CREMA-D-WAV/1071_IEO_NEU_XX.wav,1071,4,NEU,Unspecified,It's eleven o'clock,1071_IEO_NEU_XX.wav
+1071_IEO_SAD_HI.wav,CREMA-D-WAV/1071_IEO_SAD_HI.wav,1071,5,SAD,High,It's eleven o'clock,1071_IEO_SAD_HI.wav
+1071_IEO_SAD_LO.wav,CREMA-D-WAV/1071_IEO_SAD_LO.wav,1071,5,SAD,Low,It's eleven o'clock,1071_IEO_SAD_LO.wav
+1071_IEO_SAD_MD.wav,CREMA-D-WAV/1071_IEO_SAD_MD.wav,1071,5,SAD,Medium,It's eleven o'clock,1071_IEO_SAD_MD.wav
+1071_IOM_ANG_XX.wav,CREMA-D-WAV/1071_IOM_ANG_XX.wav,1071,0,ANG,Unspecified,I'm on my way to the meeting,1071_IOM_ANG_XX.wav
+1071_IOM_DIS_XX.wav,CREMA-D-WAV/1071_IOM_DIS_XX.wav,1071,1,DIS,Unspecified,I'm on my way to the meeting,1071_IOM_DIS_XX.wav
+1071_IOM_FEA_XX.wav,CREMA-D-WAV/1071_IOM_FEA_XX.wav,1071,2,FEA,Unspecified,I'm on my way to the meeting,1071_IOM_FEA_XX.wav
+1071_IOM_HAP_XX.wav,CREMA-D-WAV/1071_IOM_HAP_XX.wav,1071,3,HAP,Unspecified,I'm on my way to the meeting,1071_IOM_HAP_XX.wav
+1071_IOM_NEU_XX.wav,CREMA-D-WAV/1071_IOM_NEU_XX.wav,1071,4,NEU,Unspecified,I'm on my way to the meeting,1071_IOM_NEU_XX.wav
+1071_IOM_SAD_XX.wav,CREMA-D-WAV/1071_IOM_SAD_XX.wav,1071,5,SAD,Unspecified,I'm on my way to the meeting,1071_IOM_SAD_XX.wav
+1071_ITH_ANG_XX.wav,CREMA-D-WAV/1071_ITH_ANG_XX.wav,1071,0,ANG,Unspecified,I think I have a doctor's appointment,1071_ITH_ANG_XX.wav
+1071_ITH_DIS_XX.wav,CREMA-D-WAV/1071_ITH_DIS_XX.wav,1071,1,DIS,Unspecified,I think I have a doctor's appointment,1071_ITH_DIS_XX.wav
+1071_ITH_FEA_XX.wav,CREMA-D-WAV/1071_ITH_FEA_XX.wav,1071,2,FEA,Unspecified,I think I have a doctor's appointment,1071_ITH_FEA_XX.wav
+1071_ITH_HAP_XX.wav,CREMA-D-WAV/1071_ITH_HAP_XX.wav,1071,3,HAP,Unspecified,I think I have a doctor's appointment,1071_ITH_HAP_XX.wav
+1071_ITH_NEU_XX.wav,CREMA-D-WAV/1071_ITH_NEU_XX.wav,1071,4,NEU,Unspecified,I think I have a doctor's appointment,1071_ITH_NEU_XX.wav
+1071_ITH_SAD_XX.wav,CREMA-D-WAV/1071_ITH_SAD_XX.wav,1071,5,SAD,Unspecified,I think I have a doctor's appointment,1071_ITH_SAD_XX.wav
+1071_ITS_ANG_XX.wav,CREMA-D-WAV/1071_ITS_ANG_XX.wav,1071,0,ANG,Unspecified,I think I've seen this before,1071_ITS_ANG_XX.wav
+1071_ITS_DIS_XX.wav,CREMA-D-WAV/1071_ITS_DIS_XX.wav,1071,1,DIS,Unspecified,I think I've seen this before,1071_ITS_DIS_XX.wav
+1071_ITS_FEA_XX.wav,CREMA-D-WAV/1071_ITS_FEA_XX.wav,1071,2,FEA,Unspecified,I think I've seen this before,1071_ITS_FEA_XX.wav
+1071_ITS_HAP_XX.wav,CREMA-D-WAV/1071_ITS_HAP_XX.wav,1071,3,HAP,Unspecified,I think I've seen this before,1071_ITS_HAP_XX.wav
+1071_ITS_NEU_XX.wav,CREMA-D-WAV/1071_ITS_NEU_XX.wav,1071,4,NEU,Unspecified,I think I've seen this before,1071_ITS_NEU_XX.wav
+1071_ITS_SAD_XX.wav,CREMA-D-WAV/1071_ITS_SAD_XX.wav,1071,5,SAD,Unspecified,I think I've seen this before,1071_ITS_SAD_XX.wav
+1071_IWL_ANG_XX.wav,CREMA-D-WAV/1071_IWL_ANG_XX.wav,1071,0,ANG,Unspecified,I would like a new alarm clock,1071_IWL_ANG_XX.wav
+1071_IWL_DIS_XX.wav,CREMA-D-WAV/1071_IWL_DIS_XX.wav,1071,1,DIS,Unspecified,I would like a new alarm clock,1071_IWL_DIS_XX.wav
+1071_IWL_FEA_XX.wav,CREMA-D-WAV/1071_IWL_FEA_XX.wav,1071,2,FEA,Unspecified,I would like a new alarm clock,1071_IWL_FEA_XX.wav
+1071_IWL_HAP_XX.wav,CREMA-D-WAV/1071_IWL_HAP_XX.wav,1071,3,HAP,Unspecified,I would like a new alarm clock,1071_IWL_HAP_XX.wav
+1071_IWL_NEU_XX.wav,CREMA-D-WAV/1071_IWL_NEU_XX.wav,1071,4,NEU,Unspecified,I would like a new alarm clock,1071_IWL_NEU_XX.wav
+1071_IWL_SAD_XX.wav,CREMA-D-WAV/1071_IWL_SAD_XX.wav,1071,5,SAD,Unspecified,I would like a new alarm clock,1071_IWL_SAD_XX.wav
+1071_IWW_ANG_XX.wav,CREMA-D-WAV/1071_IWW_ANG_XX.wav,1071,0,ANG,Unspecified,I wonder what this is about,1071_IWW_ANG_XX.wav
+1071_IWW_DIS_XX.wav,CREMA-D-WAV/1071_IWW_DIS_XX.wav,1071,1,DIS,Unspecified,I wonder what this is about,1071_IWW_DIS_XX.wav
+1071_IWW_FEA_XX.wav,CREMA-D-WAV/1071_IWW_FEA_XX.wav,1071,2,FEA,Unspecified,I wonder what this is about,1071_IWW_FEA_XX.wav
+1071_IWW_HAP_XX.wav,CREMA-D-WAV/1071_IWW_HAP_XX.wav,1071,3,HAP,Unspecified,I wonder what this is about,1071_IWW_HAP_XX.wav
+1071_IWW_NEU_XX.wav,CREMA-D-WAV/1071_IWW_NEU_XX.wav,1071,4,NEU,Unspecified,I wonder what this is about,1071_IWW_NEU_XX.wav
+1071_IWW_SAD_XX.wav,CREMA-D-WAV/1071_IWW_SAD_XX.wav,1071,5,SAD,Unspecified,I wonder what this is about,1071_IWW_SAD_XX.wav
+1071_MTI_ANG_XX.wav,CREMA-D-WAV/1071_MTI_ANG_XX.wav,1071,0,ANG,Unspecified,Maybe tomorrow it will be cold,1071_MTI_ANG_XX.wav
+1071_MTI_DIS_XX.wav,CREMA-D-WAV/1071_MTI_DIS_XX.wav,1071,1,DIS,Unspecified,Maybe tomorrow it will be cold,1071_MTI_DIS_XX.wav
+1071_MTI_FEA_XX.wav,CREMA-D-WAV/1071_MTI_FEA_XX.wav,1071,2,FEA,Unspecified,Maybe tomorrow it will be cold,1071_MTI_FEA_XX.wav
+1071_MTI_HAP_XX.wav,CREMA-D-WAV/1071_MTI_HAP_XX.wav,1071,3,HAP,Unspecified,Maybe tomorrow it will be cold,1071_MTI_HAP_XX.wav
+1071_MTI_NEU_XX.wav,CREMA-D-WAV/1071_MTI_NEU_XX.wav,1071,4,NEU,Unspecified,Maybe tomorrow it will be cold,1071_MTI_NEU_XX.wav
+1071_MTI_SAD_XX.wav,CREMA-D-WAV/1071_MTI_SAD_XX.wav,1071,5,SAD,Unspecified,Maybe tomorrow it will be cold,1071_MTI_SAD_XX.wav
+1071_TAI_ANG_XX.wav,CREMA-D-WAV/1071_TAI_ANG_XX.wav,1071,0,ANG,Unspecified,The airplane is almost full,1071_TAI_ANG_XX.wav
+1071_TAI_DIS_XX.wav,CREMA-D-WAV/1071_TAI_DIS_XX.wav,1071,1,DIS,Unspecified,The airplane is almost full,1071_TAI_DIS_XX.wav
+1071_TAI_FEA_XX.wav,CREMA-D-WAV/1071_TAI_FEA_XX.wav,1071,2,FEA,Unspecified,The airplane is almost full,1071_TAI_FEA_XX.wav
+1071_TAI_HAP_XX.wav,CREMA-D-WAV/1071_TAI_HAP_XX.wav,1071,3,HAP,Unspecified,The airplane is almost full,1071_TAI_HAP_XX.wav
+1071_TAI_NEU_XX.wav,CREMA-D-WAV/1071_TAI_NEU_XX.wav,1071,4,NEU,Unspecified,The airplane is almost full,1071_TAI_NEU_XX.wav
+1071_TAI_SAD_XX.wav,CREMA-D-WAV/1071_TAI_SAD_XX.wav,1071,5,SAD,Unspecified,The airplane is almost full,1071_TAI_SAD_XX.wav
+1071_TIE_ANG_XX.wav,CREMA-D-WAV/1071_TIE_ANG_XX.wav,1071,0,ANG,Unspecified,That is exactly what happened,1071_TIE_ANG_XX.wav
+1071_TIE_DIS_XX.wav,CREMA-D-WAV/1071_TIE_DIS_XX.wav,1071,1,DIS,Unspecified,That is exactly what happened,1071_TIE_DIS_XX.wav
+1071_TIE_FEA_XX.wav,CREMA-D-WAV/1071_TIE_FEA_XX.wav,1071,2,FEA,Unspecified,That is exactly what happened,1071_TIE_FEA_XX.wav
+1071_TIE_HAP_XX.wav,CREMA-D-WAV/1071_TIE_HAP_XX.wav,1071,3,HAP,Unspecified,That is exactly what happened,1071_TIE_HAP_XX.wav
+1071_TIE_NEU_XX.wav,CREMA-D-WAV/1071_TIE_NEU_XX.wav,1071,4,NEU,Unspecified,That is exactly what happened,1071_TIE_NEU_XX.wav
+1071_TIE_SAD_XX.wav,CREMA-D-WAV/1071_TIE_SAD_XX.wav,1071,5,SAD,Unspecified,That is exactly what happened,1071_TIE_SAD_XX.wav
+1071_TSI_ANG_XX.wav,CREMA-D-WAV/1071_TSI_ANG_XX.wav,1071,0,ANG,Unspecified,The surface is slick,1071_TSI_ANG_XX.wav
+1071_TSI_DIS_XX.wav,CREMA-D-WAV/1071_TSI_DIS_XX.wav,1071,1,DIS,Unspecified,The surface is slick,1071_TSI_DIS_XX.wav
+1071_TSI_FEA_XX.wav,CREMA-D-WAV/1071_TSI_FEA_XX.wav,1071,2,FEA,Unspecified,The surface is slick,1071_TSI_FEA_XX.wav
+1071_TSI_HAP_XX.wav,CREMA-D-WAV/1071_TSI_HAP_XX.wav,1071,3,HAP,Unspecified,The surface is slick,1071_TSI_HAP_XX.wav
+1071_TSI_NEU_XX.wav,CREMA-D-WAV/1071_TSI_NEU_XX.wav,1071,4,NEU,Unspecified,The surface is slick,1071_TSI_NEU_XX.wav
+1071_TSI_SAD_XX.wav,CREMA-D-WAV/1071_TSI_SAD_XX.wav,1071,5,SAD,Unspecified,The surface is slick,1071_TSI_SAD_XX.wav
+1071_WSI_ANG_XX.wav,CREMA-D-WAV/1071_WSI_ANG_XX.wav,1071,0,ANG,Unspecified,We'll stop in a couple of minutes,1071_WSI_ANG_XX.wav
+1071_WSI_DIS_XX.wav,CREMA-D-WAV/1071_WSI_DIS_XX.wav,1071,1,DIS,Unspecified,We'll stop in a couple of minutes,1071_WSI_DIS_XX.wav
+1071_WSI_FEA_XX.wav,CREMA-D-WAV/1071_WSI_FEA_XX.wav,1071,2,FEA,Unspecified,We'll stop in a couple of minutes,1071_WSI_FEA_XX.wav
+1071_WSI_HAP_XX.wav,CREMA-D-WAV/1071_WSI_HAP_XX.wav,1071,3,HAP,Unspecified,We'll stop in a couple of minutes,1071_WSI_HAP_XX.wav
+1071_WSI_NEU_XX.wav,CREMA-D-WAV/1071_WSI_NEU_XX.wav,1071,4,NEU,Unspecified,We'll stop in a couple of minutes,1071_WSI_NEU_XX.wav
+1071_WSI_SAD_XX.wav,CREMA-D-WAV/1071_WSI_SAD_XX.wav,1071,5,SAD,Unspecified,We'll stop in a couple of minutes,1071_WSI_SAD_XX.wav
+1086_DFA_ANG_XX.wav,CREMA-D-WAV/1086_DFA_ANG_XX.wav,1086,0,ANG,Unspecified,Don't forget a jacket,1086_DFA_ANG_XX.wav
+1086_DFA_DIS_XX.wav,CREMA-D-WAV/1086_DFA_DIS_XX.wav,1086,1,DIS,Unspecified,Don't forget a jacket,1086_DFA_DIS_XX.wav
+1086_DFA_FEA_XX.wav,CREMA-D-WAV/1086_DFA_FEA_XX.wav,1086,2,FEA,Unspecified,Don't forget a jacket,1086_DFA_FEA_XX.wav
+1086_DFA_HAP_XX.wav,CREMA-D-WAV/1086_DFA_HAP_XX.wav,1086,3,HAP,Unspecified,Don't forget a jacket,1086_DFA_HAP_XX.wav
+1086_DFA_NEU_XX.wav,CREMA-D-WAV/1086_DFA_NEU_XX.wav,1086,4,NEU,Unspecified,Don't forget a jacket,1086_DFA_NEU_XX.wav
+1086_DFA_SAD_XX.wav,CREMA-D-WAV/1086_DFA_SAD_XX.wav,1086,5,SAD,Unspecified,Don't forget a jacket,1086_DFA_SAD_XX.wav
+1086_IEO_ANG_HI.wav,CREMA-D-WAV/1086_IEO_ANG_HI.wav,1086,0,ANG,High,It's eleven o'clock,1086_IEO_ANG_HI.wav
+1086_IEO_ANG_LO.wav,CREMA-D-WAV/1086_IEO_ANG_LO.wav,1086,0,ANG,Low,It's eleven o'clock,1086_IEO_ANG_LO.wav
+1086_IEO_ANG_MD.wav,CREMA-D-WAV/1086_IEO_ANG_MD.wav,1086,0,ANG,Medium,It's eleven o'clock,1086_IEO_ANG_MD.wav
+1086_IEO_DIS_HI.wav,CREMA-D-WAV/1086_IEO_DIS_HI.wav,1086,1,DIS,High,It's eleven o'clock,1086_IEO_DIS_HI.wav
+1086_IEO_DIS_LO.wav,CREMA-D-WAV/1086_IEO_DIS_LO.wav,1086,1,DIS,Low,It's eleven o'clock,1086_IEO_DIS_LO.wav
+1086_IEO_DIS_MD.wav,CREMA-D-WAV/1086_IEO_DIS_MD.wav,1086,1,DIS,Medium,It's eleven o'clock,1086_IEO_DIS_MD.wav
+1086_IEO_FEA_HI.wav,CREMA-D-WAV/1086_IEO_FEA_HI.wav,1086,2,FEA,High,It's eleven o'clock,1086_IEO_FEA_HI.wav
+1086_IEO_FEA_LO.wav,CREMA-D-WAV/1086_IEO_FEA_LO.wav,1086,2,FEA,Low,It's eleven o'clock,1086_IEO_FEA_LO.wav
+1086_IEO_FEA_MD.wav,CREMA-D-WAV/1086_IEO_FEA_MD.wav,1086,2,FEA,Medium,It's eleven o'clock,1086_IEO_FEA_MD.wav
+1086_IEO_HAP_HI.wav,CREMA-D-WAV/1086_IEO_HAP_HI.wav,1086,3,HAP,High,It's eleven o'clock,1086_IEO_HAP_HI.wav
+1086_IEO_HAP_LO.wav,CREMA-D-WAV/1086_IEO_HAP_LO.wav,1086,3,HAP,Low,It's eleven o'clock,1086_IEO_HAP_LO.wav
+1086_IEO_HAP_MD.wav,CREMA-D-WAV/1086_IEO_HAP_MD.wav,1086,3,HAP,Medium,It's eleven o'clock,1086_IEO_HAP_MD.wav
+1086_IEO_NEU_XX.wav,CREMA-D-WAV/1086_IEO_NEU_XX.wav,1086,4,NEU,Unspecified,It's eleven o'clock,1086_IEO_NEU_XX.wav
+1086_IEO_SAD_HI.wav,CREMA-D-WAV/1086_IEO_SAD_HI.wav,1086,5,SAD,High,It's eleven o'clock,1086_IEO_SAD_HI.wav
+1086_IEO_SAD_LO.wav,CREMA-D-WAV/1086_IEO_SAD_LO.wav,1086,5,SAD,Low,It's eleven o'clock,1086_IEO_SAD_LO.wav
+1086_IEO_SAD_MD.wav,CREMA-D-WAV/1086_IEO_SAD_MD.wav,1086,5,SAD,Medium,It's eleven o'clock,1086_IEO_SAD_MD.wav
+1086_IOM_ANG_XX.wav,CREMA-D-WAV/1086_IOM_ANG_XX.wav,1086,0,ANG,Unspecified,I'm on my way to the meeting,1086_IOM_ANG_XX.wav
+1086_IOM_DIS_XX.wav,CREMA-D-WAV/1086_IOM_DIS_XX.wav,1086,1,DIS,Unspecified,I'm on my way to the meeting,1086_IOM_DIS_XX.wav
+1086_IOM_FEA_XX.wav,CREMA-D-WAV/1086_IOM_FEA_XX.wav,1086,2,FEA,Unspecified,I'm on my way to the meeting,1086_IOM_FEA_XX.wav
+1086_IOM_HAP_XX.wav,CREMA-D-WAV/1086_IOM_HAP_XX.wav,1086,3,HAP,Unspecified,I'm on my way to the meeting,1086_IOM_HAP_XX.wav
+1086_IOM_NEU_XX.wav,CREMA-D-WAV/1086_IOM_NEU_XX.wav,1086,4,NEU,Unspecified,I'm on my way to the meeting,1086_IOM_NEU_XX.wav
+1086_IOM_SAD_XX.wav,CREMA-D-WAV/1086_IOM_SAD_XX.wav,1086,5,SAD,Unspecified,I'm on my way to the meeting,1086_IOM_SAD_XX.wav
+1086_ITH_ANG_XX.wav,CREMA-D-WAV/1086_ITH_ANG_XX.wav,1086,0,ANG,Unspecified,I think I have a doctor's appointment,1086_ITH_ANG_XX.wav
+1086_ITH_DIS_XX.wav,CREMA-D-WAV/1086_ITH_DIS_XX.wav,1086,1,DIS,Unspecified,I think I have a doctor's appointment,1086_ITH_DIS_XX.wav
+1086_ITH_FEA_XX.wav,CREMA-D-WAV/1086_ITH_FEA_XX.wav,1086,2,FEA,Unspecified,I think I have a doctor's appointment,1086_ITH_FEA_XX.wav
+1086_ITH_HAP_XX.wav,CREMA-D-WAV/1086_ITH_HAP_XX.wav,1086,3,HAP,Unspecified,I think I have a doctor's appointment,1086_ITH_HAP_XX.wav
+1086_ITH_NEU_XX.wav,CREMA-D-WAV/1086_ITH_NEU_XX.wav,1086,4,NEU,Unspecified,I think I have a doctor's appointment,1086_ITH_NEU_XX.wav
+1086_ITH_SAD_XX.wav,CREMA-D-WAV/1086_ITH_SAD_XX.wav,1086,5,SAD,Unspecified,I think I have a doctor's appointment,1086_ITH_SAD_XX.wav
+1086_ITS_ANG_XX.wav,CREMA-D-WAV/1086_ITS_ANG_XX.wav,1086,0,ANG,Unspecified,I think I've seen this before,1086_ITS_ANG_XX.wav
+1086_ITS_DIS_XX.wav,CREMA-D-WAV/1086_ITS_DIS_XX.wav,1086,1,DIS,Unspecified,I think I've seen this before,1086_ITS_DIS_XX.wav
+1086_ITS_FEA_XX.wav,CREMA-D-WAV/1086_ITS_FEA_XX.wav,1086,2,FEA,Unspecified,I think I've seen this before,1086_ITS_FEA_XX.wav
+1086_ITS_HAP_XX.wav,CREMA-D-WAV/1086_ITS_HAP_XX.wav,1086,3,HAP,Unspecified,I think I've seen this before,1086_ITS_HAP_XX.wav
+1086_ITS_NEU_XX.wav,CREMA-D-WAV/1086_ITS_NEU_XX.wav,1086,4,NEU,Unspecified,I think I've seen this before,1086_ITS_NEU_XX.wav
+1086_ITS_SAD_XX.wav,CREMA-D-WAV/1086_ITS_SAD_XX.wav,1086,5,SAD,Unspecified,I think I've seen this before,1086_ITS_SAD_XX.wav
+1086_IWL_ANG_XX.wav,CREMA-D-WAV/1086_IWL_ANG_XX.wav,1086,0,ANG,Unspecified,I would like a new alarm clock,1086_IWL_ANG_XX.wav
+1086_IWL_DIS_XX.wav,CREMA-D-WAV/1086_IWL_DIS_XX.wav,1086,1,DIS,Unspecified,I would like a new alarm clock,1086_IWL_DIS_XX.wav
+1086_IWL_FEA_XX.wav,CREMA-D-WAV/1086_IWL_FEA_XX.wav,1086,2,FEA,Unspecified,I would like a new alarm clock,1086_IWL_FEA_XX.wav
+1086_IWL_HAP_XX.wav,CREMA-D-WAV/1086_IWL_HAP_XX.wav,1086,3,HAP,Unspecified,I would like a new alarm clock,1086_IWL_HAP_XX.wav
+1086_IWL_NEU_XX.wav,CREMA-D-WAV/1086_IWL_NEU_XX.wav,1086,4,NEU,Unspecified,I would like a new alarm clock,1086_IWL_NEU_XX.wav
+1086_IWL_SAD_XX.wav,CREMA-D-WAV/1086_IWL_SAD_XX.wav,1086,5,SAD,Unspecified,I would like a new alarm clock,1086_IWL_SAD_XX.wav
+1086_IWW_ANG_XX.wav,CREMA-D-WAV/1086_IWW_ANG_XX.wav,1086,0,ANG,Unspecified,I wonder what this is about,1086_IWW_ANG_XX.wav
+1086_IWW_DIS_XX.wav,CREMA-D-WAV/1086_IWW_DIS_XX.wav,1086,1,DIS,Unspecified,I wonder what this is about,1086_IWW_DIS_XX.wav
+1086_IWW_FEA_XX.wav,CREMA-D-WAV/1086_IWW_FEA_XX.wav,1086,2,FEA,Unspecified,I wonder what this is about,1086_IWW_FEA_XX.wav
+1086_IWW_HAP_XX.wav,CREMA-D-WAV/1086_IWW_HAP_XX.wav,1086,3,HAP,Unspecified,I wonder what this is about,1086_IWW_HAP_XX.wav
+1086_IWW_NEU_XX.wav,CREMA-D-WAV/1086_IWW_NEU_XX.wav,1086,4,NEU,Unspecified,I wonder what this is about,1086_IWW_NEU_XX.wav
+1086_IWW_SAD_XX.wav,CREMA-D-WAV/1086_IWW_SAD_XX.wav,1086,5,SAD,Unspecified,I wonder what this is about,1086_IWW_SAD_XX.wav
+1086_MTI_ANG_XX.wav,CREMA-D-WAV/1086_MTI_ANG_XX.wav,1086,0,ANG,Unspecified,Maybe tomorrow it will be cold,1086_MTI_ANG_XX.wav
+1086_MTI_DIS_XX.wav,CREMA-D-WAV/1086_MTI_DIS_XX.wav,1086,1,DIS,Unspecified,Maybe tomorrow it will be cold,1086_MTI_DIS_XX.wav
+1086_MTI_FEA_XX.wav,CREMA-D-WAV/1086_MTI_FEA_XX.wav,1086,2,FEA,Unspecified,Maybe tomorrow it will be cold,1086_MTI_FEA_XX.wav
+1086_MTI_HAP_XX.wav,CREMA-D-WAV/1086_MTI_HAP_XX.wav,1086,3,HAP,Unspecified,Maybe tomorrow it will be cold,1086_MTI_HAP_XX.wav
+1086_MTI_NEU_XX.wav,CREMA-D-WAV/1086_MTI_NEU_XX.wav,1086,4,NEU,Unspecified,Maybe tomorrow it will be cold,1086_MTI_NEU_XX.wav
+1086_MTI_SAD_XX.wav,CREMA-D-WAV/1086_MTI_SAD_XX.wav,1086,5,SAD,Unspecified,Maybe tomorrow it will be cold,1086_MTI_SAD_XX.wav
+1086_TAI_ANG_XX.wav,CREMA-D-WAV/1086_TAI_ANG_XX.wav,1086,0,ANG,Unspecified,The airplane is almost full,1086_TAI_ANG_XX.wav
+1086_TAI_DIS_XX.wav,CREMA-D-WAV/1086_TAI_DIS_XX.wav,1086,1,DIS,Unspecified,The airplane is almost full,1086_TAI_DIS_XX.wav
+1086_TAI_FEA_XX.wav,CREMA-D-WAV/1086_TAI_FEA_XX.wav,1086,2,FEA,Unspecified,The airplane is almost full,1086_TAI_FEA_XX.wav
+1086_TAI_HAP_XX.wav,CREMA-D-WAV/1086_TAI_HAP_XX.wav,1086,3,HAP,Unspecified,The airplane is almost full,1086_TAI_HAP_XX.wav
+1086_TAI_NEU_XX.wav,CREMA-D-WAV/1086_TAI_NEU_XX.wav,1086,4,NEU,Unspecified,The airplane is almost full,1086_TAI_NEU_XX.wav
+1086_TAI_SAD_XX.wav,CREMA-D-WAV/1086_TAI_SAD_XX.wav,1086,5,SAD,Unspecified,The airplane is almost full,1086_TAI_SAD_XX.wav
+1086_TIE_ANG_XX.wav,CREMA-D-WAV/1086_TIE_ANG_XX.wav,1086,0,ANG,Unspecified,That is exactly what happened,1086_TIE_ANG_XX.wav
+1086_TIE_DIS_XX.wav,CREMA-D-WAV/1086_TIE_DIS_XX.wav,1086,1,DIS,Unspecified,That is exactly what happened,1086_TIE_DIS_XX.wav
+1086_TIE_FEA_XX.wav,CREMA-D-WAV/1086_TIE_FEA_XX.wav,1086,2,FEA,Unspecified,That is exactly what happened,1086_TIE_FEA_XX.wav
+1086_TIE_HAP_XX.wav,CREMA-D-WAV/1086_TIE_HAP_XX.wav,1086,3,HAP,Unspecified,That is exactly what happened,1086_TIE_HAP_XX.wav
+1086_TIE_NEU_XX.wav,CREMA-D-WAV/1086_TIE_NEU_XX.wav,1086,4,NEU,Unspecified,That is exactly what happened,1086_TIE_NEU_XX.wav
+1086_TIE_SAD_XX.wav,CREMA-D-WAV/1086_TIE_SAD_XX.wav,1086,5,SAD,Unspecified,That is exactly what happened,1086_TIE_SAD_XX.wav
+1086_TSI_ANG_XX.wav,CREMA-D-WAV/1086_TSI_ANG_XX.wav,1086,0,ANG,Unspecified,The surface is slick,1086_TSI_ANG_XX.wav
+1086_TSI_DIS_XX.wav,CREMA-D-WAV/1086_TSI_DIS_XX.wav,1086,1,DIS,Unspecified,The surface is slick,1086_TSI_DIS_XX.wav
+1086_TSI_FEA_XX.wav,CREMA-D-WAV/1086_TSI_FEA_XX.wav,1086,2,FEA,Unspecified,The surface is slick,1086_TSI_FEA_XX.wav
+1086_TSI_HAP_XX.wav,CREMA-D-WAV/1086_TSI_HAP_XX.wav,1086,3,HAP,Unspecified,The surface is slick,1086_TSI_HAP_XX.wav
+1086_TSI_NEU_XX.wav,CREMA-D-WAV/1086_TSI_NEU_XX.wav,1086,4,NEU,Unspecified,The surface is slick,1086_TSI_NEU_XX.wav
+1086_TSI_SAD_XX.wav,CREMA-D-WAV/1086_TSI_SAD_XX.wav,1086,5,SAD,Unspecified,The surface is slick,1086_TSI_SAD_XX.wav
+1086_WSI_ANG_XX.wav,CREMA-D-WAV/1086_WSI_ANG_XX.wav,1086,0,ANG,Unspecified,We'll stop in a couple of minutes,1086_WSI_ANG_XX.wav
+1086_WSI_DIS_XX.wav,CREMA-D-WAV/1086_WSI_DIS_XX.wav,1086,1,DIS,Unspecified,We'll stop in a couple of minutes,1086_WSI_DIS_XX.wav
+1086_WSI_FEA_XX.wav,CREMA-D-WAV/1086_WSI_FEA_XX.wav,1086,2,FEA,Unspecified,We'll stop in a couple of minutes,1086_WSI_FEA_XX.wav
+1086_WSI_HAP_XX.wav,CREMA-D-WAV/1086_WSI_HAP_XX.wav,1086,3,HAP,Unspecified,We'll stop in a couple of minutes,1086_WSI_HAP_XX.wav
+1086_WSI_NEU_XX.wav,CREMA-D-WAV/1086_WSI_NEU_XX.wav,1086,4,NEU,Unspecified,We'll stop in a couple of minutes,1086_WSI_NEU_XX.wav
+1086_WSI_SAD_XX.wav,CREMA-D-WAV/1086_WSI_SAD_XX.wav,1086,5,SAD,Unspecified,We'll stop in a couple of minutes,1086_WSI_SAD_XX.wav
+1089_DFA_ANG_XX.wav,CREMA-D-WAV/1089_DFA_ANG_XX.wav,1089,0,ANG,Unspecified,Don't forget a jacket,1089_DFA_ANG_XX.wav
+1089_DFA_DIS_XX.wav,CREMA-D-WAV/1089_DFA_DIS_XX.wav,1089,1,DIS,Unspecified,Don't forget a jacket,1089_DFA_DIS_XX.wav
+1089_DFA_FEA_XX.wav,CREMA-D-WAV/1089_DFA_FEA_XX.wav,1089,2,FEA,Unspecified,Don't forget a jacket,1089_DFA_FEA_XX.wav
+1089_DFA_HAP_XX.wav,CREMA-D-WAV/1089_DFA_HAP_XX.wav,1089,3,HAP,Unspecified,Don't forget a jacket,1089_DFA_HAP_XX.wav
+1089_DFA_NEU_XX.wav,CREMA-D-WAV/1089_DFA_NEU_XX.wav,1089,4,NEU,Unspecified,Don't forget a jacket,1089_DFA_NEU_XX.wav
+1089_DFA_SAD_XX.wav,CREMA-D-WAV/1089_DFA_SAD_XX.wav,1089,5,SAD,Unspecified,Don't forget a jacket,1089_DFA_SAD_XX.wav
+1089_IEO_ANG_HI.wav,CREMA-D-WAV/1089_IEO_ANG_HI.wav,1089,0,ANG,High,It's eleven o'clock,1089_IEO_ANG_HI.wav
+1089_IEO_ANG_LO.wav,CREMA-D-WAV/1089_IEO_ANG_LO.wav,1089,0,ANG,Low,It's eleven o'clock,1089_IEO_ANG_LO.wav
+1089_IEO_ANG_MD.wav,CREMA-D-WAV/1089_IEO_ANG_MD.wav,1089,0,ANG,Medium,It's eleven o'clock,1089_IEO_ANG_MD.wav
+1089_IEO_DIS_HI.wav,CREMA-D-WAV/1089_IEO_DIS_HI.wav,1089,1,DIS,High,It's eleven o'clock,1089_IEO_DIS_HI.wav
+1089_IEO_DIS_LO.wav,CREMA-D-WAV/1089_IEO_DIS_LO.wav,1089,1,DIS,Low,It's eleven o'clock,1089_IEO_DIS_LO.wav
+1089_IEO_DIS_MD.wav,CREMA-D-WAV/1089_IEO_DIS_MD.wav,1089,1,DIS,Medium,It's eleven o'clock,1089_IEO_DIS_MD.wav
+1089_IEO_FEA_HI.wav,CREMA-D-WAV/1089_IEO_FEA_HI.wav,1089,2,FEA,High,It's eleven o'clock,1089_IEO_FEA_HI.wav
+1089_IEO_FEA_LO.wav,CREMA-D-WAV/1089_IEO_FEA_LO.wav,1089,2,FEA,Low,It's eleven o'clock,1089_IEO_FEA_LO.wav
+1089_IEO_FEA_MD.wav,CREMA-D-WAV/1089_IEO_FEA_MD.wav,1089,2,FEA,Medium,It's eleven o'clock,1089_IEO_FEA_MD.wav
+1089_IEO_HAP_HI.wav,CREMA-D-WAV/1089_IEO_HAP_HI.wav,1089,3,HAP,High,It's eleven o'clock,1089_IEO_HAP_HI.wav
+1089_IEO_HAP_LO.wav,CREMA-D-WAV/1089_IEO_HAP_LO.wav,1089,3,HAP,Low,It's eleven o'clock,1089_IEO_HAP_LO.wav
+1089_IEO_HAP_MD.wav,CREMA-D-WAV/1089_IEO_HAP_MD.wav,1089,3,HAP,Medium,It's eleven o'clock,1089_IEO_HAP_MD.wav
+1089_IEO_NEU_XX.wav,CREMA-D-WAV/1089_IEO_NEU_XX.wav,1089,4,NEU,Unspecified,It's eleven o'clock,1089_IEO_NEU_XX.wav
+1089_IEO_SAD_HI.wav,CREMA-D-WAV/1089_IEO_SAD_HI.wav,1089,5,SAD,High,It's eleven o'clock,1089_IEO_SAD_HI.wav
+1089_IEO_SAD_LO.wav,CREMA-D-WAV/1089_IEO_SAD_LO.wav,1089,5,SAD,Low,It's eleven o'clock,1089_IEO_SAD_LO.wav
+1089_IEO_SAD_MD.wav,CREMA-D-WAV/1089_IEO_SAD_MD.wav,1089,5,SAD,Medium,It's eleven o'clock,1089_IEO_SAD_MD.wav
+1089_IOM_ANG_XX.wav,CREMA-D-WAV/1089_IOM_ANG_XX.wav,1089,0,ANG,Unspecified,I'm on my way to the meeting,1089_IOM_ANG_XX.wav
+1089_IOM_DIS_XX.wav,CREMA-D-WAV/1089_IOM_DIS_XX.wav,1089,1,DIS,Unspecified,I'm on my way to the meeting,1089_IOM_DIS_XX.wav
+1089_IOM_FEA_XX.wav,CREMA-D-WAV/1089_IOM_FEA_XX.wav,1089,2,FEA,Unspecified,I'm on my way to the meeting,1089_IOM_FEA_XX.wav
+1089_IOM_HAP_XX.wav,CREMA-D-WAV/1089_IOM_HAP_XX.wav,1089,3,HAP,Unspecified,I'm on my way to the meeting,1089_IOM_HAP_XX.wav
+1089_IOM_NEU_XX.wav,CREMA-D-WAV/1089_IOM_NEU_XX.wav,1089,4,NEU,Unspecified,I'm on my way to the meeting,1089_IOM_NEU_XX.wav
+1089_IOM_SAD_XX.wav,CREMA-D-WAV/1089_IOM_SAD_XX.wav,1089,5,SAD,Unspecified,I'm on my way to the meeting,1089_IOM_SAD_XX.wav
+1089_ITH_ANG_XX.wav,CREMA-D-WAV/1089_ITH_ANG_XX.wav,1089,0,ANG,Unspecified,I think I have a doctor's appointment,1089_ITH_ANG_XX.wav
+1089_ITH_DIS_XX.wav,CREMA-D-WAV/1089_ITH_DIS_XX.wav,1089,1,DIS,Unspecified,I think I have a doctor's appointment,1089_ITH_DIS_XX.wav
+1089_ITH_FEA_XX.wav,CREMA-D-WAV/1089_ITH_FEA_XX.wav,1089,2,FEA,Unspecified,I think I have a doctor's appointment,1089_ITH_FEA_XX.wav
+1089_ITH_HAP_XX.wav,CREMA-D-WAV/1089_ITH_HAP_XX.wav,1089,3,HAP,Unspecified,I think I have a doctor's appointment,1089_ITH_HAP_XX.wav
+1089_ITH_NEU_XX.wav,CREMA-D-WAV/1089_ITH_NEU_XX.wav,1089,4,NEU,Unspecified,I think I have a doctor's appointment,1089_ITH_NEU_XX.wav
+1089_ITH_SAD_XX.wav,CREMA-D-WAV/1089_ITH_SAD_XX.wav,1089,5,SAD,Unspecified,I think I have a doctor's appointment,1089_ITH_SAD_XX.wav
+1089_ITS_ANG_XX.wav,CREMA-D-WAV/1089_ITS_ANG_XX.wav,1089,0,ANG,Unspecified,I think I've seen this before,1089_ITS_ANG_XX.wav
+1089_ITS_DIS_XX.wav,CREMA-D-WAV/1089_ITS_DIS_XX.wav,1089,1,DIS,Unspecified,I think I've seen this before,1089_ITS_DIS_XX.wav
+1089_ITS_FEA_XX.wav,CREMA-D-WAV/1089_ITS_FEA_XX.wav,1089,2,FEA,Unspecified,I think I've seen this before,1089_ITS_FEA_XX.wav
+1089_ITS_HAP_XX.wav,CREMA-D-WAV/1089_ITS_HAP_XX.wav,1089,3,HAP,Unspecified,I think I've seen this before,1089_ITS_HAP_XX.wav
+1089_ITS_NEU_XX.wav,CREMA-D-WAV/1089_ITS_NEU_XX.wav,1089,4,NEU,Unspecified,I think I've seen this before,1089_ITS_NEU_XX.wav
+1089_ITS_SAD_XX.wav,CREMA-D-WAV/1089_ITS_SAD_XX.wav,1089,5,SAD,Unspecified,I think I've seen this before,1089_ITS_SAD_XX.wav
+1089_IWL_ANG_XX.wav,CREMA-D-WAV/1089_IWL_ANG_XX.wav,1089,0,ANG,Unspecified,I would like a new alarm clock,1089_IWL_ANG_XX.wav
+1089_IWL_DIS_XX.wav,CREMA-D-WAV/1089_IWL_DIS_XX.wav,1089,1,DIS,Unspecified,I would like a new alarm clock,1089_IWL_DIS_XX.wav
+1089_IWL_FEA_XX.wav,CREMA-D-WAV/1089_IWL_FEA_XX.wav,1089,2,FEA,Unspecified,I would like a new alarm clock,1089_IWL_FEA_XX.wav
+1089_IWL_HAP_XX.wav,CREMA-D-WAV/1089_IWL_HAP_XX.wav,1089,3,HAP,Unspecified,I would like a new alarm clock,1089_IWL_HAP_XX.wav
+1089_IWL_NEU_XX.wav,CREMA-D-WAV/1089_IWL_NEU_XX.wav,1089,4,NEU,Unspecified,I would like a new alarm clock,1089_IWL_NEU_XX.wav
+1089_IWL_SAD_XX.wav,CREMA-D-WAV/1089_IWL_SAD_XX.wav,1089,5,SAD,Unspecified,I would like a new alarm clock,1089_IWL_SAD_XX.wav
+1089_IWW_ANG_XX.wav,CREMA-D-WAV/1089_IWW_ANG_XX.wav,1089,0,ANG,Unspecified,I wonder what this is about,1089_IWW_ANG_XX.wav
+1089_IWW_DIS_XX.wav,CREMA-D-WAV/1089_IWW_DIS_XX.wav,1089,1,DIS,Unspecified,I wonder what this is about,1089_IWW_DIS_XX.wav
+1089_IWW_FEA_XX.wav,CREMA-D-WAV/1089_IWW_FEA_XX.wav,1089,2,FEA,Unspecified,I wonder what this is about,1089_IWW_FEA_XX.wav
+1089_IWW_HAP_XX.wav,CREMA-D-WAV/1089_IWW_HAP_XX.wav,1089,3,HAP,Unspecified,I wonder what this is about,1089_IWW_HAP_XX.wav
+1089_IWW_NEU_XX.wav,CREMA-D-WAV/1089_IWW_NEU_XX.wav,1089,4,NEU,Unspecified,I wonder what this is about,1089_IWW_NEU_XX.wav
+1089_IWW_SAD_XX.wav,CREMA-D-WAV/1089_IWW_SAD_XX.wav,1089,5,SAD,Unspecified,I wonder what this is about,1089_IWW_SAD_XX.wav
+1089_MTI_ANG_XX.wav,CREMA-D-WAV/1089_MTI_ANG_XX.wav,1089,0,ANG,Unspecified,Maybe tomorrow it will be cold,1089_MTI_ANG_XX.wav
+1089_MTI_DIS_XX.wav,CREMA-D-WAV/1089_MTI_DIS_XX.wav,1089,1,DIS,Unspecified,Maybe tomorrow it will be cold,1089_MTI_DIS_XX.wav
+1089_MTI_FEA_XX.wav,CREMA-D-WAV/1089_MTI_FEA_XX.wav,1089,2,FEA,Unspecified,Maybe tomorrow it will be cold,1089_MTI_FEA_XX.wav
+1089_MTI_HAP_XX.wav,CREMA-D-WAV/1089_MTI_HAP_XX.wav,1089,3,HAP,Unspecified,Maybe tomorrow it will be cold,1089_MTI_HAP_XX.wav
+1089_MTI_NEU_XX.wav,CREMA-D-WAV/1089_MTI_NEU_XX.wav,1089,4,NEU,Unspecified,Maybe tomorrow it will be cold,1089_MTI_NEU_XX.wav
+1089_MTI_SAD_XX.wav,CREMA-D-WAV/1089_MTI_SAD_XX.wav,1089,5,SAD,Unspecified,Maybe tomorrow it will be cold,1089_MTI_SAD_XX.wav
+1089_TAI_ANG_XX.wav,CREMA-D-WAV/1089_TAI_ANG_XX.wav,1089,0,ANG,Unspecified,The airplane is almost full,1089_TAI_ANG_XX.wav
+1089_TAI_DIS_XX.wav,CREMA-D-WAV/1089_TAI_DIS_XX.wav,1089,1,DIS,Unspecified,The airplane is almost full,1089_TAI_DIS_XX.wav
+1089_TAI_FEA_XX.wav,CREMA-D-WAV/1089_TAI_FEA_XX.wav,1089,2,FEA,Unspecified,The airplane is almost full,1089_TAI_FEA_XX.wav
+1089_TAI_HAP_XX.wav,CREMA-D-WAV/1089_TAI_HAP_XX.wav,1089,3,HAP,Unspecified,The airplane is almost full,1089_TAI_HAP_XX.wav
+1089_TAI_NEU_XX.wav,CREMA-D-WAV/1089_TAI_NEU_XX.wav,1089,4,NEU,Unspecified,The airplane is almost full,1089_TAI_NEU_XX.wav
+1089_TAI_SAD_XX.wav,CREMA-D-WAV/1089_TAI_SAD_XX.wav,1089,5,SAD,Unspecified,The airplane is almost full,1089_TAI_SAD_XX.wav
+1089_TIE_ANG_XX.wav,CREMA-D-WAV/1089_TIE_ANG_XX.wav,1089,0,ANG,Unspecified,That is exactly what happened,1089_TIE_ANG_XX.wav
+1089_TIE_DIS_XX.wav,CREMA-D-WAV/1089_TIE_DIS_XX.wav,1089,1,DIS,Unspecified,That is exactly what happened,1089_TIE_DIS_XX.wav
+1089_TIE_FEA_XX.wav,CREMA-D-WAV/1089_TIE_FEA_XX.wav,1089,2,FEA,Unspecified,That is exactly what happened,1089_TIE_FEA_XX.wav
+1089_TIE_HAP_XX.wav,CREMA-D-WAV/1089_TIE_HAP_XX.wav,1089,3,HAP,Unspecified,That is exactly what happened,1089_TIE_HAP_XX.wav
+1089_TIE_NEU_XX.wav,CREMA-D-WAV/1089_TIE_NEU_XX.wav,1089,4,NEU,Unspecified,That is exactly what happened,1089_TIE_NEU_XX.wav
+1089_TIE_SAD_XX.wav,CREMA-D-WAV/1089_TIE_SAD_XX.wav,1089,5,SAD,Unspecified,That is exactly what happened,1089_TIE_SAD_XX.wav
+1089_TSI_ANG_XX.wav,CREMA-D-WAV/1089_TSI_ANG_XX.wav,1089,0,ANG,Unspecified,The surface is slick,1089_TSI_ANG_XX.wav
+1089_TSI_DIS_XX.wav,CREMA-D-WAV/1089_TSI_DIS_XX.wav,1089,1,DIS,Unspecified,The surface is slick,1089_TSI_DIS_XX.wav
+1089_TSI_FEA_XX.wav,CREMA-D-WAV/1089_TSI_FEA_XX.wav,1089,2,FEA,Unspecified,The surface is slick,1089_TSI_FEA_XX.wav
+1089_TSI_HAP_XX.wav,CREMA-D-WAV/1089_TSI_HAP_XX.wav,1089,3,HAP,Unspecified,The surface is slick,1089_TSI_HAP_XX.wav
+1089_TSI_NEU_XX.wav,CREMA-D-WAV/1089_TSI_NEU_XX.wav,1089,4,NEU,Unspecified,The surface is slick,1089_TSI_NEU_XX.wav
+1089_TSI_SAD_XX.wav,CREMA-D-WAV/1089_TSI_SAD_XX.wav,1089,5,SAD,Unspecified,The surface is slick,1089_TSI_SAD_XX.wav
+1089_WSI_ANG_XX.wav,CREMA-D-WAV/1089_WSI_ANG_XX.wav,1089,0,ANG,Unspecified,We'll stop in a couple of minutes,1089_WSI_ANG_XX.wav
+1089_WSI_DIS_XX.wav,CREMA-D-WAV/1089_WSI_DIS_XX.wav,1089,1,DIS,Unspecified,We'll stop in a couple of minutes,1089_WSI_DIS_XX.wav
+1089_WSI_FEA_XX.wav,CREMA-D-WAV/1089_WSI_FEA_XX.wav,1089,2,FEA,Unspecified,We'll stop in a couple of minutes,1089_WSI_FEA_XX.wav
+1089_WSI_HAP_XX.wav,CREMA-D-WAV/1089_WSI_HAP_XX.wav,1089,3,HAP,Unspecified,We'll stop in a couple of minutes,1089_WSI_HAP_XX.wav
+1089_WSI_NEU_XX.wav,CREMA-D-WAV/1089_WSI_NEU_XX.wav,1089,4,NEU,Unspecified,We'll stop in a couple of minutes,1089_WSI_NEU_XX.wav
+1089_WSI_SAD_XX.wav,CREMA-D-WAV/1089_WSI_SAD_XX.wav,1089,5,SAD,Unspecified,We'll stop in a couple of minutes,1089_WSI_SAD_XX.wav
