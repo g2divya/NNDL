@@ -224,7 +224,7 @@ def predict_emotion(model, audio_bytes):
     return (
         predicted_emotion,
         confidence,
-        probabilitiy)
+        probabilities)
 # 7 User 
 
 st.title("🎙️ Speech Emotion Recognition")
