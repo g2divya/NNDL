@@ -1,4 +1,4 @@
-
+import os 
 import streamlit as st
 import numpy as np
 import tensorflow as tf
@@ -273,3 +273,15 @@ with st.sidebar:
 
     for emotion in EMOTIONS:
         st.write(f"- {emotion}")
+SAVE_DIR = "CREMA-CNN-BILSTM-ATTENTION-RESULTS"
+
+os.makedirs(SAVE_DIR, exist_ok=True)
+
+model.save(
+    os.path.join(
+        SAVE_DIR,
+        "best_crema_bilstm_attention.keras"
+    )
+)
+
+print("Trained model saved successfully!")
