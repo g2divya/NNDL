@@ -25,17 +25,12 @@ PROJECT_ROOT = BASE_DIR.parent
 
 MODEL_FILENAME = "best_crema_bilstm_attention.keras"
 
-# Search possible model locations
 POSSIBLE_PATHS = [
     BASE_DIR / MODEL_FILENAME,
     PROJECT_ROOT / MODEL_FILENAME,
     PROJECT_ROOT / "models" / MODEL_FILENAME,
+    BASE_DIR / "models" / MODEL_FILENAME,
 ]
-
-MODEL_PATH = next(
-    (path for path in POSSIBLE_PATHS if path.is_file()),
-    None
-)
 
 SAMPLE_RATE = 16000
 DURATION = 5
@@ -77,7 +72,112 @@ class FrequencyPooling(tf.keras.layers.Layer):
 
 
 # =====================================================
-# 3. LOAD TRAINED MODEL
+# 3. FIND MODEL AUTOMATICALLY
+# =====================================================
+
+def find_model():
+
+    for path in POSSIBLE_PATHS:
+        if path.is_file():
+            return path
+
+    # Search project directories for the exact filename
+    search_roots = [BASE_DIR, PROJECT_ROOT]
+
+    for root in search_roots:
+        if root.exists():
+            matches = list(
+                root.rglob(MODEL_FILENAME)
+            )
+
+            if matches:
+                return matches[0]
+
+    return None
+
+
+MODEL_PATH = find_model()
+
+
+# =====================================================
+# 4. VALIDATE MODEL FILE
+# =====================================================
+
+def validate_model_file(path):
+
+    if not path.exists():
+        raise FileNotFoundError(
+            f"Model file does not exist: {path}"
+        )
+
+    if path.stat().st_size == 0:
+        raise ValueError(
+            "The model file is empty."
+        )
+
+    if path.stat().st_size < 1024:
+        raise ValueError(
+            "The model file is unusually small. "
+            "It may be a Git LFS pointer or an incorrect file."
+        )
+
+    # Check whether it is a real Keras ZIP archive
+    if not zipfile.is_zipfile(path):
+        with open(path, "rb") as file:
+            beginning = file.read(300)
+
+        if b"git-lfs.github.com/spec/v1" in beginning:
+            raise ValueError(
+                "Git LFS pointer detected instead of the actual "
+                "model. Download the real model and upload it "
+                "using Git LFS or another supported hosting method."
+            )
+
+        if beginning.lstrip().startswith(
+            (b"import ", b"#", b"from ", b"def ", b"class ")
+        ):
+            raise ValueError(
+                "The uploaded file contains Python source code, "
+                "not a trained Keras model. Save the trained model "
+                "using model.save('best_crema_bilstm_attention.keras')."
+            )
+
+        raise ValueError(
+            "Invalid Keras archive. The file may be corrupted "
+            "or may not be a genuine .keras model."
+        )
+
+    # Inspect archive integrity
+    try:
+        with zipfile.ZipFile(path, "r") as archive:
+
+            bad_file = archive.testzip()
+
+            if bad_file is not None:
+                raise ValueError(
+                    f"Corrupted model archive: {bad_file}"
+                )
+
+            files = archive.namelist()
+
+            if "config.json" not in files:
+                raise ValueError(
+                    "Invalid Keras archive: config.json is missing."
+                )
+
+            if "metadata.json" not in files:
+                raise ValueError(
+                    "Invalid Keras archive: metadata.json is missing."
+                )
+
+    except zipfile.BadZipFile:
+        raise ValueError(
+            "The Keras model archive is corrupted."
+        )
+
+
+# =====================================================
+# 5. LOAD TRAINED MODEL
 # =====================================================
 
 @st.cache_resource
@@ -91,35 +191,47 @@ def load_model():
 
         raise FileNotFoundError(
             "Trained model not found.\n\n"
-            "Checked locations:\n" + checked_paths
+            "Expected locations:\n" + checked_paths
         )
 
-    if MODEL_PATH.stat().st_size == 0:
-        raise ValueError("The model file is empty.")
+    validate_model_file(MODEL_PATH)
 
-    # Validate Keras archive
-    if not zipfile.is_zipfile(MODEL_PATH):
+    try:
+
+        model = tf.keras.models.load_model(
+            MODEL_PATH,
+            custom_objects={
+                "FrequencyPooling": FrequencyPooling,
+                "CREMA>FrequencyPooling": FrequencyPooling
+            },
+            compile=False,
+            safe_mode=True
+        )
+
+    except Exception as error:
+
+        raise RuntimeError(
+            "The model archive is valid, but TensorFlow "
+            "could not load the model.\n\n"
+            f"Original error: {str(error)}"
+        ) from error
+
+    if len(model.output_shape) != 2:
         raise ValueError(
-            f"Invalid Keras model archive: {MODEL_PATH}\n"
-            "Make sure this is a real .keras model, "
-            "not a Python script renamed to .keras."
+            f"Unexpected model output shape: {model.output_shape}"
         )
 
-    model = tf.keras.models.load_model(
-        MODEL_PATH,
-        custom_objects={
-            "FrequencyPooling": FrequencyPooling,
-            "CREMA>FrequencyPooling": FrequencyPooling
-        },
-        compile=False,
-        safe_mode=True
-    )
+    if model.output_shape[-1] != len(CLASS_NAMES):
+        raise ValueError(
+            f"Expected 6 output classes, "
+            f"but model has {model.output_shape[-1]}."
+        )
 
     return model
 
 
 # =====================================================
-# 4. CREATE MEL FILTER BANK
+# 6. CREATE MEL FILTER BANK
 # =====================================================
 
 @st.cache_resource
@@ -135,7 +247,7 @@ def create_mel_matrix():
 
 
 # =====================================================
-# 5. AUDIO PREPROCESSING
+# 7. AUDIO PREPROCESSING
 # =====================================================
 
 def preprocess_audio(audio_bytes):
@@ -145,6 +257,11 @@ def preprocess_audio(audio_bytes):
         sr=SAMPLE_RATE,
         mono=True
     )
+
+    if len(audio) == 0:
+        raise ValueError(
+            "The uploaded audio contains no samples."
+        )
 
     audio = audio.astype(np.float32)
 
@@ -216,7 +333,7 @@ def preprocess_audio(audio_bytes):
 
 
 # =====================================================
-# 6. PREDICTION
+# 8. PREDICTION
 # =====================================================
 
 def predict_emotion(model, audio_bytes):
@@ -236,7 +353,9 @@ def predict_emotion(model, audio_bytes):
         raise ValueError(
             f"Input shape mismatch.\n"
             f"Expected: {expected_shape}\n"
-            f"Received: {actual_shape}"
+            f"Received: {actual_shape}\n"
+            "Check that deployment preprocessing matches "
+            "the preprocessing used during model training."
         )
 
     probabilities = model(
@@ -246,12 +365,13 @@ def predict_emotion(model, audio_bytes):
 
     if len(probabilities) != len(CLASS_NAMES):
         raise ValueError(
-            f"Model has {len(probabilities)} outputs, "
-            f"but {len(CLASS_NAMES)} classes are configured."
+            "The model output does not match the configured classes."
         )
 
     if not np.all(np.isfinite(probabilities)):
-        raise ValueError("Model returned invalid probabilities.")
+        raise ValueError(
+            "Model returned invalid probabilities."
+        )
 
     predicted_index = int(
         np.argmax(probabilities)
@@ -273,7 +393,7 @@ def predict_emotion(model, audio_bytes):
 
 
 # =====================================================
-# 7. STREAMLIT USER INTERFACE
+# 9. STREAMLIT USER INTERFACE
 # =====================================================
 
 st.title("🎙️ Speech Emotion Recognition")
@@ -304,7 +424,7 @@ st.sidebar.markdown(
 
     - CNN feature extractor
     - Bidirectional LSTM
-    - Multi-Head Attention
+    - Attention mechanism
     - Feed-forward network
     - Softmax classification
 
@@ -320,6 +440,10 @@ if MODEL_PATH is not None:
 
     st.sidebar.success(
         f"Model found: {MODEL_PATH.name}"
+    )
+
+    st.sidebar.caption(
+        f"Location: {MODEL_PATH}"
     )
 
 else:
@@ -389,10 +513,7 @@ if uploaded_file is not None:
 
             st.divider()
 
-            # ==========================================
-            # MAIN PREDICTION
-            # ==========================================
-
+            # Main prediction
             st.subheader("Predicted Emotion")
 
             col1, col2 = st.columns(2)
@@ -413,10 +534,7 @@ if uploaded_file is not None:
 
             st.divider()
 
-            # ==========================================
-            # PROBABILITY CHART
-            # ==========================================
-
+            # Probability chart
             st.subheader(
                 "Emotion Probability Distribution"
             )
@@ -437,10 +555,7 @@ if uploaded_file is not None:
 
             st.divider()
 
-            # ==========================================
-            # TOP THREE PREDICTIONS
-            # ==========================================
-
+            # Top three predictions
             st.subheader("Top 3 Predictions")
 
             top_indices = np.argsort(
@@ -468,10 +583,7 @@ if uploaded_file is not None:
 
             st.divider()
 
-            # ==========================================
-            # DETAILED RESULTS
-            # ==========================================
-
+            # Detailed results
             st.subheader("Detailed Results")
 
             detailed_df = pd.DataFrame({
@@ -492,10 +604,9 @@ if uploaded_file is not None:
             )
 
             st.caption(
-                "Probabilities are model outputs, not "
-                "calibrated measures of certainty. "
-                "Predictions may be affected by recording "
-                "quality, background noise and speaking style."
+                "Probabilities are model outputs, not calibrated "
+                "measures of certainty. Predictions may be affected "
+                "by recording quality, background noise and speaking style."
             )
 
         except Exception as error:
@@ -512,7 +623,7 @@ else:
 
 
 # =====================================================
-# 8. FOOTER
+# 10. FOOTER
 # =====================================================
 
 st.divider()
